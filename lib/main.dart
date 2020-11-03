@@ -1,9 +1,12 @@
+import 'package:fintech/create_account.dart';
 import 'package:fintech/pattern_view.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fintech/pattern_view.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import 'custom_button.dart';
+import 'custom_field.dart';
 
 
 
@@ -16,7 +19,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: CreateAccount(),
     );
   }
 
@@ -157,117 +160,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-class CustomField extends StatefulWidget {
-  const CustomField({ this.fieldKey,
-    //this.minLength,
-    this.hintText,
-    this.labelText,
-    this.helperText,
-    this.icon,
-    this.onSaved,
-    this.validator,
-    this.onFieldSubmitted,
-    this.prefixIcon,
-  });
-
-  final Key fieldKey;
-  //final int minLength;
-  final String hintText;
-  final String labelText;
-  final String helperText;
-  final Icon icon;
-  final Widget prefixIcon;
-  final FormFieldSetter<String> onSaved;
-  final FormFieldValidator<String> validator;
-  final ValueChanged<String> onFieldSubmitted;
-  @override
-  _CustomFieldState createState() => new _CustomFieldState();
-
-// TODO: implement createState
 
 
-
-}
-class _CustomFieldState extends State<CustomField> {
-  bool _obscureText = true;
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 342,
-      height: 50,
-      //padding: EdgeInsets.symmetric(horizontal: 20),
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: HexColor("#F2F2F2"),
-
-
-      ),
-      child: Container(
-        height: 50,
-        child: TextFormField(
-
-
-
-          key: widget.fieldKey,
-          obscureText: _obscureText,
-          onSaved: widget.onSaved,
-          validator: widget.validator,
-          onFieldSubmitted: widget.onFieldSubmitted,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-
-            filled: true,
-            hintText: widget.hintText,
-
-            labelText: widget.labelText,
-            helperText: widget.helperText,
-
-
-          ),
-
-        ),
-      ),
-    );
-  }
-}
-
-class CustomButton extends StatelessWidget {
-  CustomButton({this.text,this.color,this.onPressed,this.borderSide,this.shape,this.style,this.side});
-  final text;
-  final color;
-  final onPressed;
-  final borderSide;
-  final shape;
-  final style;
-  final side;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-
-      height: 50,
-      width: 342,
-      child: OutlineButton(
-
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
-          //side: BorderSide(color: color),
-        ),
-        onPressed: onPressed,
-
-        child: Text(text,style: style,),
-
-      ),
-
-
-
-
-
-    );
-  }
-}
 
 
 
