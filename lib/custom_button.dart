@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
-  CustomButton({this.text,this.color,this.onPressed,this.borderSide,this.shape,this.style,this.side});
+class CustomOutlineButton extends StatelessWidget {
+  CustomOutlineButton({this.icon,this.text,this.color,this.onPressed,this.borderSide,this.shape,this.style,this.side});
   final text;
   final color;
   final onPressed;
@@ -10,6 +10,7 @@ class CustomButton extends StatelessWidget {
   final shape;
   final style;
   final side;
+  final icon;
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +19,17 @@ class CustomButton extends StatelessWidget {
       height: 50,
       width: 342,
       child: OutlineButton(
-
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0),
-          //side: BorderSide(color: color),
-        ),
+        borderSide: BorderSide(color: Colors.red),
+        shape: StadiumBorder(),
         onPressed: onPressed,
-
-        child: Text(text,style: style,),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Icon(Icons.fingerprint,color: Colors.red,),
+            SizedBox(width: 40,),
+            Text(text,style: style,),
+          ],
+        ),
 
       ),
 
@@ -35,4 +39,28 @@ class CustomButton extends StatelessWidget {
 
     );
   }
+}
+
+class CustomMatButton extends StatelessWidget {
+  CustomMatButton({this.text,this.color,this.onPressed});
+  final text;
+  final color;
+  final onPressed;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      shape:RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30.0),),
+      height: 50,
+      minWidth: 342,
+      color: color,
+      onPressed:onPressed,
+      child: Text(text,style: TextStyle(
+        color: Colors.white,
+        fontFamily: "Poppins",
+        fontSize: 16,
+      ),),
+    );
+
+    }
 }

@@ -25,7 +25,7 @@ class PatternView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height:MediaQuery.of(context).size.height * 0.53,
+     // height:MediaQuery.of(context).size.height * 0.4,
       decoration: BoxDecoration(
         gradient: gradient,
       ),
@@ -33,7 +33,7 @@ class PatternView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
 
         children: [
-          Image.asset(image,height: 225,width: 175,),
+          Image.asset(image,height: 180,width: 130,),
           Text(text,style: TextStyle(
             fontSize: 24,
             fontStyle: FontStyle.normal,
