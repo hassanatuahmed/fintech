@@ -24,6 +24,10 @@ class _CreateAccountState extends State<CreateAccount> {
             children: [
 
              Header(
+               color:Colors.white,
+               color1:Colors.black,
+               color2:Colors.black,
+               color3:Colors.black,
                icon: Icons.keyboard_backspace,
                text: "Create Account",
                gradient: LinearGradient(colors: [Colors.red,Colors.pink],
@@ -111,7 +115,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       ],
                     ),
                     decoration:BoxDecoration(
-                      border: Border.all(color: HexColor("333333")),
+                      border: Border.all(color: HexColor("333333"),width: 0.1),
 
                     ),
                     width: 290,
@@ -155,7 +159,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       ],
                     ),
                     decoration: BoxDecoration(
-                      border: Border.all(color: HexColor("333333")),
+                      border: Border.all(color: HexColor("333333"),width: 0.1),
                     ),
                   ),
                 ),
@@ -256,8 +260,12 @@ class SecondHeader extends StatelessWidget {
 
 
 class Header extends StatelessWidget {
-  Header({this.color,this.gradient,this.icon,this.text,this.borderRadius,});
+  Header({this.color,this.gradient,this.icon,this.text,this.borderRadius,
+  this.color1,this.color2,this.color3});
   final color;
+  final color1;
+  final color2;
+  final color3;
   final gradient;
   final icon;
   final text;
@@ -278,17 +286,73 @@ class Header extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height:MediaQuery.of(context).size.height * 0.25,
               child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  child: Column(
                     children: [
-                      Icon(icon,color: Colors.white,),
-                      Text(text,style: TextStyle(
-                        fontSize: 34,
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "Poly",
-                        color: Colors.white,
-                      ),),
+                      Padding(
+                        padding: EdgeInsets.only(top: 60.0),
+                        child: Row(
+
+                          children: [
+                            SizedBox(width: 34,),
+
+                            Icon(icon,color: Colors.white,),
+                            SizedBox(width: 40,),
+
+                            Text(text,style: TextStyle(
+                              fontSize: 34,
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Poly",
+                              color: Colors.white,
+                            ),),
+
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 15,),
+                      Center(
+                        child: Padding(
+                            padding: EdgeInsets.only(top: 5.0),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 130,),
+
+                                 Container(
+                                  color: color,
+                                  height: 3,
+                                  width: 40,
+                                ),
+
+                              SizedBox(width: 10,),
+
+                              Center(
+                                child: Container(
+                                  color: color1,
+                                  height: 3,
+                                  width: 40,
+                                ),
+                              ),
+                              SizedBox(width: 10,),
+                              Center(
+                                child: Container(
+                                  color: color2,
+                                  height: 3,
+                                  width: 40,
+                                ),
+                              ),
+                              SizedBox(width: 10,),
+
+                              Center(
+                                child: Container(
+                                  color: color3,
+                                  height: 3,
+                                  width: 40,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   )),
             ),
