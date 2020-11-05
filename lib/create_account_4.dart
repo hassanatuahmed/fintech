@@ -1,3 +1,4 @@
+import 'package:fintech/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -46,7 +47,6 @@ class CreateAccount4 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 14.0,left: 60.0),
                   child: Container(
-
                     width: 290,
                     height: 144,
                     color: Colors.white,
@@ -90,17 +90,31 @@ class CreateAccount4 extends StatelessWidget {
                                 child: Text("I want to receive \n promotional offers"))
                           ],
                         ),
+
                       ],
                     ),
                   ),
                 ),
+                Spacer(),
 
+                Padding(
+                  padding: EdgeInsets.only(bottom: 50,right: 90,left: 90),
+                  child: Container(
+                    child: CustomMatButton(
+                      color: Colors.red,
+                      text: "submit",
+                      onPressed: (){},
+
+                    ),
+                  ),
+                ),
 
 
               ],
             ),
 
           ),
+
 
 
         ],

@@ -2,6 +2,7 @@ import 'package:fintech/create_account_screen1.dart';
 import 'package:fintech/create_account_screen3.dart';
 import 'package:fintech/custom_field.dart';
 import 'package:fintech/pattern_view.dart';
+import 'package:fintech/pin_verification_screen.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:CreateAccount4(),
+      home: PinVerification(),
     );
   }
 
