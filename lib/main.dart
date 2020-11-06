@@ -25,7 +25,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PinVerification(),
+      home:PinVerification(),
     );
   }
 

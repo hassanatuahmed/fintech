@@ -50,6 +50,8 @@ flutter:
     - asset/images/personal.png
     - asset/images/pay_online.png
     - asset/images/account.png
+    - asset/images/phone.png
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
