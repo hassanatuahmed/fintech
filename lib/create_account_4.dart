@@ -101,6 +101,7 @@ class CreateAccount4 extends StatelessWidget {
                   padding: EdgeInsets.only(bottom: 50,right: 90,left: 90),
                   child: Container(
                     child: CustomMatButton(
+                      textColor: Colors.white,
                       color: Colors.red,
                       text: "submit",
                       onPressed: (){},

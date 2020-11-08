@@ -56,7 +56,14 @@ class CreateAccount2 extends StatelessWidget {
                       children: [
                          Padding(
                            padding: EdgeInsets.only(right:160.0),
-                           child: Text("4. Mobile Number"),
+                           child: Text("4. Mobile Number",style: TextStyle(
+                               fontSize: 16,
+                               fontWeight: FontWeight.w300,
+                               fontStyle: FontStyle.normal,
+                               fontFamily: "Poppins",
+                               color: HexColor("#333333"),
+
+                           ),),
                          ),
                         SizedBox(height: 10,),
 
@@ -86,7 +93,13 @@ class CreateAccount2 extends StatelessWidget {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(right:160.0),
-                          child: Text("5. Email Address"),
+                          child: Text("5. Email Address",style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: "Poppins",
+                            color: HexColor("#333333"),
+                          ),),
                         ),
                         SizedBox(height: 10,),
 
@@ -116,7 +129,13 @@ class CreateAccount2 extends StatelessWidget {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(right:160.0),
-                          child: Text("6. Digital Address"),
+                          child: Text("6. Digital Address",style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.normal,
+                              fontFamily: "Poppins",
+                              color: HexColor("#333333"),
+                          ),),
                         ),
                         SizedBox(height: 10,),
 

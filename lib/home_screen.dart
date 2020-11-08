@@ -86,6 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: (){},
                         text: "Sign In",
                         color: Colors.red,
+                        textColor: Colors.white,
                       ),
 
                       SizedBox(height: 20,),

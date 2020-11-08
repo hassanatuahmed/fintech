@@ -1,6 +1,7 @@
 import 'package:fintech/custom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class PinVerification extends StatelessWidget {
   @override
@@ -19,12 +20,12 @@ class PinVerification extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Row(
-              children: [
-                Image.asset('asset/images/phone.png',scale: 4,),
-                Image.asset('asset/images/phone.png',scale: 4,),
-              ],
-            ),
+            SizedBox(height: 20,),
+
+
+            Image.asset('asset/images/phone.png',scale: 4,),
+
+
             SizedBox(height: 20,),
             Center(
               child: Text("PIN Verification",style: TextStyle(
@@ -38,10 +39,41 @@ class PinVerification extends StatelessWidget {
             SizedBox(height: 62,),
             Container(
                 child: Text(
-                    "Please input the 4-digit PIN that \n was sent to your phone number")),
+                    "Please input the 4-digit PIN that \n was sent to your phone number",style: TextStyle(
+                  color: Colors.white,
+                  fontSize:16,
+                  fontFamily: "Poppins",
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w400,
+
+                ),)),
             SizedBox(height: 20,),
 
-            Text("(000) 000-0000"),
+            Row(
+
+              children: [
+                SizedBox(width: 90,),
+                Text("(000) 000-0000",style: TextStyle(
+                  color: Colors.white,
+                  fontSize:24,
+                  fontFamily: "Poppins",
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w400,
+                ),),
+                SizedBox(width: 10,),
+
+                Text("Change",style: TextStyle(
+                  color: Colors.white,
+                  fontSize:14,
+                  fontFamily: "Poppins",
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w400,
+                ),),
+
+                SizedBox(width: 75,),
+
+              ],
+            ),
             SizedBox(height: 60,),
 
 
@@ -74,7 +106,7 @@ class PinVerification extends StatelessWidget {
                   height: 3,
                   width: 40,
                 ),
-                SizedBox(width: 90,),
+                SizedBox(width: 50,),
 
 
 
@@ -88,12 +120,15 @@ class PinVerification extends StatelessWidget {
               color: Colors.white,
               fontSize:16,
               fontFamily: "Poppins",
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.w300,
 
             ),),
             SizedBox(height: 27,),
 
 
             CustomMatButton(
+              textColor: HexColor("#ED1C24"),
               text: "verify",
               onPressed: (){},
               color: Colors.white,

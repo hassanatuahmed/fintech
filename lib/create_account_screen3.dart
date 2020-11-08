@@ -51,7 +51,7 @@ class CreateAccount3 extends StatelessWidget {
                   child: Container(
 
                     width: 290,
-                    height: 100,
+                    height: 150,
                     child: Column(
                       children: [
                         Column(
@@ -65,6 +65,7 @@ class CreateAccount3 extends StatelessWidget {
                         SizedBox(height: 10,),
 
 
+
                         Padding(
                           padding: const EdgeInsets.only(bottom: 0.0,left: 0.0),
                           child: CustomField(
@@ -73,6 +74,11 @@ class CreateAccount3 extends StatelessWidget {
                             hintText: "(000) 000-00770",
                             prefixIcon: Icon(Icons.flag),
                           ),
+                        ),
+                        Text("Security Answer "),
+                        CustomField(
+                          hintText: "null",
+                          prefixIcon: null,
                         ),
                       ],
                     ),
@@ -97,11 +103,13 @@ class CreateAccount3 extends StatelessWidget {
                           padding: const EdgeInsets.only(bottom: 0.0,left: 0.0),
                           child: Column(
                             children: [
+
                               CustomField(
                                 hintText: "",
                                 prefixIcon: Icon(null),
                               ),
                               SizedBox(height: 30,),
+                              Text("Confirm Password"),
                               CustomField(
                                 hintText: "",
                                 prefixIcon: Icon(null),
