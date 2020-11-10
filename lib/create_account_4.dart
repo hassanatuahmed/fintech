@@ -49,7 +49,12 @@ class CreateAccount4 extends StatelessWidget {
                   child: Container(
                     width: 290,
                     height: 144,
-                    color: Colors.white,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(width: 0.1,color: HexColor("333333"),),
+
+                    ),
                     child: Column(
                       children: [
                         SizedBox(height: 23,),

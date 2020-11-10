@@ -31,9 +31,9 @@ class CreateAccount3 extends StatelessWidget {
 
           ),
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.75,
             color: Colors.white,
+          width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.75,
             child: Column(
               children: [
                 Row(
@@ -45,92 +45,95 @@ class CreateAccount3 extends StatelessWidget {
 
                   ],
                 ),
-                SizedBox(height: 18,),
+                SizedBox(height: 17,),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 14.0,left: 50.0),
+                  padding: const EdgeInsets.only(left:53.0),
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: HexColor("333333"),width: 0.1)
 
+                    ),
                     width: 290,
-                    height: 150,
+                    height: 217,
                     child: Column(
                       children: [
                         Column(
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(right:160.0),
-                              child: Text("7.Security Questions  "),
+                              padding: EdgeInsets.only(right:140.0,top: 15.0,bottom: 10),
+                              child: Text("7. Security Questions"),
                             ),
                           ],
                         ),
                         SizedBox(height: 10,),
 
-
-
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 0.0,left: 0.0),
+                          padding: EdgeInsets.only(left:25.0,right: 20,bottom: 30),
                           child: CustomField(
 
 
-                            hintText: "(000) 000-00770",
-                            prefixIcon: Icon(Icons.flag),
+                            hintText: "Select Question",
+                            prefixIcon: Icon(null),
                           ),
                         ),
-                        Text("Security Answer "),
-                        CustomField(
-                          hintText: "null",
-                          prefixIcon: null,
+                        Padding(
+                          padding: EdgeInsets.only(right:140.0,bottom: 10),
+                          child: Text("Security Answer "),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left:25.0,right: 20),
+                          child: CustomField(
+                            hintText: "null",
+                            prefixIcon: Icon(null),
+                          ),
                         ),
                       ],
                     ),
 
                   ),
                 ),
+                SizedBox(height: 17,),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 1.0,left: 50.0),
+                  padding: EdgeInsets.only(left:50.0),
                   child: Container(
-
                     width: 290,
-                    height: 217,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: HexColor("333333"),width: 0.1),),
                     child: Column(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(right:160.0),
+                          padding:  EdgeInsets.only(right:190.0,top: 10,bottom: 10),
                           child: Text("8. Password"),
                         ),
-                        SizedBox(height: 10,),
-
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 0.0,left: 0.0),
-                          child: Column(
-                            children: [
-
-                              CustomField(
-                                hintText: "",
-                                prefixIcon: Icon(null),
-                              ),
-                              SizedBox(height: 30,),
-                              Text("Confirm Password"),
-                              CustomField(
-                                hintText: "",
-                                prefixIcon: Icon(null),
-                              ),
-                            ],
+                          padding:  EdgeInsets.only(left:30.0,right: 20.0,bottom: 20),
+                          child: CustomField(
+                            hintText: "",
+                            prefixIcon: Icon(null),
+                          ),
+                        ),
+                        Padding(
+                          padding:  EdgeInsets.only(right:110.0,bottom: 10),
+                          child: Text("Confirm Password"),
+                        ),
+                        Padding(
+                          padding:  EdgeInsets.only(left:30.0,right: 20.0,bottom: 1),
+                          child: CustomField(
+                            hintText: "",
+                            prefixIcon: Icon(null),
                           ),
                         ),
                       ],
                     ),
-                    decoration: BoxDecoration(
-                        border: Border(top: BorderSide(color: HexColor("333333"),width: 0.1))
+
                     ),
-                  ),
                 ),
 
 
-                Padding(
-                    padding: EdgeInsets.only(left: 300.0),
-                    child:NextArrow()
-                ),
 
+               
 
               ],
             ),
@@ -143,50 +146,3 @@ class CreateAccount3 extends StatelessWidget {
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
-
-  @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-
-  String dropdownValue = 'One';
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownButton<String>(
-        value: dropdownValue,
-        icon: Icon(Icons.arrow_downward),
-    iconSize: 24,
-    elevation: 16,
-    style: TextStyle(color: Colors.deepPurple),
-    underline: Container(
-    height: 2,
-    color: Colors.redAccent,
-    ),
-    onChanged: (String newValue) {
-    setState(() {
-    dropdownValue = newValue;
-    });
-    },
-      items: <String>['One', 'Two', 'Free', 'Four']
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Row(children: [
-
-            IconButton(
-              icon: Icon(Icons.home),
-              color: Colors.redAccent,
-            ),
-
-            Text(value),
-
-          ]),
-        );
-      }).toList(),
-    );
-  }
-}
