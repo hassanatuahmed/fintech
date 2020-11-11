@@ -18,7 +18,7 @@
                               width: 100,
                               height: 40,
                               child: MyButton(
-
+                                BorderSide_color: Colors.white,
                                 text: "Sign Out",
                                 style:TextStyle(
                                   fontSize: 16,
@@ -78,6 +78,7 @@
                       SizedBox(height: 20,),
 
                         MyButton(
+                          BorderSide_color: Colors.white,
                         text: "Personal",
                         style: TextStyle(
                         fontSize: 14,
@@ -92,6 +93,7 @@
                        SizedBox(height: 10,),
 
                       MyButton(
+                        BorderSide_color: Colors.white,
                       text: "Business",
                       style: TextStyle(
                       fontSize: 14,
@@ -106,6 +108,7 @@
                       SizedBox(height: 10,),
 
                       MyButton(
+                        BorderSide_color: Colors.white,
                       text: "Client Guarantor Information",
                       style: TextStyle(fontSize: 14,
                       fontFamily: "Poppins",
@@ -126,11 +129,12 @@
           }
         }
         class MyButton extends StatelessWidget {
-          MyButton({this.onPressed,this.text,this.style,this.color});
+          MyButton({this.onPressed,this.text,this.style,this.color,this.BorderSide_color});
           final onPressed;
           final text;
           final style;
           final color;
+          final BorderSide_color;
           @override
           Widget build(BuildContext context) {
             return Container(
@@ -139,7 +143,7 @@
               child: FlatButton(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
-                  side: BorderSide(color: Colors.white,width: 0.2),
+                  side: BorderSide(color: BorderSide_color,width: 0.2),
 
                 ),
                 child: Text(text,style: style,),

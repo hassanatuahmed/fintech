@@ -52,6 +52,10 @@ flutter:
     - asset/images/account.png
     - asset/images/phone.png
     - asset/images/pin.png
+    - asset/images/passport.png
+    - asset/images/id.png
+    - asset/images/bills.png
+    - asset/images/contract.png
 
 
   # To add assets to your application, add an assets section, like this:

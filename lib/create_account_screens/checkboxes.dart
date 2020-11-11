@@ -2,8 +2,8 @@ import 'package:fintech/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'create_account_screen1.dart';
-import 'custom_field.dart';
+import 'full_name.dart';
+import '../custom_field.dart';
 class CreateAccount4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

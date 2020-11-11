@@ -1,8 +1,8 @@
-import 'package:fintech/create_account_screen1.dart';
+import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/full_name.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'custom_field.dart';
+import '../custom_field.dart';
 
 class CreateAccount2 extends StatelessWidget {
   @override
