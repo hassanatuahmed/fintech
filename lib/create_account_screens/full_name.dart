@@ -3,16 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class CreateAccount extends StatefulWidget {
-  CreateAccount({this.color,this.text});
+class FullName extends StatefulWidget {
+  FullName({this.color,this.text});
   final text;
   final color;
 
   @override
-  _CreateAccountState createState() => _CreateAccountState();
+  _FullNameState createState() => _FullNameState();
 }
 
-class _CreateAccountState extends State<CreateAccount> {
+class _FullNameState extends State<FullName> {
 
   @override
   Widget build(BuildContext context) {

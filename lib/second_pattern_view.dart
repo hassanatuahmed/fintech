@@ -14,7 +14,7 @@ class SecondPatternView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 425,
-      height: 261.5,
+      height: 261.4,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topRight,

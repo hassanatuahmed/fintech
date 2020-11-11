@@ -4,7 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 
 import '../custom_field.dart';
 
-class CreateAccount2 extends StatelessWidget {
+class MobileNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -4,7 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 
 import 'full_name.dart';
 import '../custom_field.dart';
-class CreateAccount4 extends StatelessWidget {
+class Checkboxes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -4,37 +4,29 @@ import 'package:hexcolor/hexcolor.dart';
 import 'full_name.dart';
 import '../custom_field.dart';
 
-class CreateAccount3 extends StatelessWidget {
+class SecurityQuestion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Stack(
-
-            children: [
-
-              Header(
-                color:Colors.white,
-                color1:Colors.white,
-                color2:Colors.white,
-                color3:Colors.black,
-                icon: Icons.keyboard_backspace,
-                text: "Create Account",
-                gradient: LinearGradient(colors: [Colors.red,Colors.pink],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Header(
+              color:Colors.white,
+              color1:Colors.white,
+              color2:Colors.white,
+              color3:Colors.black,
+              icon: Icons.keyboard_backspace,
+              text: "Create Account",
+              gradient: LinearGradient(colors: [Colors.red,Colors.pink],
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
               ),
-
-            ],
-
-          ),
-          Container(
-            color: Colors.white,
-          width: MediaQuery.of(context).size.width,
-            //height: MediaQuery.of(context).size.height * 0.75,
-            child: SingleChildScrollView(
+            ),
+            Container(
+              color: Colors.white,
+            width: MediaQuery.of(context).size.width,
+              //height: MediaQuery.of(context).size.height * 0.75,
               child: Column(
                 children: [
                   Row(
@@ -126,20 +118,24 @@ class CreateAccount3 extends StatelessWidget {
                               prefixIcon: Icon(null),
                             ),
                           ),
+
                         ],
                       ),
 
                       ),
                   ),
+                  
+
+
 
                 ],
               ),
+
+
             ),
 
-
-          ),
-
-        ],
+          ],
+        ),
       ),
 
     );

@@ -7,6 +7,8 @@ import 'package:hexcolor/hexcolor.dart';
 import '../create_account_screens/full_name.dart';
 
 class AddressInformation extends StatelessWidget {
+  get selected => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +45,10 @@ class AddressInformation extends StatelessWidget {
 
 
          Padding(
-           padding: EdgeInsets.only(bottom:27.0,right: 180),
-           child: Text("Upload Proof of Address"),
+           padding: EdgeInsets.only(bottom:27.0,right: 140),
+           child: Text("Upload Proof of Address",style: TextStyle(
+             fontSize: 20,
+           ),),
          ),
           Padding(
             padding: EdgeInsets.only(bottom:60.0,right: 150),
@@ -106,9 +110,15 @@ class AddressInformation extends StatelessWidget {
             child: Container(
               height: 60,
               width: 339,
-              child: RaisedButton(
-                onPressed: (){},
-                child: Text("DD/MM/YY"),
+              child: Container(
+                height: 60,
+                width: 339,
+                child: MaterialButton(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  color: HexColor("#333333"),
+                  onPressed: (){},
+                  child: Text("DD/MM/YY"),
+                ),
               ),
             ),
           ),
@@ -137,9 +147,28 @@ class AddressInformation extends StatelessWidget {
             Container(
               height: 60,
                 width: 339,
-                child: DropdownButtonFormField(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: HexColor("#333333"),
+                  border: Border.all()),
+                child: DropdownButtonFormField<String>(
 
-                ),),
+                  hint: Text("Select Status"),
+                  value: selected,
+
+                  items: ["three", "two", "one"]
+                    .map((label) => DropdownMenuItem(
+                      child: Text(label),
+              value: label,
+      ))
+                .toList(),
+            onChanged: (value) {
+            },
+
+
+                ),
+            ),
+
             SizedBox(height: 60,),
             Padding(
               padding: EdgeInsets.only(right: 310.0),
