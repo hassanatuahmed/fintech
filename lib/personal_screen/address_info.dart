@@ -1,5 +1,5 @@
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_screen/personal_screen.dart';
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified_screen.dart';
+import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/second_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -33,7 +33,7 @@ class AddressInformation extends StatelessWidget {
               ),),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 300.0),
+              padding: EdgeInsets.only(right: 310.0),
               child: Text("1 of 4",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -45,7 +45,7 @@ class AddressInformation extends StatelessWidget {
 
 
          Padding(
-           padding: EdgeInsets.only(bottom:27.0,right: 140),
+           padding: EdgeInsets.only(bottom:27.0,right: 132),
            child: Text("Upload Proof of Address",style: TextStyle(
              fontSize: 20,
            ),),
@@ -114,10 +114,24 @@ class AddressInformation extends StatelessWidget {
                 height: 60,
                 width: 339,
                 child: MaterialButton(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
                   color: HexColor("#333333"),
                   onPressed: (){},
-                  child: Text("DD/MM/YY"),
+                  child: Row(
+                    children: [
+                      SizedBox(width: 15,),
+
+                      Text("DD/MM/YY",style: TextStyle(
+                          fontWeight: FontWeight.w200,
+                          fontStyle: FontStyle.normal,
+                          fontFamily: "Poppins",
+                          color: Colors.white),),
+                      SizedBox(width: 160,),
+                      Icon(Icons.calendar_today,color: Colors.white,),
+                      SizedBox(width: 15,),
+
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -148,24 +162,34 @@ class AddressInformation extends StatelessWidget {
               height: 60,
                 width: 339,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
+
+                  borderRadius: BorderRadius.circular(30.0),
                   color: HexColor("#333333"),
                   border: Border.all()),
-                child: DropdownButtonFormField<String>(
+                child: Padding(
+                  padding: EdgeInsets.only(right:8.0,left: 8.0),
+                  child: DropdownButtonFormField<String>(
 
-                  hint: Text("Select Status"),
-                  value: selected,
+                    hint: Text("Select Status",style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Poppins",
+                        color: Colors.white,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 16,
+                    ),),
+                    value: selected,
 
-                  items: ["three", "two", "one"]
-                    .map((label) => DropdownMenuItem(
-                      child: Text(label),
+                    items: ["three", "two", "one"]
+                      .map((label) => DropdownMenuItem(
+                        child: Text(label),
               value: label,
       ))
-                .toList(),
+                  .toList(),
             onChanged: (value) {
             },
 
 
+                  ),
                 ),
             ),
 
@@ -254,7 +278,9 @@ class AddressInformation extends StatelessWidget {
                 NextArrow(),
               ],
             ),
-    ],
+            SizedBox(height: 60,),
+
+          ],
         ),
       ),
     );

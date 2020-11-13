@@ -1,15 +1,22 @@
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class SecondPatternView extends StatelessWidget {
-  SecondPatternView({this.color,this.color3,this.color2,this.color1});
+import 'create_account_screens/pin_successfully_verified.dart';
+
+class BusinessPatternView extends StatelessWidget {
+  BusinessPatternView({this.color,this.color3,this.color2,this.color1,
+    this.color4,this.color5,this.color6,this.color7,this.color8});
 
   final color;
   final color1;
   final color2;
   final color3;
+  final color4;
+  final color5;
+  final color6;
+  final color7;
+  final color8;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +40,7 @@ class SecondPatternView extends StatelessWidget {
                   width: 16,
                   child: Icon(Icons.keyboard_backspace,color: Colors.white,)),
               SizedBox(width: 70,),
-              Text("Personal",style: TextStyle(fontSize: 34,
+              Text("Business",style: TextStyle(fontSize: 34,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal, color: Colors.white,
               ),
@@ -62,30 +69,63 @@ class SecondPatternView extends StatelessWidget {
           SizedBox(height: 22,),
           Row(
             children: [
-              SizedBox(width: 100,),
+              SizedBox(width: 50,),
 
               Container(
                 height: 3,
-                width:40,
+                width:20,
                 color: color,
               ),
               SizedBox(width: 10,),
+
               Container(
                 height: 3,
-                width:40,
+                width:20,
                 color: color1,
               ),
               SizedBox(width: 10,),
               Container(
                 height: 3,
-                width:40,
+                width:20,
                 color: color2,
               ),
               SizedBox(width: 10,),
               Container(
                 height: 3,
-                width:40,
+                width:20,
                 color: color3,
+              ),
+              SizedBox(width: 10,),
+
+              Container(
+                height: 3,
+                width:20,
+                color: color4,
+              ),
+              SizedBox(width: 10,),
+              Container(
+                height: 3,
+                width:20,
+                color: color5,
+              ),
+              SizedBox(width: 10,),
+
+              Container(
+                height: 3,
+                width:20,
+                color: color6,
+              ),
+              SizedBox(width: 10,),
+              Container(
+                height: 3,
+                width:20,
+                color: color7,
+              ),
+              SizedBox(width: 10,),
+              Container(
+                height: 3,
+                width:20,
+                color: color8,
               ),
             ],
           ),

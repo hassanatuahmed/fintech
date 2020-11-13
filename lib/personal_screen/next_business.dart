@@ -1,4 +1,4 @@
-import 'package:fintech/create_account_screens/pin_successfully_verified_screen.dart';
+import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -31,11 +31,10 @@ class NextBusiness extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 240,),
 
 
-
-
-            Text("Select Personal to start",style: TextStyle(
+            Text("Next is Business Information",style: TextStyle(
               fontSize: 16,
               fontFamily: "Poppins",
               fontStyle: FontStyle.normal,
@@ -45,19 +44,19 @@ class NextBusiness extends StatelessWidget {
             SizedBox(height: 20,),
 
             MyButton(
-              BorderSide_color: Colors.white,
+              BorderSide_color: Colors.green,
               text: "Personal",
               style: TextStyle(
                 fontSize: 14,
                 fontFamily: "Poppins",
-                color: Colors.white,
+                color: Colors.green,
 
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.w300,
               ),
               onPressed: (){},
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 15,),
 
             MyButton(
               BorderSide_color: Colors.white,
@@ -72,7 +71,7 @@ class NextBusiness extends StatelessWidget {
               ),
               onPressed: (){},
             ),
-            SizedBox(height: 10,),
+            SizedBox(height: 15,),
 
             MyButton(
               BorderSide_color: Colors.white,
@@ -83,6 +82,12 @@ class NextBusiness extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.w300,),
               onPressed: (){},
+            ),
+            SizedBox(height: 90,),
+
+            CircleAvatar(
+              backgroundColor: Colors.white,
+              child: Text("?",style: TextStyle(color: Colors.black),),
             ),
 
 

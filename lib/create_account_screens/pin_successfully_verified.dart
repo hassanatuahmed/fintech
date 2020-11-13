@@ -34,7 +34,23 @@
                           ),
                           Padding(
                                   padding: EdgeInsets.only(top:10.0,bottom: 10),
-                                  child: Image.asset("asset/images/pin.png",scale: 4,),
+                                  child: Stack(
+                                      children: [
+                                        Image.asset("asset/images/pin.png",scale: 4,),
+                                        Positioned(
+                                          top: -5, right: -5,
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.green,
+                                              borderRadius: BorderRadius.circular(30.0),
+                                            ),
+                                            height: 52,
+                                              width: 52,
+
+                                              child: Icon(Icons.check,color: Colors.white,)),
+                                        ),
+
+                                      ],),
                     ),
                           Container(
                               height: 80,
