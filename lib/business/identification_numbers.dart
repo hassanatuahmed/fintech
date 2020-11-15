@@ -45,15 +45,18 @@ class _IdentificationNumbersState extends State<IdentificationNumbers> {
               ),
             ),
 
+            SizedBox(height:35),
 
-
-            Text("1 of 2",style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontFamily: "Poppins",
-              fontStyle: FontStyle.normal,
-              fontSize: 14,
-              color: Colors.red,
-            ),),
+            Padding(
+              padding: EdgeInsets.only(right:310.0),
+              child: Text("1 of 2",style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontFamily: "Poppins",
+                fontStyle: FontStyle.normal,
+                fontSize: 14,
+                color: Colors.red,
+              ),),
+            ),
 
             Container(
               height: 60,
@@ -65,21 +68,32 @@ class _IdentificationNumbersState extends State<IdentificationNumbers> {
                   fontSize: 20,
                 ),),),
 
+            SizedBox(height:20),
+
+
             MyText(
               hintText: "Number",
               hintText_color:Colors.white ,
               fillColor: HexColor("#333333"),
             ),
-            Text("2 of 2",style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontFamily: "Poppins",
-              fontStyle: FontStyle.normal,
-              fontSize: 14,
-              color: Colors.red,
-            ),),
+
+            SizedBox(height:60),
 
             Padding(
-              padding: EdgeInsets.only(left:20.0),
+              padding: EdgeInsets.only(right:310.0),
+              child: Text("2 of 2",style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontFamily: "Poppins",
+                fontStyle: FontStyle.normal,
+                fontSize: 14,
+                color: Colors.red,
+              ),),
+            ),
+
+
+
+            Padding(
+              padding: EdgeInsets.only(left:15.0),
               child: Container(
                 width: 360,
                   height: 60,
@@ -90,11 +104,16 @@ class _IdentificationNumbersState extends State<IdentificationNumbers> {
                     fontSize: 20,
                   ),),),
             ),
+
+            SizedBox(height:20),
+
             MyText(
               hintText: "TIN",
               hintText_color:Colors.white ,
               fillColor: HexColor("#333333"),
             ),
+            SizedBox(height:70),
+
 
             Row(
               children: [
@@ -129,6 +148,8 @@ class _IdentificationNumbersState extends State<IdentificationNumbers> {
                 NextArrow(),
               ],
             ),
+            SizedBox(height:35),
+
 
           ],
         ),
