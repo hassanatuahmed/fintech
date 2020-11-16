@@ -9,7 +9,9 @@ import 'business/business_type.dart';
 import 'business/duration.dart';
 import 'business/employees.dart';
 import 'business/identification_numbers.dart';
+import 'business/loan_information.dart';
 import 'business/name.dart';
+import 'business/upload_document.dart';
 import 'create_account_screens/pin_successfully_verified.dart';
 import 'create_account_screens/security_question.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_screen/address_info.dart';
@@ -31,7 +33,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BusinessAddress(),
+      home: LoanInformation(),
     );
   }
 

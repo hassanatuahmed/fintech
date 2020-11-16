@@ -33,20 +33,23 @@ class _BusinessAddressState extends State<BusinessAddress> {
               color7: Colors.black,
               color8: Colors.black,
             ),
-            Container(
-              height: 51,
-              width: 360,
-              child: Text("Address Information",style: TextStyle(
-                fontSize: 34,
-                fontStyle: FontStyle.normal,
-                fontFamily: "Poppins",
-                color: HexColor("333333").withOpacity(0.9),
-                fontWeight: FontWeight.w400,
-              ),),),
+            Padding(
+              padding: EdgeInsets.only(left:20.0),
+              child: Container(
+                height: 51,
+                width: 360,
+                child: Text("Address Information",style: TextStyle(
+                  fontSize: 34,
+                  fontStyle: FontStyle.normal,
+                  fontFamily: "Poppins",
+                  color: HexColor("333333").withOpacity(0.9),
+                  fontWeight: FontWeight.w400,
+                ),),),
+            ),
 
              SizedBox(height: 35,),
             Padding(
-              padding: EdgeInsets.only(right: 310.0),
+              padding: EdgeInsets.only(right: 300.0),
               child: Text("1 of 2",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -56,7 +59,7 @@ class _BusinessAddressState extends State<BusinessAddress> {
               ),),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom:27.0,right: 50),
+              padding: EdgeInsets.only(bottom:27.0,right: 30),
               child: Text("Upload Proof of Business Address",style: TextStyle(
                 fontSize: 20,
                 fontStyle: FontStyle.normal,
@@ -99,7 +102,7 @@ class _BusinessAddressState extends State<BusinessAddress> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 310.0),
+              padding: EdgeInsets.only(right: 300.0),
               child: Text("2 of 2",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -110,7 +113,7 @@ class _BusinessAddressState extends State<BusinessAddress> {
             ),
 
             Padding(
-              padding: EdgeInsets.only(right:10.0,bottom: 20),
+              padding: EdgeInsets.only(left:20.0,bottom: 20),
               child: Container(
                 height: 60,
                 width: 360,
@@ -190,6 +193,7 @@ class _BusinessAddressState extends State<BusinessAddress> {
                 ],
               ),
             ),
+            SizedBox(height: 30,),
           ],
         ),
       ),
