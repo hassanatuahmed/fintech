@@ -4,12 +4,12 @@ import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/second_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-class Employees extends StatefulWidget {
+class HowLong extends StatefulWidget {
   @override
-  _EmployeesState createState() => _EmployeesState();
+  _HowLongState createState() => _HowLongState();
 }
 
-class _EmployeesState extends State<Employees> {
+class _HowLongState extends State<HowLong> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,26 +17,26 @@ class _EmployeesState extends State<Employees> {
       body: Column(
         children: [
           BusinessPatternView(
-              color: Colors.white,
-              color1: Colors.white,
-              color2: Colors.white,
-              color3: Colors.black,
-              color4: Colors.black,
-              color5: Colors.black,
-              color6: Colors.black,
-              color7: Colors.black,
-              color8: Colors.black,
+            color: Colors.white,
+            color1: Colors.white,
+            color2: Colors.white,
+            color3: Colors.white,
+            color4: Colors.black,
+            color5: Colors.black,
+            color6: Colors.black,
+            color7: Colors.black,
+            color8: Colors.black,
           ),
           Container(
-            height: 153,
-              width: 360,
-              child: Text("How many \nEmployees do you \nhave?",style: TextStyle(
-                fontSize: 34,
-                fontStyle: FontStyle.normal,
-                fontFamily: "Poppins",
-                color: HexColor("333333").withOpacity(0.9),
-                fontWeight: FontWeight.w400,
-              ),),),
+            height: 102,
+            width: 360,
+            child: Text("How long have you been in Business?",style: TextStyle(
+              fontSize: 34,
+              fontStyle: FontStyle.normal,
+              fontFamily: "Poppins",
+              color: HexColor("333333").withOpacity(0.9),
+              fontWeight: FontWeight.w400,
+            ),),),
 
 
           SizedBox(height: 28,),
@@ -53,15 +53,15 @@ class _EmployeesState extends State<Employees> {
           Row(
             children: [
               SizedBox(width: 36,),
-              Text("1 - 10"),
+              Text("1 - 5"),
               SizedBox(width: 36,),
-              Text("10- 20"),
+              Text("6- 10"),
               SizedBox(width: 36,),
-              Text("20 - 50"),
+              Text("11- 20"),
               SizedBox(width: 36,),
-              Text("50 - 100"),
+              Text("21 - 30"),
               SizedBox(width: 36,),
-              Text("100+"),
+              Text("30+"),
             ],
           ),
 
@@ -69,7 +69,7 @@ class _EmployeesState extends State<Employees> {
 
           Padding(
             padding: EdgeInsets.only(right:280.0),
-            child: Text("1- 10",style: TextStyle(
+            child: Text("30+",style: TextStyle(
               fontSize: 34,
               fontStyle: FontStyle.normal,
               fontFamily: "Poppins",

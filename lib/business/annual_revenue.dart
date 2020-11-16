@@ -2,14 +2,15 @@ import 'package:fintech/business_pattern_view.dart';
 import 'package:fintech/create_account_screens/full_name.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/second_pattern_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-class Employees extends StatefulWidget {
+class AnnualRevenue extends StatefulWidget {
   @override
-  _EmployeesState createState() => _EmployeesState();
+  _AnnualRevenueState createState() => _AnnualRevenueState();
 }
 
-class _EmployeesState extends State<Employees> {
+class _AnnualRevenueState extends State<AnnualRevenue> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,26 +18,26 @@ class _EmployeesState extends State<Employees> {
       body: Column(
         children: [
           BusinessPatternView(
-              color: Colors.white,
-              color1: Colors.white,
-              color2: Colors.white,
-              color3: Colors.black,
-              color4: Colors.black,
-              color5: Colors.black,
-              color6: Colors.black,
-              color7: Colors.black,
-              color8: Colors.black,
+            color: Colors.white,
+            color1: Colors.white,
+            color2: Colors.white,
+            color3: Colors.white,
+            color4: Colors.white,
+            color5: Colors.black,
+            color6: Colors.black,
+            color7: Colors.black,
+            color8: Colors.black,
           ),
           Container(
             height: 153,
-              width: 360,
-              child: Text("How many \nEmployees do you \nhave?",style: TextStyle(
-                fontSize: 34,
-                fontStyle: FontStyle.normal,
-                fontFamily: "Poppins",
-                color: HexColor("333333").withOpacity(0.9),
-                fontWeight: FontWeight.w400,
-              ),),),
+            width: 360,
+            child: Text("What is your Annual Revenue?",style: TextStyle(
+              fontSize: 34,
+              fontStyle: FontStyle.normal,
+              fontFamily: "Poppins",
+              color: HexColor("333333").withOpacity(0.9),
+              fontWeight: FontWeight.w400,
+            ),),),
 
 
           SizedBox(height: 28,),
@@ -52,24 +53,34 @@ class _EmployeesState extends State<Employees> {
 
           Row(
             children: [
-              SizedBox(width: 36,),
-              Text("1 - 10"),
-              SizedBox(width: 36,),
-              Text("10- 20"),
-              SizedBox(width: 36,),
-              Text("20 - 50"),
-              SizedBox(width: 36,),
-              Text("50 - 100"),
-              SizedBox(width: 36,),
-              Text("100+"),
+              SizedBox(width: 22,),
+              Text("50-100k"),
+              SizedBox(width: 22,),
+              Text("101- 250k"),
+              SizedBox(width: 22,),
+              Text("251 - 500k"),
+              SizedBox(width: 22,),
+              Text("251 - 500k"),
+              SizedBox(width: 22,),
+              Text("1M+"),
             ],
           ),
 
           SizedBox(height: 40,),
+          Padding(
+            padding:  EdgeInsets.only(right:320.0),
+            child: Text("GHC",style: TextStyle(
+              color: Colors.red,
+              fontWeight: FontWeight.w400,
+              fontFamily: "Poppins",
+              fontSize: 16,
+              fontStyle: FontStyle.normal,
+            ),),
+          ),
 
           Padding(
-            padding: EdgeInsets.only(right:280.0),
-            child: Text("1- 10",style: TextStyle(
+            padding: EdgeInsets.only(right:80.0),
+            child: Text("251,000 - 500,000 ",style: TextStyle(
               fontSize: 34,
               fontStyle: FontStyle.normal,
               fontFamily: "Poppins",
@@ -78,7 +89,7 @@ class _EmployeesState extends State<Employees> {
             ),),
           ),
 
-          SizedBox(height: 75,),
+          SizedBox(height: 45,),
 
 
           Padding(

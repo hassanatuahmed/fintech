@@ -2,14 +2,19 @@ import 'package:fintech/business_pattern_view.dart';
 import 'package:fintech/create_account_screens/full_name.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/second_pattern_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-class Employees extends StatefulWidget {
+
+import 'name.dart';
+class BusinessType extends StatefulWidget {
   @override
-  _EmployeesState createState() => _EmployeesState();
+  _BusinessTypeState createState() => _BusinessTypeState();
 }
 
-class _EmployeesState extends State<Employees> {
+class _BusinessTypeState extends State<BusinessType> {
+  get selected => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,68 +22,66 @@ class _EmployeesState extends State<Employees> {
       body: Column(
         children: [
           BusinessPatternView(
-              color: Colors.white,
-              color1: Colors.white,
-              color2: Colors.white,
-              color3: Colors.black,
-              color4: Colors.black,
-              color5: Colors.black,
-              color6: Colors.black,
-              color7: Colors.black,
-              color8: Colors.black,
+            color: Colors.white,
+            color1: Colors.white,
+            color2: Colors.white,
+            color3: Colors.white,
+            color4: Colors.white,
+            color5: Colors.white,
+            color6: Colors.black,
+            color7: Colors.black,
+            color8: Colors.black,
           ),
           Container(
             height: 153,
-              width: 360,
-              child: Text("How many \nEmployees do you \nhave?",style: TextStyle(
-                fontSize: 34,
-                fontStyle: FontStyle.normal,
-                fontFamily: "Poppins",
-                color: HexColor("333333").withOpacity(0.9),
-                fontWeight: FontWeight.w400,
-              ),),),
-
-
-          SizedBox(height: 28,),
-          Container(
-            height: 10,
             width: 360,
-            color: Colors.red,
-          ),
-
-          SizedBox(height: 12,),
-
-
-
-          Row(
-            children: [
-              SizedBox(width: 36,),
-              Text("1 - 10"),
-              SizedBox(width: 36,),
-              Text("10- 20"),
-              SizedBox(width: 36,),
-              Text("20 - 50"),
-              SizedBox(width: 36,),
-              Text("50 - 100"),
-              SizedBox(width: 36,),
-              Text("100+"),
-            ],
-          ),
-
-          SizedBox(height: 40,),
-
-          Padding(
-            padding: EdgeInsets.only(right:280.0),
-            child: Text("1- 10",style: TextStyle(
+            child: Text("What’s your type of Business?",style: TextStyle(
               fontSize: 34,
               fontStyle: FontStyle.normal,
               fontFamily: "Poppins",
               color: HexColor("333333").withOpacity(0.9),
               fontWeight: FontWeight.w400,
-            ),),
+            ),),),
+
+
+          SizedBox(height: 28,),
+
+          Container(
+            height: 60,
+            width: 339,
+            decoration: BoxDecoration(
+
+                borderRadius: BorderRadius.circular(30.0),
+                color: HexColor("#333333"),
+                border: Border.all()),
+            child: Padding(
+              padding: EdgeInsets.only(right:8.0,left: 8.0),
+              child: DropdownButtonFormField<String>(
+
+                hint: Text("Business Type",style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontFamily: "Poppins",
+                  color: Colors.white,
+                  fontStyle: FontStyle.normal,
+                  fontSize: 16,
+                ),),
+                value: selected,
+
+                items: ["three", "two", "one"]
+                    .map((label) => DropdownMenuItem(
+                  child: Text(label),
+                  value: label,
+                ))
+                    .toList(),
+                onChanged: (value) {
+                },
+
+
+              ),
+            ),
           ),
 
-          SizedBox(height: 75,),
+          SizedBox(height: 100,),
 
 
           Padding(
