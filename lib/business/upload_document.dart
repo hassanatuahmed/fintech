@@ -62,7 +62,7 @@ class _UploadDocumentState extends State<UploadDocument> {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(top:30.0,bottom: 40),
-                        child: Image.asset("asset/images/id.png",scale: 4,),
+                        child: Image.asset("asset/images/form.png",scale: 4,),
                       ),
                       Container(
                           width: 160,
@@ -93,7 +93,7 @@ class _UploadDocumentState extends State<UploadDocument> {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(top:30.0,bottom: 40),
-                        child: Image.asset("asset/images/id.png",scale: 4,),
+                        child: Image.asset("asset/images/feedback.png",scale: 4,),
                       ),
                       SizedBox(width: 30,),
 
@@ -124,7 +124,7 @@ class _UploadDocumentState extends State<UploadDocument> {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(top:30.0,bottom: 40),
-                        child: Image.asset("asset/images/id.png",scale: 4,),
+                        child: Image.asset("asset/images/financial-statement.png",scale: 4,),
                       ),
                       Container(
                           width: 160,
@@ -187,6 +187,8 @@ class _UploadDocumentState extends State<UploadDocument> {
               ],
             ),
           ),
+          SizedBox(height: 20,),
+
         ],
       ),
 
