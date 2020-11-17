@@ -1,7 +1,7 @@
 import 'package:fintech/create_account_screens/full_name.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/custom_button.dart';
-import 'package:fintech/second_pattern_view.dart';
+import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';

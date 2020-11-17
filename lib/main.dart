@@ -2,6 +2,7 @@
 import 'package:fintech/personal_screen/dob.dart';
 import 'package:fintech/personal_screen/next_business.dart';
 import 'package:fintech/personal_screen/personal_screen.dart';
+import 'package:fintech/personal_pattern_view.dart';
 
 import 'business/address_information.dart';
 import 'business/annual_revenue.dart';

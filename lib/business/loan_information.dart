@@ -1,11 +1,13 @@
 import 'package:fintech/business_pattern_view.dart';
 import 'package:fintech/create_account_screens/full_name.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
-import 'package:fintech/second_pattern_view.dart';
+import 'package:fintech/custom_button.dart';
+import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../my_style_text.dart';
 import 'name.dart';
 class LoanInformation extends StatefulWidget {
   @override
@@ -33,33 +35,37 @@ class _LoanInformationState extends State<LoanInformation> {
               color7: Colors.white,
               color8: Colors.white,
             ),
-            MyStyleText(
-              text: "Loan Information",
-              height: 50.0,
-              fontSize: 34.0,
-              width: 380.0,
-              color: HexColor("#333333").withOpacity(0.9),
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(left:30.0,bottom: 35),
+              child: MyStyleText(
+                text: "Loan Information",
+                height: 50.0,
+                fontSize: 34.0,
+                width: 380.0,
+                color: HexColor("#333333").withOpacity(0.9),
+              ),
             ),
 
-            MyStyleText(
-              text: "1 of 6",
-              height: 50.0,
-              fontSize: 14.0,
-              width: 100.0,
-              color: Colors.red,
-              fontWeight: FontWeight.w300,
+            Padding(
+              padding: EdgeInsets.only(right:245.0),
+              child: MyStyleText(
+                text: "1 of 6",
+                height: 21.0,
+                fontSize: 14.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
             ),
 
 
             MyStyleText(
               text: "Reason for Loan",
-              height: 51.0,
+              height: 21.0,
               fontSize: 20.0,
               width: 341.0,
               color: HexColor("#333333").withOpacity(0.8),
-              fontWeight: FontWeight.w400,
             ),
+            SizedBox(height: 20,),
 
             Container(
               height: 60,
@@ -95,107 +101,223 @@ class _LoanInformationState extends State<LoanInformation> {
                 ),
               ),
             ),
+            SizedBox(height: 60,),
 
-            MyStyleText(
-              text: "2 of 6",
-              height: 50.0,
-              fontSize: 14.0,
-              width: 100.0,
-              color: Colors.red,
-              fontWeight: FontWeight.w300,
+            Padding(
+              padding: EdgeInsets.only(right:245.0),
+              child: MyStyleText(
+                text: "2 of 6",
+                height: 21.0,
+                fontSize: 14.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
             ),
 
-            MyStyleText(
-              text: "What is the Loan Name",
-              height: 30.0,
-              fontSize: 20.0,
-              width: 360.0,
-              color: HexColor("#333333").withOpacity(0.8),
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(left:10.0),
+              child: MyStyleText(
+                text: "What is the Loan Name",
+                height: 21.0,
+                fontSize: 20.0,
+                width: 360.0,
+                color: HexColor("#333333").withOpacity(0.8),
+              ),
             ),
+
+            SizedBox(height: 20,),
             MyText(
               hintText: "Name",
               hintText_color:Colors.white ,
               fillColor: HexColor("#333333"),
             ),
 
+            SizedBox(height: 60,),
 
-            MyStyleText(
-              text: "3 of 6",
-              height: 50.0,
-              fontSize: 14.0,
-              width: 100.0,
-              color: Colors.red,
-              fontWeight: FontWeight.w300,
+
+
+            Padding(
+              padding: EdgeInsets.only(right:250.0),
+              child: MyStyleText(
+                text: "3 of 6",
+                height: 21.0,
+                fontSize: 14.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
             ),
 
-            MyStyleText(
-              text: "What is the Loan Amount?",
-              height: 30.0,
-              fontSize: 20.0,
-              width: 360.0,
-              color: HexColor("#333333").withOpacity(0.8),
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(left:15.0),
+              child: MyStyleText(
+                text: "What is the Loan Amount?",
+                height: 21.0,
+                fontSize: 20.0,
+                width: 360.0,
+                color: HexColor("#333333").withOpacity(0.8),
+              ),
             ),
+            SizedBox(height: 20,),
+
             MyText(
               hintText: "GHC",
               hintText_color:Colors.white ,
               fillColor: HexColor("#333333"),
             ),
 
-            MyStyleText(
-              text: "4 of 6",
-              height: 50.0,
-              fontSize: 14.0,
-              width: 100.0,
-              color: Colors.red,
-              fontWeight: FontWeight.w300,
+
+
+            Padding(
+              padding: EdgeInsets.only(right:250.0,top: 60),
+              child: MyStyleText(
+                text: "4 of 6",
+                height: 21.0,
+                fontSize: 14.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
             ),
 
             MyStyleText(
               text: "What is the Loan Tenure?",
-              height: 30.0,
+              height: 21.0,
               fontSize: 20.0,
               width: 360.0,
               color: HexColor("#333333").withOpacity(0.8),
-              fontWeight: FontWeight.w400,
+            ),
+            SizedBox(height: 20,),
+
+
+            Row(
+              children: [
+                SizedBox(width: 30,),
+
+                Container(
+                  width: 134,
+                  child: CustomMatButton(
+                    color: HexColor("#F2F2F2"),
+                    text: "6 months",
+                    onPressed: (){},
+                    textColor: HexColor("#333333"),
+                  ),
+                ),
+                SizedBox(width: 37,),
+
+                Container(
+                  width: 134,
+                  child: CustomMatButton(
+                    color: HexColor("#F2F2F2"),
+                    text: "12 months",
+                    onPressed: (){},
+                    textColor: HexColor("#333333"),
+                  ),
+                ),
+              ],
             ),
 
-            MyStyleText(
-              text: "5 of 6",
-              height: 50.0,
-              fontSize: 14.0,
-              width: 100.0,
-              color: Colors.red,
-              fontWeight: FontWeight.w300,
+
+
+            SizedBox(height: 60,),
+
+            Padding(
+              padding: EdgeInsets.only(right:250.0),
+              child: MyStyleText(
+                text: "5 of 6",
+                height: 21.0,
+                fontSize: 14.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
             ),
 
-            MyStyleText(
-              text: "What is the re-payment duration?",
-              height: 30.0,
-              fontSize: 20.0,
-              width: 360.0,
-              color: HexColor("#333333").withOpacity(0.8),
-              fontWeight: FontWeight.w400,
+            Padding(
+              padding: EdgeInsets.only(left:25.0),
+              child: MyStyleText(
+                text: "What is the re-payment duration?",
+                height: 21.0,
+                fontSize: 20.0,
+                width: 360.0,
+                color: HexColor("#333333").withOpacity(0.8),
+              ),
+            ),
+            SizedBox(height: 20,),
+
+            Row(
+              children: [
+                SizedBox(width: 37,),
+                Container(
+                  width: 134,
+                  child: CustomMatButton(
+                    color: HexColor("#333333"),
+                    text: "Weekly",
+                    onPressed: (){},
+                    textColor: Colors.white,
+                  ),
+                ),
+                SizedBox(width: 37,),
+
+                Container(
+                  width: 134,
+                  child: CustomMatButton(
+                    color: HexColor("#F2F2F2"),
+                    text: "Daily",
+                    onPressed: (){},
+                    textColor: HexColor("#333333"),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 60,),
+
+            Padding(
+              padding: EdgeInsets.only(right:250.0),
+              child: MyStyleText(
+                text: "6 of 6",
+                height: 21.0,
+                fontSize: 14.0,
+                width: 100.0,
+                color: Colors.red,
+              ),
             ),
 
-            MyStyleText(
-              text: "6 of 6",
-              height: 50.0,
-              fontSize: 14.0,
-              width: 100.0,
-              color: Colors.red,
-              fontWeight: FontWeight.w300,
-            ),
+            Padding(
+              padding: EdgeInsets.only(left:30.0),
+              child: MyStyleText(
+                text: "How do you want to re-pay the loans?",
+                height: 50.0,
+                fontSize: 20.0,
+                width: 360.0,
+                color: HexColor("333333"),
 
-            MyStyleText(
-              text: "How do you want to re-pay the loans?",
-              height: 50.0,
-              fontSize: 20.0,
-              width: 360.0,
-              color: HexColor("333333"),
-
+              ),
             ),
+            Row(
+              children: [
+                SizedBox(width: 37,),
+                Container(
+                  width: 134,
+                  child: CustomMatButton(
+                    color: HexColor("#F2F2F2"),
+                    text: "Bank",
+                    onPressed: (){},
+                    textColor: HexColor("#333333"),
+                  ),
+                ),
+                SizedBox(width: 37,),
+
+                Container(
+                  width: 134,
+                  child: CustomMatButton(
+                    color: HexColor("#333333"),
+                    text: "Wallet",
+                    onPressed: (){},
+                    textColor: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 60,),
+
 
 
 
@@ -213,7 +335,7 @@ class _LoanInformationState extends State<LoanInformation> {
                     height: 45,
                     child: MyButton(
                       BorderSide_color: Colors.black,
-                      text: "Sign Out",
+                      text: "Save",
                       style:TextStyle(
                         fontSize: 16,
                         fontFamily: "Poppins",
@@ -239,6 +361,7 @@ class _LoanInformationState extends State<LoanInformation> {
                 ],
               ),
             ),
+            SizedBox(height: 60,),
           ],
         ),
       ),
@@ -246,27 +369,4 @@ class _LoanInformationState extends State<LoanInformation> {
     );
   }
 }
-class MyStyleText extends StatelessWidget {
-  MyStyleText({this.text,this.height,this.width,this.color,this.fontSize,this.fontWeight});
-  final text;
-  final width;
-  final height;
-  final color;
-  final fontSize;
-  final fontWeight;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      child: Text(text,style: TextStyle(
-          fontWeight: fontWeight,
-          fontStyle: FontStyle.normal,
-          fontFamily: "Poppins",
-          fontSize:fontSize,
-          color: color),
-      ),
-    );
-  }
-}

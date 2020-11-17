@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class SecondPatternView extends StatelessWidget {
-  SecondPatternView({this.color,this.color3,this.color2,this.color1});
+class PersonalPatternView extends StatelessWidget {
+  PersonalPatternView({this.color,this.color3,this.color2,this.color1});
 
   final color;
   final color1;
