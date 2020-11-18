@@ -10,6 +10,7 @@ import 'business/business_type.dart';
 import 'business/duration.dart';
 import 'business/employees.dart';
 import 'business/identification_numbers.dart';
+import 'business/last_client_guarantor.dart';
 import 'business/loan_information.dart';
 import 'business/name.dart';
 import 'business/upload_document.dart';
@@ -34,7 +35,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoanInformation(),
+      home: ClientGuarantor(),
     );
   }
 

@@ -2,7 +2,7 @@ import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class NextBusiness extends StatelessWidget {
+class ClientGuarantor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class NextBusiness extends StatelessWidget {
             SizedBox(height: 240,),
 
 
-            Text("Next is Business Information",style: TextStyle(
+            Text("Last  is Client Guarantor Information",style: TextStyle(
               fontSize: 16,
               fontFamily: "Poppins",
               fontStyle: FontStyle.normal,
@@ -59,13 +59,13 @@ class NextBusiness extends StatelessWidget {
             SizedBox(height: 15,),
 
             MyButton(
-              BorderSide_color: Colors.white,
+              BorderSide_color: HexColor("#1FE000"),
               text: "Business",
               style: TextStyle(
                 fontSize: 14,
                 fontFamily: "Poppins",
                 fontStyle: FontStyle.normal,
-                color: Colors.white,
+                color: HexColor("#1FE000"),
 
                 fontWeight: FontWeight.w300,
               ),
