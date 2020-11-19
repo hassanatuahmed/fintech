@@ -4,7 +4,8 @@ import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import '../create_account_screens/full_name.dart';
+import '../create_account_screens/full_name_screen2.dart';
+import 'next_business.dart';
 
 class AddressInformation extends StatelessWidget {
   get selected => null;
@@ -275,7 +276,13 @@ class AddressInformation extends StatelessWidget {
                       fontStyle: FontStyle.normal),),
                 ),
                 SizedBox(width: 80,),
-                NextArrow(),
+                GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>NextBusiness(),
+                          fullscreenDialog: true)
+                      );
+                    },
+                    child: NextArrow()),
               ],
             ),
             SizedBox(height: 60,),

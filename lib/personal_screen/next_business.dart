@@ -1,3 +1,4 @@
+import 'package:fintech/business/name.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -58,18 +59,25 @@ class NextBusiness extends StatelessWidget {
             ),
             SizedBox(height: 15,),
 
-            MyButton(
-              BorderSide_color: Colors.white,
-              text: "Business",
-              style: TextStyle(
-                fontSize: 14,
-                fontFamily: "Poppins",
-                fontStyle: FontStyle.normal,
-                color: Colors.white,
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessName(),
+                    fullscreenDialog: true)
+                );
+              },
+              child: MyButton(
+                BorderSide_color: Colors.white,
+                text: "Business",
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: "Poppins",
+                  fontStyle: FontStyle.normal,
+                  color: Colors.white,
 
-                fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w300,
+                ),
+                onPressed: (){},
               ),
-              onPressed: (){},
             ),
             SizedBox(height: 15,),
 

@@ -1,9 +1,10 @@
 import 'package:fintech/business_pattern_view.dart';
-import 'package:fintech/create_account_screens/full_name.dart';
+import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import 'employees.dart';
 import 'name.dart';
 
 class IdentificationNumbers extends StatefulWidget {
@@ -145,7 +146,13 @@ class _IdentificationNumbersState extends State<IdentificationNumbers> {
                       fontStyle: FontStyle.normal),),
                 ),
                 SizedBox(width: 80,),
-                NextArrow(),
+                GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Employees(),
+                          fullscreenDialog: true)
+                      );
+                    },
+                    child: NextArrow()),
               ],
             ),
             SizedBox(height:35),

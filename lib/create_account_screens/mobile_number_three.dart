@@ -1,4 +1,5 @@
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/full_name.dart';
+import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/full_name_screen2.dart';
+import 'package:fintech/create_account_screens/security_question_screen_four.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -159,7 +160,14 @@ class MobileNumber extends StatelessWidget {
                 Padding(
                     padding: EdgeInsets.only(left: 300.0),
 
-                    child:NextArrow()
+                    child:GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context)=>SecurityQuestion(),
+                            fullscreenDialog: true,
+                          ));
+                        },
+                        child: NextArrow())
                 ),
 
 

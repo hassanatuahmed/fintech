@@ -1,4 +1,6 @@
         import 'package:fintech/custom_button.dart';
+import 'package:fintech/personal_screen/dob.dart';
+import 'package:fintech/personal_screen/personal_screen.dart';
         import 'package:flutter/cupertino.dart';
         import 'package:flutter/material.dart';
         import 'package:hexcolor/hexcolor.dart';
@@ -32,26 +34,7 @@
                               ),
                             ),
                           ),
-                          Padding(
-                                  padding: EdgeInsets.only(top:10.0,bottom: 10),
-                                  child: Stack(
-                                      children: [
-                                        Image.asset("asset/images/pin.png",scale: 4,),
-                                        Positioned(
-                                          top: -5, right: -5,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.green,
-                                              borderRadius: BorderRadius.circular(30.0),
-                                            ),
-                                            height: 52,
-                                              width: 52,
-
-                                              child: Icon(Icons.check,color: Colors.white,)),
-                                        ),
-
-                                      ],),
-                    ),
+                          Image.asset("asset/images/verified.png",scale: 1,),
                           Container(
                               height: 80,
                               width: 321,
@@ -93,18 +76,27 @@
             ),),
                       SizedBox(height: 20,),
 
-                        MyButton(
-                          BorderSide_color: Colors.white,
-                        text: "Personal",
-                        style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: "Poppins",
-                        color: Colors.white,
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalScreen(),
+                                fullscreenDialog: true)
+                            );
+                          },
+                          child: MyButton(
+                            BorderSide_color: Colors.white,
+                          text: "Personal",
+                          style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                          color: Colors.white,
 
-                        fontStyle: FontStyle.normal,
-                        fontWeight: FontWeight.w300,
-                        ),
-                        onPressed: (){},
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w300,
+                          ),
+                          //PersonalScreen
+                          onPressed: (){
+                          },
+                          ),
                         ),
                        SizedBox(height: 10,),
 

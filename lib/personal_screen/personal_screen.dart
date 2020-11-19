@@ -1,4 +1,4 @@
-import 'package:fintech/create_account_screens/full_name.dart';
+import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/pattern_view.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';

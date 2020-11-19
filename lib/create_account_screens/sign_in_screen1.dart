@@ -3,22 +3,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'custom_button.dart';
-import 'custom_field.dart';
+import 'full_name_screen2.dart';
+import '../custom_button.dart';
+import '../custom_field.dart';
 
-class HomeScreen extends StatefulWidget {
+class SignIn extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _SignInState createState() => _SignInState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     var constant;
     return Scaffold(
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(0.0),
+        child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               PatternView(
@@ -100,16 +100,29 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         text: ("Sign in with FingerPrint"),
                         side: BorderSide(color: Colors.blue),
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>FullName()),
+                          );
+                        },
                       ),
                       SizedBox(height: 20),
-                      Text("Create Account",style: TextStyle(
-                        fontStyle: FontStyle.normal,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context)=>FullName(),
+                            fullscreenDialog: true,
+                          ));
+                        },
+                        child: Text("Create Account",
+                          style: TextStyle(
+                          fontStyle: FontStyle.normal,
 
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "Poppins",
-                        fontSize: 16,
-                      ),),
+                          fontWeight: FontWeight.w400,
+                          fontFamily: "Poppins",
+                          fontSize: 16,
+                        ),),
+                      ),
                       SizedBox(height: 15,),
                     ],
                   ),

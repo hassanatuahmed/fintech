@@ -1,5 +1,6 @@
+import 'package:fintech/business/duration.dart';
 import 'package:fintech/business_pattern_view.dart';
-import 'package:fintech/create_account_screens/full_name.dart';
+import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/material.dart';
@@ -113,7 +114,13 @@ class _EmployeesState extends State<Employees> {
                       fontStyle: FontStyle.normal),),
                 ),
                 SizedBox(width: 80,),
-                NextArrow(),
+                GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HowLong(),
+                          fullscreenDialog: true)
+                      );
+                    },
+                    child: NextArrow()),
               ],
             ),
           ),

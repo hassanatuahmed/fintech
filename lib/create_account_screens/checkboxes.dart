@@ -1,8 +1,9 @@
+import 'package:fintech/create_account_screens/pin_verification.dart';
 import 'package:fintech/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'full_name.dart';
+import 'full_name_screen2.dart';
 import '../custom_field.dart';
 class Checkboxes extends StatelessWidget {
   @override
@@ -109,7 +110,12 @@ class Checkboxes extends StatelessWidget {
                       textColor: Colors.white,
                       color: Colors.red,
                       text: "submit",
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerification(),
+                        fullscreenDialog: true)
+
+                        );
+                      },
 
                     ),
                   ),

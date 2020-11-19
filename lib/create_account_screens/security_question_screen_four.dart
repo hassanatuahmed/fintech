@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import 'full_name.dart';
+import 'checkboxes.dart';
+import 'full_name_screen2.dart';
 import '../custom_field.dart';
 
 class SecurityQuestion extends StatelessWidget {
@@ -9,6 +10,10 @@ class SecurityQuestion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        onPressed:(){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Checkboxes()),
+          );
+        },
         backgroundColor: Colors.red,
         child: Icon(Icons.arrow_forward,color: Colors.white,),
       ),

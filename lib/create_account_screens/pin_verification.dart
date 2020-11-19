@@ -1,3 +1,4 @@
+import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/custom_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -130,7 +131,11 @@ class PinVerification extends StatelessWidget {
             CustomMatButton(
               textColor: HexColor("#ED1C24"),
               text: "verify",
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerified(),
+                fullscreenDialog: true)
+                );
+              },
               color: Colors.white,
 
             ),

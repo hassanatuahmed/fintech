@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import 'mobile_number_three.dart';
+
 class FullName extends StatefulWidget {
   FullName({this.color,this.text});
   final text;
@@ -168,7 +170,17 @@ class _FullNameState extends State<FullName> {
                 Padding(
                   padding: EdgeInsets.only(left: 300.0),
 
-                  child:NextArrow()
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=>MobileNumber(),
+                        fullscreenDialog: true,
+                      ));
+                    },
+                    child: NextArrow(
+
+                    ),
+                  )
                 ),
                 SizedBox(height: 20),
 
@@ -184,20 +196,7 @@ class _FullNameState extends State<FullName> {
   }
 }
 
-class GroupBox extends StatelessWidget {
-  GroupBox({this.height,this.width,this.border});
-  final height;
-  final width;
-  final border;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-        border: Border.all(color: HexColor("333333"),
-        ),),
-    );
-  }
-}
+
 
 
 class NextArrow extends StatelessWidget {
