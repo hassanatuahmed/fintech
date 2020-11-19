@@ -2,6 +2,7 @@ import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/pattern_view.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';
+import 'package:fintech/personal_screen/dob.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -275,7 +276,13 @@ class _PersonalScreenState extends State<PersonalScreen> {
                       fontStyle: FontStyle.normal),),
                 ),
                 SizedBox(width: 80,),
-                NextArrow(),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalDob(),
+                    fullscreenDialog: true)
+                    );
+                  },
+                    child: NextArrow()),
               ],
             ),
             SizedBox(height: 30,),

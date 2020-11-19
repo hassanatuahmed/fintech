@@ -5,12 +5,15 @@ import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:syncfusion_flutter_sliders/sliders.dart';
 class Employees extends StatefulWidget {
   @override
   _EmployeesState createState() => _EmployeesState();
 }
 
 class _EmployeesState extends State<Employees> {
+  double _value = 40.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +45,22 @@ class _EmployeesState extends State<Employees> {
 
           SizedBox(height: 28,),
           Container(
+            child: SfSlider(
+              min: 1.0,
+              max: 100.0,
+              showLabels: true,
+              showTicks: true,
+              showTooltip: true,
+              interval: 10,
+              value: _value,
+              minorTicksPerInterval: 1,
+              onChanged: (dynamic value){
+                setState(() {
+                  _value = value;
+
+                });
+              },
+            ),
             height: 10,
             width: 360,
             color: Colors.red,

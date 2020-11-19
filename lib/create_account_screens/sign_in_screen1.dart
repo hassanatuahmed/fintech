@@ -17,8 +17,10 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     var constant;
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
+
           child: Column(
             children: <Widget>[
               PatternView(

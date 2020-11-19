@@ -4,6 +4,7 @@ import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_scr
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:fintech/personal_screen/upload_identification.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -37,9 +38,18 @@ class _PersonalDobState extends State<PersonalDob> {
             ),),
           ),
           Container(
-            width: 233,
+            width: 240,
             height: 227,
+            child: CupertinoDatePicker(
+              mode: CupertinoDatePickerMode.date,
+              initialDateTime: DateTime(1900,1,1),
+              onDateTimeChanged: (DateTime newDateTime){},
+
+            ),
+
           ),
+
+
           Row(
            children: [
              SizedBox(width: 36,),
