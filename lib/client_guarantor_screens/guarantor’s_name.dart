@@ -1,4 +1,5 @@
 import 'package:fintech/business/name.dart';
+import 'package:fintech/client_guarantor_screens/relation_with_gurantor.dart';
 import 'package:fintech/client_gurantor_pathern.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/custom_button.dart';
@@ -58,6 +59,7 @@ class _GurantorNameState extends State<GurantorName> {
                 fontSize: 20.0,
               ),
             ),
+            SizedBox(height: 20,),
             Row(
               children: [
                 SizedBox(width: 37,),
@@ -98,7 +100,7 @@ class _GurantorNameState extends State<GurantorName> {
               ],
             ),
 
-
+             SizedBox(height: 60,),
 
             Padding(
               padding: EdgeInsets.only(left:33.0),
@@ -121,12 +123,18 @@ class _GurantorNameState extends State<GurantorName> {
                 fontSize: 20.0,
               ),
             ),
+            SizedBox(height: 20,),
 
-            MyText(
-              hintText: "Name",
-              hintText_color: Colors.white,
-              fillColor: HexColor("#333333"),
+            Padding(
+              padding:  EdgeInsets.only(right:20.0),
+              child: MyText(
+                hintText: "Name",
+                hintText_color: Colors.white,
+                fillColor: HexColor("#333333"),
+              ),
             ),
+
+            SizedBox(height: 60,),
 
             Padding(
               padding: EdgeInsets.only(left:33.0),
@@ -149,10 +157,16 @@ class _GurantorNameState extends State<GurantorName> {
                 fontSize: 20.0,
               ),
             ),
-            MyText(
-              hintText: "Last Name",
-              hintText_color: Colors.white,
-              fillColor: HexColor("#333333"),
+
+            SizedBox(height: 20,),
+
+            Padding(
+              padding:  EdgeInsets.only(right:20.0),
+              child: MyText(
+                hintText: "Last Name",
+                hintText_color: Colors.white,
+                fillColor: HexColor("#333333"),
+              ),
             ),
 
             SizedBox(height: 120,),
@@ -192,11 +206,11 @@ class _GurantorNameState extends State<GurantorName> {
                   ),
                   SizedBox(width: 80,),
                   GestureDetector(
-                      //onTap: (){
-                        //Navigator.push(context, MaterialPageRoute(builder: (context)=>(),
-                           // fullscreenDialog: true));
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>RelationWithGuarantor(),
+                            fullscreenDialog: true));
 
-                      //},
+                      },
                       child: NextArrow()),
                 ],
               ),
