@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../my_button_screen.dart';
 import '../my_style_text.dart';
 import 'name.dart';
 class LoanInformation extends StatefulWidget {
@@ -335,6 +336,7 @@ class _LoanInformationState extends State<LoanInformation> {
                     width: 125,
                     height: 45,
                     child: MyButton(
+
                       BorderSide_color: Colors.black,
                       text: "Save",
                       style:TextStyle(

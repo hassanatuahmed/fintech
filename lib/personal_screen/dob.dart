@@ -1,3 +1,4 @@
+import '../my_button_screen.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/custom_button.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_screen/personal_screen.dart';
@@ -57,6 +58,8 @@ class _PersonalDobState extends State<PersonalDob> {
                width: 125,
                height: 45,
                child: MyButton(
+
+
                  BorderSide_color: Colors.black,
                  text: "Sign Out",
                  style:TextStyle(

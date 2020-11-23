@@ -1,6 +1,9 @@
+import 'package:fintech/button_two.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../my_button_screen.dart';
 
 class ClientGuarantor extends StatelessWidget {
   @override
@@ -17,6 +20,7 @@ class ClientGuarantor extends StatelessWidget {
                 width: 100,
                 height: 40,
                 child: MyButton(
+
                   BorderSide_color: Colors.white,
                   text: "Sign Out",
                   style:TextStyle(
@@ -43,7 +47,8 @@ class ClientGuarantor extends StatelessWidget {
             ),),
             SizedBox(height: 20,),
 
-            MyButton(
+            ButtonTwo(
+              icon: Icons.check,
               BorderSide_color: HexColor("#1FE000"),
               text: "Personal",
               style: TextStyle(
@@ -58,7 +63,8 @@ class ClientGuarantor extends StatelessWidget {
             ),
             SizedBox(height: 15,),
 
-            MyButton(
+            ButtonTwo(
+              icon: Icons.check,
               BorderSide_color: HexColor("#1FE000"),
               text: "Business",
               style: TextStyle(

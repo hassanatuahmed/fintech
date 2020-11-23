@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../my_button_screen.dart';
 import 'name.dart';
 class BusinessAddress extends StatefulWidget {
   @override
@@ -167,6 +168,8 @@ class _BusinessAddressState extends State<BusinessAddress> {
                     width: 125,
                     height: 45,
                     child: MyButton(
+
+
                       BorderSide_color: Colors.black,
                       text: "Sign Out",
                       style:TextStyle(

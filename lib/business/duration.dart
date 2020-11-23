@@ -2,9 +2,12 @@ import 'package:fintech/business/annual_revenue.dart';
 import 'package:fintech/business_pattern_view.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
+import 'package:fintech/my_slider.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../my_button_screen.dart';
 class HowLong extends StatefulWidget {
   @override
   _HowLongState createState() => _HowLongState();
@@ -45,6 +48,7 @@ class _HowLongState extends State<HowLong> {
             height: 10,
             width: 360,
             color: Colors.red,
+            child: MySlider(),
           ),
 
           SizedBox(height: 12,),
@@ -91,6 +95,7 @@ class _HowLongState extends State<HowLong> {
                   width: 125,
                   height: 45,
                   child: MyButton(
+
                     BorderSide_color: Colors.black,
                     text: "Sign Out",
                     style:TextStyle(

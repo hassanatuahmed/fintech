@@ -2,10 +2,13 @@ import 'package:fintech/business/duration.dart';
 import 'package:fintech/business_pattern_view.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
+import 'package:fintech/my_slider.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:syncfusion_flutter_sliders/sliders.dart';
+
+import '../my_button_screen.dart';
+
 class Employees extends StatefulWidget {
   @override
   _EmployeesState createState() => _EmployeesState();
@@ -45,22 +48,8 @@ class _EmployeesState extends State<Employees> {
 
           SizedBox(height: 28,),
           Container(
-            child: SfSlider(
-              min: 1.0,
-              max: 100.0,
-              showLabels: true,
-              showTicks: true,
-              showTooltip: true,
-              interval: 10,
-              value: _value,
-              minorTicksPerInterval: 1,
-              onChanged: (dynamic value){
-                setState(() {
-                  _value = value;
+            child:  MySlider(),
 
-                });
-              },
-            ),
             height: 10,
             width: 360,
             color: Colors.red,
@@ -98,7 +87,10 @@ class _EmployeesState extends State<Employees> {
             ),),
           ),
 
-          SizedBox(height: 75,),
+
+
+          SizedBox(height: 55,),
+
 
 
           Padding(
@@ -110,6 +102,7 @@ class _EmployeesState extends State<Employees> {
                   width: 125,
                   height: 45,
                   child: MyButton(
+
                     BorderSide_color: Colors.black,
                     text: "Sign Out",
                     style:TextStyle(
@@ -148,3 +141,5 @@ class _EmployeesState extends State<Employees> {
     );
   }
 }
+
+

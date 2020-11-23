@@ -4,6 +4,7 @@ import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../my_button_screen.dart';
 import 'employees.dart';
 import 'name.dart';
 
@@ -123,6 +124,7 @@ class _IdentificationNumbersState extends State<IdentificationNumbers> {
                   width: 125,
                   height: 45,
                   child: MyButton(
+
                     BorderSide_color: Colors.black,
                     text: "Sign Out",
                     style:TextStyle(

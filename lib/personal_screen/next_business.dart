@@ -3,6 +3,9 @@ import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../button_two.dart';
+import '../my_button_screen.dart';
+
 class NextBusiness extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -44,7 +47,9 @@ class NextBusiness extends StatelessWidget {
             ),),
             SizedBox(height: 20,),
 
-            MyButton(
+            ButtonTwo(
+              icon:(Icons.check),
+
               BorderSide_color: HexColor("#1FE000"),
               text: "Personal",
               style: TextStyle(
@@ -76,6 +81,7 @@ class NextBusiness extends StatelessWidget {
 
                   fontWeight: FontWeight.w300,
                 ),
+
                 onPressed: (){},
               ),
             ),

@@ -1,3 +1,4 @@
+import '../my_button_screen.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_screen/personal_screen.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';
@@ -253,6 +254,7 @@ class AddressInformation extends StatelessWidget {
                   width: 125,
                   height: 45,
                   child: MyButton(
+
                     BorderSide_color: Colors.black,
                     text: "Sign Out",
                     style:TextStyle(

@@ -74,7 +74,7 @@ class MobileNumber extends StatelessWidget {
 
 
                             hintText: "(000) 000-000",
-                            prefixIcon: Icon(Icons.flag),
+                            prefixIcon: Icon(Icons.flag,color: Colors.red,),
                           ),
                         ),
                       ],

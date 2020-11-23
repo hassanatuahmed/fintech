@@ -1,3 +1,4 @@
+import '../my_button_screen.dart';
 import 'address_info.dart';
 import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_screen/personal_screen.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
@@ -102,6 +103,7 @@ class UploadIdentification extends StatelessWidget {
                 width: 125,
                 height: 45,
                 child: MyButton(
+
                   BorderSide_color: Colors.black,
                   text: "Sign Out",
                   style:TextStyle(

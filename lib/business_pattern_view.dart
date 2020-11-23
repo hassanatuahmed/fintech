@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import 'create_account_screens/pin_successfully_verified.dart';
+import 'my_button_screen.dart';
 
 class BusinessPatternView extends StatelessWidget {
   BusinessPatternView({this.color,this.color3,this.color2,this.color1,
@@ -21,7 +22,7 @@ class BusinessPatternView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 425,
-      height: 261.3,
+      //height: 261.3,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topRight,
@@ -51,6 +52,8 @@ class BusinessPatternView extends StatelessWidget {
                 width: 95,
                 height: 40,
                 child: MyButton(
+
+
                   BorderSide_color: Colors.white,
                   text: "Sign Out",
                   style:TextStyle(

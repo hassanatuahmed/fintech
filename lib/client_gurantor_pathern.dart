@@ -5,18 +5,19 @@ import 'package:hexcolor/hexcolor.dart';
 
 import 'my_button_screen.dart';
 
-class PersonalPatternView extends StatelessWidget {
-  PersonalPatternView({this.color,this.color3,this.color2,this.color1});
+class GurantorPatternView extends StatelessWidget {
+  GurantorPatternView({this.color,this.color3,this.color2,this.color1,this.color4});
 
   final color;
   final color1;
   final color2;
   final color3;
+  final color4;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 425,
-      height: 261.3,
+
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topRight,
@@ -34,13 +35,16 @@ class PersonalPatternView extends StatelessWidget {
                   height: 16,
                   width: 16,
                   child: Icon(Icons.keyboard_backspace,color: Colors.white,)),
-              SizedBox(width: 70,),
-              Text("Personal",style: TextStyle(fontSize: 34,
-                fontWeight: FontWeight.w400,
-                fontStyle: FontStyle.normal, color: Colors.white,
+              SizedBox(width: 25,),
+              Container(
+                height: 80,
+                width: 239,
+                child: Text("Client Guarantor",style: TextStyle(fontSize: 34,
+                  fontWeight: FontWeight.w400,
+                  fontStyle: FontStyle.normal, color: Colors.white,
+                ),
+                  textAlign: TextAlign.center,),
               ),
-                textAlign: TextAlign.center,),
-              SizedBox(width: 30,),
 
               Container(
                 width: 95,
@@ -63,10 +67,10 @@ class PersonalPatternView extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 22,),
+          SizedBox(height: 10,),
           Row(
             children: [
-              SizedBox(width: 100,),
+              SizedBox(width: 80,),
 
               Container(
                 height: 3,
@@ -90,6 +94,13 @@ class PersonalPatternView extends StatelessWidget {
                 height: 3,
                 width:40,
                 color: color3,
+              ),
+              SizedBox(width: 10,),
+
+              Container(
+                height: 3,
+                width:40,
+                color: color4,
               ),
             ],
           ),

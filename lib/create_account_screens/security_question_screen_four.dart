@@ -86,7 +86,7 @@ class SecurityQuestion extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(left:25.0,right: 20),
                             child: CustomField(
-                              hintText: "null",
+                              hintText: "",
                               prefixIcon: Icon(null),
                             ),
                           ),
