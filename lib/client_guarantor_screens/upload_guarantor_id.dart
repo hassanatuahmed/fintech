@@ -1,81 +1,66 @@
-
-import 'package:fintech/client_gurantor_pathern.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
-import 'package:fintech/my_style_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../client_gurantor_pathern.dart';
 import '../my_button_screen.dart';
-import 'guarantor_mobile_number.dart';
-
-
-
-class RelationWithGuarantor extends StatefulWidget {
+import '../my_style_text.dart';
+class GuarantorUploads extends StatefulWidget {
   @override
-  _RelationWithGuarantorState createState() => _RelationWithGuarantorState();
+  _GuarantorUploadsState createState() => _GuarantorUploadsState();
 }
 
-class _RelationWithGuarantorState extends State<RelationWithGuarantor> {
-  get selected => null;
-
-
-
+class _GuarantorUploadsState extends State<GuarantorUploads> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       body: Column(
         children: [
           GurantorPatternView(
             color: Colors.white,
             color1: Colors.white,
-            color2: Colors.black,
-            color3: Colors.black,
-            color4: Colors.black,
+            color2: Colors.white,
+            color3: Colors.white,
+            color4: Colors.white,
           ),
           MyStyleText(
-            text: "What’s your relationship with the Guarantor",
+            text: "Upload Guarantor’s Primary ID",
             fontSize: 34.0,
             color: HexColor("333333").withOpacity(0.9),
-            height: 153.0,
+            height: 100.0,
             width: 360.0,
           ),
-          Container(
-            height: 60,
-            width: 339,
-            decoration: BoxDecoration(
 
-                borderRadius: BorderRadius.circular(30.0),
-                color: HexColor("#333333"),
-                border: Border.all()),
-            child: Padding(
-              padding: EdgeInsets.only(right:8.0,left: 8.0),
-              child: DropdownButtonFormField<String>(
-
-                hint: Text("Relationship Type",style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontFamily: "Poppins",
-                  color: Colors.white,
-                  fontStyle: FontStyle.normal,
-                  fontSize: 16,
-                ),),
-                value: selected,
-
-                items: ["three", "two", "one"]
-                    .map((label) => DropdownMenuItem(
-                  child: Text(label),
-                  value: label,
-                ))
-                    .toList(),
-                onChanged: (value) {
-                },
-
-
+          Padding(
+            padding: EdgeInsets.only(right:150.0),
+            child: Container(
+              height:200,
+              width: 180,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: HexColor("#333333"),width: 1),
+              ),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top:28.0,bottom: 24.0),
+                    child: Image.asset("asset/images/passport.png"),
+                  ),
+                  Container(
+                      height: 54,
+                      width: 160,
+                      child: Text("Passport, National ID, Driver License/ Voter ID",style: TextStyle(
+                        fontSize: 16,
+                        fontStyle: FontStyle.normal,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                      ),textAlign: TextAlign.center,)),
+                ],
               ),
             ),
           ),
-          SizedBox(height: 100,),
+          SizedBox(height: 20,),
           Padding(
             padding:  EdgeInsets.only(right:4.0),
             child: Row(
@@ -111,16 +96,15 @@ class _RelationWithGuarantorState extends State<RelationWithGuarantor> {
                 ),
                 SizedBox(width: 80,),
                 GestureDetector(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>GuarantorMobile(),
-                         fullscreenDialog: true));
+                  //onTap: (){
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>RelationWithGuarantor(),
+                  // fullscreenDialog: true));
 
-                    },
+                  // },
                     child: NextArrow()),
               ],
             ),
           ),
-
         ],
       ),
     );
