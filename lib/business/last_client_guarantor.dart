@@ -1,4 +1,5 @@
 import 'package:fintech/button_two.dart';
+import 'package:fintech/client_guarantor_screens/guarantor%E2%80%99s_name.dart';
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -79,15 +80,23 @@ class ClientGuarantor extends StatelessWidget {
             ),
             SizedBox(height: 15,),
 
-            MyButton(
-              BorderSide_color: Colors.white,
-              text: "Client Guarantor Information",
-              style: TextStyle(fontSize: 14,
-                fontFamily: "Poppins",
-                fontStyle: FontStyle.normal,
-                color: Colors.white,
-                fontWeight: FontWeight.w300,),
-              onPressed: (){},
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>GurantorName(),
+                  fullscreenDialog: true,
+                ),
+                );
+              },
+              child: MyButton(
+                BorderSide_color: Colors.white,
+                text: "Client Guarantor Information",
+                style: TextStyle(fontSize: 14,
+                  fontFamily: "Poppins",
+                  fontStyle: FontStyle.normal,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,),
+                onPressed: (){},
+              ),
             ),
             SizedBox(height: 90,),
 
