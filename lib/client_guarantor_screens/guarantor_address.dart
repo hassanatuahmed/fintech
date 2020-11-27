@@ -15,6 +15,7 @@ class _GuarantorAddressState extends State<GuarantorAddress> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           GurantorPatternView(
@@ -29,27 +30,35 @@ class _GuarantorAddressState extends State<GuarantorAddress> {
             text: "What’s the Guarantor’s Digital Address?",
             fontSize: 34.0,
             color: HexColor("333333").withOpacity(0.9),
-            height: 153.0,
+            height: 150.0,
             width: 360.0,
           ),
 
           Container(
-            color: Colors.red,
             height: 60,
-            child: Row(
-              children: [
-                Text("hello"),
-                Text("hello"),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "hellohello",
-                  ),
-                ),
-                Icon(Icons.flag),
-              ],
+            width: 339,
+            child: MaterialButton(
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
+              color: HexColor("#333333"),
+              onPressed: (){},
+              child: Row(
+                children: [
+                  SizedBox(width: 15,),
+
+                  Text("Digital Address",style: TextStyle(
+                      fontWeight: FontWeight.w200,
+                      fontStyle: FontStyle.normal,
+                      fontFamily: "Poppins",
+                      color: Colors.white),),
+                  SizedBox(width: 160,),
+                  Icon(Icons.location_on,color: Colors.white,),
+                  SizedBox(width: 15,),
+
+                ],
+              ),
             ),
           ),
-          SizedBox(height: 80,),
+          SizedBox(height: 85,),
           Padding(
             padding:  EdgeInsets.only(right:4.0),
             child: Row(

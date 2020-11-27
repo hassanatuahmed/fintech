@@ -5,6 +5,7 @@ import 'package:hexcolor/hexcolor.dart';
 import '../client_gurantor_pathern.dart';
 import '../my_button_screen.dart';
 import '../my_style_text.dart';
+import 'all_done.dart';
 class GuarantorUploads extends StatefulWidget {
   @override
   _GuarantorUploadsState createState() => _GuarantorUploadsState();
@@ -96,11 +97,11 @@ class _GuarantorUploadsState extends State<GuarantorUploads> {
                 ),
                 SizedBox(width: 80,),
                 GestureDetector(
-                  //onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>RelationWithGuarantor(),
-                  // fullscreenDialog: true));
+                  onTap: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>AllDone(),
+                   fullscreenDialog: true));
 
-                  // },
+                   },
                     child: NextArrow()),
               ],
             ),
