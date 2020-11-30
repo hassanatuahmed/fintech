@@ -62,6 +62,8 @@ flutter:
     - asset/images/financial-statement.png
     - asset/images/verified.png
     - asset/images/wallet.png
+    - asset/images/lady.png
+    - asset/images/loan.png
 
 
 
