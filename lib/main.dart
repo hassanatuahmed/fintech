@@ -3,6 +3,7 @@
 
 
 import 'package:fintech/create_account_screens/sign_in_screen1.dart';
+import 'package:fintech/portal/current_loan_application.dart';
 import 'package:fintech/portal/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:HomePage(),
+      home:CurrentLoanApplication(),
     );
   }
 

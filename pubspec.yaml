@@ -65,6 +65,10 @@ flutter:
     - asset/images/lady.png
     - asset/images/loan.png
     - asset/images/finance.png
+    - asset/images/invest.png
+    - asset/images/file.png
+    - asset/images/money.png
+    - asset/images/chat.png
 
 
 

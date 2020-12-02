@@ -1,47 +1,109 @@
-import 'package:fintech/home_page_pattern_view.dart';
-import 'package:fintech/my_style_text.dart';
+import 'package:fintech/my_button_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import '../my_button_screen.dart';
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+import '../home_page_pattern_view.dart';
+import '../my_style_text.dart';
 
-class _HomePageState extends State<HomePage> {
+class CurrentLoanApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(currentIndex: 0,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.black45
-        ,
-          items: [
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.home,color: Colors.red,),
-          title: new Text('Home',style: TextStyle(color: Colors.red),),
-        ),
-
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.attach_money,color: Colors.grey),
-          title: new Text('Loan',style: TextStyle(color: Colors.grey ),),
-        ),
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.home,color: Colors.grey),
-          title: new Text('Banking',style: TextStyle(color: Colors.grey),),
-        ),
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.notifications,color: Colors.grey),
-          title: new Text('Notification',style: TextStyle(color: Colors.grey),),
-        ),
-      ],),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HomePagePatternView(),
+            Stack(
+
+              children: [
+                HomePagePatternView(),
+                Padding(
+                  padding:  EdgeInsets.only(top:95.0,left: 25.0,right: 25.0),
+                  child: Card(
+                    child: Container(
+                      height: 300,
+                      width: 361,
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(height: 50.0,),
+
+                              SizedBox(width: 120.0,),
+
+
+                              MyStyleText(
+                                text: "Application ID:",
+                                height: 18.0,
+                                width: 86.0,
+                                fontSize: 12.0,
+                              ),
+                              MyStyleText(
+                                text: "72",
+                                height: 18.0,
+                                width: 86.0,
+                                fontSize: 12.0,
+                              ),
+
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(width: 35,),
+                              Container(
+                                height: 161,
+                                width: 15,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topCenter,
+                                    end: Alignment.bottomLeft,
+                                    colors: [Colors.red,HexColor("9C3D98")],
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(right:12.0),
+                                    child: Text("Approved"),
+                                  ),
+                                  SizedBox(height: 43,),
+                                  Padding(
+                                    padding: EdgeInsets.only(left:12.0),
+                                    child: Text("Under Review"),
+                                  ),
+                                  SizedBox(height: 43,),
+
+                                  Text("In progress"),
+
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Text("Status"),
+                                  MyStyleText(
+                                    text: "Approved",
+                                  ),
+                                  MyStyleText(
+                                    text: "Loan requested",
+                                  ),
+                                  Text("100,000 GHS"),
+
+                                ],
+                              ),
+
+                            ],
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20,),
             Padding(
               padding: EdgeInsets.only(right:280.0),
               child: MyStyleText(
@@ -59,12 +121,12 @@ class _HomePageState extends State<HomePage> {
                   height: 120,
                   width: 110,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    gradient: LinearGradient(
-                      begin:Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [HexColor("333333").withOpacity(1.0), HexColor("E75348").withOpacity(1.0)])
-                    ),
+                      borderRadius: BorderRadius.circular(10.0),
+                      gradient: LinearGradient(
+                          begin:Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [HexColor("333333").withOpacity(1.0), HexColor("E75348").withOpacity(1.0)])
+                  ),
                   child: Column(
                     children: [
                       SizedBox(height: 23,),
@@ -72,22 +134,22 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: 10,),
 
                       Container(
-                        height: 36,
+                          height: 36,
                           width: 88,
                           child: Text("Apply for a Loan",style: TextStyle(
                             color: Colors.white,
                           ),textAlign: TextAlign.center,)),
                     ],
                   ),
-                  ),
+                ),
 
                 SizedBox(width: 10,),
                 Container(
                   height: 120,
                   width: 110,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                     color: HexColor("FA5E64").withOpacity(1.0),
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: HexColor("FA5E64").withOpacity(1.0),
                   ),
                   child: Column(
                     children: [
@@ -123,7 +185,7 @@ class _HomePageState extends State<HomePage> {
                           height: 36,
                           width: 88,
                           child: Text("Book Appointment",style: TextStyle(color: Colors.white),
-                          textAlign: TextAlign.center,)),
+                            textAlign: TextAlign.center,)),
                     ],
                   ),
                 ),
@@ -195,28 +257,19 @@ class _HomePageState extends State<HomePage> {
                       width: 43.0,
                       fontSize: 16.0,
                     ),
-                    SizedBox(width: 30,),
-                    Stack(
-                      children: [
-                        Image.asset("asset/images/invest.png",scale: 4,),
-                        Padding(
-                          padding: EdgeInsets.only(left:100.0,right: 0.0),
-                          child: Image.asset("asset/images/chat.png"),
-                        ),
-                      ],
-                    ),
+                    SizedBox(width: 50,),
+                    Image.asset("asset/images/invest.png"),
                     SizedBox(width: 10,),
 
                   ],
                 ),
               ),
             ),
+            SizedBox(height: 20,),
+
           ],
         ),
       ),
     );
   }
 }
-
-
-

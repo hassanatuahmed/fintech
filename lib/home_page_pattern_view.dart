@@ -13,7 +13,7 @@ class HomePagePatternView extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
-          colors: [Colors.red,HexColor("9C3D98")],),
+          colors: [Colors.red,Colors.red],),
       ),
       child: Column(
         children: [
