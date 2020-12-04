@@ -62,6 +62,7 @@ class LoanSuccessful extends StatelessWidget {
               child: CustomMatButton(
                 textColor: HexColor("#ED1C24"),
                 text: "Home",
+                fontSize: 16,
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerified(),
                       fullscreenDialog: true)

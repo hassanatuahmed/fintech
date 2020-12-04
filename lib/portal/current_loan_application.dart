@@ -1,7 +1,7 @@
-import 'package:fintech/my_button_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../custom_button.dart';
 import '../home_page_pattern_view.dart';
 import '../my_style_text.dart';
 
@@ -79,16 +79,53 @@ class CurrentLoanApplication extends StatelessWidget {
 
                                 ],
                               ),
+                              SizedBox(width: 20,),
                               Column(
                                 children: [
-                                  Text("Status"),
-                                  MyStyleText(
-                                    text: "Approved",
+                                  Padding(
+                                    padding: EdgeInsets.only(right:58.0),
+                                    child: Text("Status"),
+                                  ),
+                                  Padding(
+                                    padding:  EdgeInsets.only(bottom:20.0),
+                                    child: MyStyleText(
+                                      text: "Approved",
+                                      fontSize: 20.0,
+                                      height: 30.0,
+                                      width: 98.0,
+                                    ),
                                   ),
                                   MyStyleText(
                                     text: "Loan requested",
+                                    height: 18.0,
+                                    fontSize: 12.0,
+                                    width: 94.0,
                                   ),
-                                  Text("100,000 GHS"),
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom:15.0),
+                                    child: Text("100,000 GHS",style: TextStyle(fontSize: 20.0,color: Colors.red),),
+                                  ),
+                                  Container(
+                                    height: 38,
+                                      width: 172,
+                                      child:  CustomMatButton(
+                                        onPressed: (){},
+                                        text: "View and Accept Terms",
+                                        color: Colors.red,
+                                        textColor: Colors.white,
+                                        fontSize: 12.0,
+                                      ),),
+                                  SizedBox(height: 10,),
+                                  Container(
+                                    height: 38,
+                                    width: 172,
+                                    child:  CustomMatButton(
+                                      onPressed: (){},
+                                      text: "View Application details",
+                                      color: HexColor("#F9F9F9"),
+                                      textColor: HexColor("#ED1C24"),
+                                      fontSize: 12.0,
+                                    ),),
 
                                 ],
                               ),

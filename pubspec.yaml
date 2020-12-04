@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
   hexcolor: ^1.0.6
+  dotted_border: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
     - asset/images/file.png
     - asset/images/money.png
     - asset/images/chat.png
+    - asset/images/polygon.png
 
 
 

@@ -1,20 +1,7 @@
 
-
-
-
-import 'package:fintech/create_account_screens/sign_in_screen1.dart';
-import 'package:fintech/portal/current_loan_application.dart';
-import 'package:fintech/portal/home_page.dart';
+import 'package:fintech/portal/loan_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'client_guarantor_screens/guarantor_address.dart';
-import 'client_guarantor_screens/guarantor_mobile_number.dart';
-import 'client_guarantor_screens/guarantor’s_name.dart';
-import 'client_guarantor_screens/upload_guarantor_id.dart';
-
-
-
 
 
 
@@ -26,7 +13,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:CurrentLoanApplication(),
+      home: LoanPage(),
     );
   }
 

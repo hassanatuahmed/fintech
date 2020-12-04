@@ -42,11 +42,12 @@ class CustomOutlineButton extends StatelessWidget {
 }
 
 class CustomMatButton extends StatelessWidget {
-  CustomMatButton({this.text,this.color,this.onPressed,this.textColor});
+  CustomMatButton({this.text,this.color,this.onPressed,this.textColor,this.fontSize});
   final text;
   final color;
   final onPressed;
   final textColor;
+  final fontSize;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
@@ -59,7 +60,7 @@ class CustomMatButton extends StatelessWidget {
       child: Text(text,style: TextStyle(
         color: textColor,
         fontFamily: "Poppins",
-        fontSize: 16,
+        fontSize: fontSize,
       ),),
     );
 

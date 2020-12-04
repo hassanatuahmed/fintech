@@ -109,6 +109,7 @@ class Checkboxes extends StatelessWidget {
                     child: CustomMatButton(
                       textColor: Colors.white,
                       color: Colors.red,
+                      fontSize: 16,
                       text: "submit",
                       onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerification(),
