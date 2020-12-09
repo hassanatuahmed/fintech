@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import '../home_page_pattern_view.dart';
+import '../pattern_view.dart';
 
 class LoanPage extends StatelessWidget {
   @override
@@ -250,8 +251,15 @@ class LoanPage extends StatelessWidget {
             Divider(
               thickness: 2,
             ),
+            Padding(
+              padding: EdgeInsets.only(left:280.0),
+              child: DropdownButton(
+
+              ),
+            ),
             Row(
               children: [
+                SizedBox(width: 5,),
                 MyStyleText(
                   text: "Histories",
                   height: 36.0,
@@ -259,11 +267,13 @@ class LoanPage extends StatelessWidget {
                   fontSize: 24.0,
 
                 ),
+                SizedBox(width: 70,),
+
                 Container(
-                  height: 50,
-                  width: 200,
+                  height: 55,
+                  width: 230,
                   child: CustomMatButton(
-                    text: "helllohello",
+                    text: "set-up auto payments",
                     onPressed: (){},
                     color: HexColor("#ED1C24"),
                     textColor: Colors.white,
@@ -274,6 +284,8 @@ class LoanPage extends StatelessWidget {
             ),
             Row(
               children: [
+                SizedBox(width: 15,),
+
                 Container(
                   width: 90,
                   height: 120,
@@ -282,7 +294,7 @@ class LoanPage extends StatelessWidget {
                     color: HexColor("333333").withOpacity(0.8),
                   ),
                 ),
-                SizedBox(width: 30,),
+                SizedBox(width: 20,),
                 Container(
                   width: 90,
                   height: 120,
@@ -304,27 +316,5 @@ class LoanPage extends StatelessWidget {
 
 
 
-class PatternView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 425,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [Colors.red.withOpacity(0.5),Colors.red.withOpacity(0.5)],),
-      ),
-      child: Column(
-        children: [
-          SizedBox(height: 100,),
 
-
-          Image.asset("asset/images/account.png",color: Colors.white,),
-        ],
-      ),
-
-    );
-  }
-}
 
