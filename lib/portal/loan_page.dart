@@ -12,6 +12,7 @@ import '../pattern_view.dart';
 class LoanPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -270,17 +271,21 @@ class LoanPage extends StatelessWidget {
                 ),
                 SizedBox(width: 70,),
 
-                Container(
-                  height: 55,
-                  width: 230,
-                  child: CustomMatButton(
-                    text: "set-up auto payments",
-                    onPressed: (){},
-                    color: HexColor("#ED1C24"),
-                    textColor: Colors.white,
-                    fontSize: 17.0,
-                  ),
-                ),
+                //Container(
+                 // height: 55,
+                  //width: 230,
+                  //child: MaterialButton(
+
+                    //child:Text("set-up auto payments"),
+                    //onPressed: (){
+
+
+                     // }
+
+                 // ),
+                //),
+
+
               ],
             ),
             Row(
@@ -314,6 +319,64 @@ class LoanPage extends StatelessWidget {
     );
   }
 }
+
+class SlidingButton extends StatefulWidget {
+
+
+  @override
+  _SlidingButtonState createState() => _SlidingButtonState();
+}
+
+class _SlidingButtonState extends State<SlidingButton> {
+
+  void slidingSheet(){
+    showModalBottomSheet(
+        context: context,
+        builder: (context){
+          return Container(
+            color: Colors.black,
+            child: Container(
+              height: 180,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                )
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text("hello"),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text("hello"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: RaisedButton(
+          onPressed: slidingSheet,
+          child: Text('set-up auto payments'),
+        ),
+      ),
+
+    );
+  }
+}
+
 
 
 

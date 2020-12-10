@@ -33,6 +33,7 @@ dependencies:
   dotted_border: ^1.0.7
   intl: ^0.16.0
   sleek_circular_slider: ^1.2.0+web
+  sliding_sheet: ^0.4.1
 
 dev_dependencies:
   flutter_test:

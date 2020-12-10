@@ -4,6 +4,7 @@ import 'package:fintech/portal/loan_page.dart';
 import 'package:fintech/portal/loan_payment.dart';
 import 'package:fintech/portal/payment_method.dart';
 import 'package:fintech/portal/start_date.dart';
+import 'package:fintech/portal/trying.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoanPayment(),
+      home: MySliding(),
     );
   }
 
