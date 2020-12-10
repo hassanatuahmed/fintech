@@ -32,6 +32,7 @@ dependencies:
   hexcolor: ^1.0.6
   dotted_border: ^1.0.7
   intl: ^0.16.0
+  sleek_circular_slider: ^1.2.0+web
 
 dev_dependencies:
   flutter_test:

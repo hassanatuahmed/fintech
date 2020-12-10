@@ -1,6 +1,7 @@
 
 import 'package:fintech/portal/auto_payment.dart';
 import 'package:fintech/portal/loan_page.dart';
+import 'package:fintech/portal/loan_payment.dart';
 import 'package:fintech/portal/payment_method.dart';
 import 'package:fintech/portal/start_date.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +17,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StartDate(),
+      home: LoanPayment(),
     );
   }
 

@@ -2,18 +2,16 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:fintech/custom_button.dart';
 import 'package:fintech/my_style_text.dart';
 import 'package:fintech/portal/pattern_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
-import '../home_page_pattern_view.dart';
 import '../pattern_view.dart';
 
-class LoanPage extends StatelessWidget {
+class LoanPayment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -103,12 +101,12 @@ class LoanPage extends StatelessWidget {
                           Row(
                             children: [
                               Text("15%",style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontStyle: FontStyle.normal,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Poppins",
-                          ),),
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
+                              ),),
                               SizedBox(width: 85,),
 
                               Text("174",style: TextStyle(
@@ -133,6 +131,175 @@ class LoanPage extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(right:140.0),
+              child: MyStyleText(
+                text: "Loan Payments",
+                fontSize: 24.0,
+                height: 36.0,
+                width: 184.0,
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(width: 23.0,),
+                      SleekCircularSlider(
+                        appearance:  CircularSliderAppearance(
+                            customWidths: CustomSliderWidths(progressBarWidth: 10)),
+                        min: 0,
+                        max: 28,
+                        initialValue: 0,
+                      ),
+                      SizedBox(width: 40,),
+                      Column(
+                        children: [
+                        Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 6,
+                              backgroundColor: HexColor("#FFB8BB"),
+                            ),
+                            SizedBox(width: 5,),
+                            MyStyleText(
+                            text: "Unpaid",
+                            fontSize: 12.0,
+                            height: 18.0,
+                            width: 44.0,),
+                          ],
+                        ),
+                        MyStyleText(
+                        text: "115,000 GHS",
+                        fontSize: 20.0,
+                        height: 30.0,
+                        width: 140.0,),
+                          SizedBox(height: 27,),
+
+                          Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 6,
+                              backgroundColor: HexColor("#ED1C24"),
+                            ),
+                            SizedBox(width: 5,),
+
+                            MyStyleText(
+                            text: "Paid",
+                            fontSize: 12.0,
+                            height: 18.0,
+                            width: 27.0,),
+                          ],
+                        ),
+                        MyStyleText(
+                        text: "0 GHS",
+                        fontSize: 20.0,
+                        height: 30.0,
+                        width: 60.0,),
+
+
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+
+                    children: [
+                      SizedBox(width: 33,),
+                      MyStyleText(
+                        text: "Next Due Date",
+                        fontSize: 13.0,
+                        height: 18.0,
+                        width: 85.0,
+                      ),
+                      SizedBox(width: 75,),
+
+                      MyStyleText(
+                        text: "Amount Due",
+                        fontSize: 13.0,
+                        height: 18.0,
+                        width: 85.0,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(width: 33,),
+
+                      MyStyleText(
+                        text: "Sep 10, 2020",
+                        fontSize: 20.0,
+                        height: 30.0,
+                        width: 120.0,
+                      ),
+                      SizedBox(width: 40,),
+
+                      MyStyleText(
+                        text: "320 GHS",
+                        fontSize: 20.0,
+                        height: 30.0,
+                        width: 83.0,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20,),
+                ],
+              ),
+
+            ),
+
+              Divider(
+                thickness: 2,
+
+              ),
+            Padding(
+              padding: EdgeInsets.only(left:100.0),
+              child: Container(
+                child: CustomMatButton(
+                  text: "make payment",
+                  onPressed: (){},
+                  fontSize: 17.0,
+                  color: HexColor("#ED1C24"),
+                  textColor: Colors.black,
+
+                ),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Row(
+              children: [
+                SizedBox(width: 30,),
+                MyStyleText(
+                  text: "Repayments Made",
+                  fontSize: 24.0,
+                  height: 36.0,
+                  width: 227.0,
+                ),
+                DropdownButton(),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.only(right:120.0),
+              child: MyStyleText(
+                text: "No repayments yet.",
+                fontSize: 16.0,
+                height: 36.0,
+                width: 227.0,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left:33.0),
+              child: MyStyleText(
+                text: "When you make repayments, they will appear here",
+                fontSize: 14.0,
+                height: 36.0,
+                width: 388.0,
+              ),
+            ),
+            Divider(
+              thickness: 2,
             ),
             Padding(
               padding: EdgeInsets.only(left:20.0),
@@ -252,12 +419,7 @@ class LoanPage extends StatelessWidget {
             Divider(
               thickness: 2,
             ),
-            Padding(
-              padding: EdgeInsets.only(left:280.0),
-              child: DropdownButton(
 
-              ),
-            ),
             Row(
               children: [
                 SizedBox(width: 5,),
@@ -268,19 +430,9 @@ class LoanPage extends StatelessWidget {
                   fontSize: 24.0,
 
                 ),
+                DropdownButton(),
                 SizedBox(width: 70,),
 
-                Container(
-                  height: 55,
-                  width: 230,
-                  child: CustomMatButton(
-                    text: "set-up auto payments",
-                    onPressed: (){},
-                    color: HexColor("#ED1C24"),
-                    textColor: Colors.white,
-                    fontSize: 17.0,
-                  ),
-                ),
               ],
             ),
             Row(
@@ -294,6 +446,20 @@ class LoanPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30.0),
                     color: HexColor("333333").withOpacity(0.8),
                   ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 30,),
+                      Icon(Icons.history,color: Colors.white,),
+                      Text("Application  History",style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Poppins",
+                        fontSize: 12,
+                        fontStyle: FontStyle.normal,
+                      ),
+                      textAlign: TextAlign.center,),
+                    ],
+                  ),
                 ),
                 SizedBox(width: 20,),
                 Container(
@@ -302,6 +468,20 @@ class LoanPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
                     color: HexColor("333333").withOpacity(0.8),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 30,),
+                      Icon(Icons.history,color: Colors.white,),
+                      Text("Loan  \nHistory",style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Poppins",
+                        fontSize: 12,
+                        fontStyle: FontStyle.normal,
+                      ),
+                        textAlign: TextAlign.center,),
+                    ],
                   ),
                 ),
               ],
@@ -314,8 +494,3 @@ class LoanPage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
