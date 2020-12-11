@@ -131,7 +131,7 @@ class PinVerification extends StatelessWidget {
             CustomMatButton(
               textColor: HexColor("#ED1C24"),
               text: "verify",
-              fontSize: 16,
+              fontSize: 16.0,
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerified(),
                 fullscreenDialog: true)

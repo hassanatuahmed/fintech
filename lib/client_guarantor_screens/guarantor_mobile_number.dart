@@ -46,7 +46,7 @@ class _GuarantorMobileState extends State<GuarantorMobile> {
             width: 330,
             child: TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.flag,color: Colors.white,),
+                prefixIcon: Image.asset("asset/images/gh.png"),
                 hintText: "Number",
                 hintStyle: TextStyle(color: Colors.white),
                 border: InputBorder.none,

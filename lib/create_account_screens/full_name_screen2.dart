@@ -240,7 +240,7 @@ class SecondHeader extends StatelessWidget {
           Container(
             width: 290,
             height: 75,
-            color: HexColor("ED1C24").withOpacity(0.1),
+            color: HexColor("#ED1C24").withOpacity(0.1),
             child: Center(
               child: Text(text,
                 style:TextStyle(fontSize: 16,

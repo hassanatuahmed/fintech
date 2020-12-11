@@ -171,7 +171,8 @@ class _PersonalScreenState extends State<PersonalScreen> {
                       decoration: InputDecoration(
                         fillColor: HexColor("#F2F2F2"),
                         hintText: "(000) 000-000",
-                        prefixIcon: Icon(Icons.flag,color: Colors.red,),
+                        prefixIcon: Image.asset("asset/images/gh.png"),
+                        //Icon(Icons.flag,color: Colors.red,),
                       ),
                     ),
                   ),

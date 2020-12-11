@@ -89,7 +89,7 @@ class _SignInState extends State<SignIn> {
                         text: "Sign In",
                         color: Colors.red,
                         textColor: Colors.white,
-                        fontSize: 16,
+                        fontSize: 16.0,
                       ),
 
                       SizedBox(height: 20,),

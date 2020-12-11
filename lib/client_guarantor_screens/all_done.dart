@@ -121,7 +121,7 @@ class AllDone extends StatelessWidget {
                 child: CustomMatButton(
                   textColor: Colors.white,
                   color: Colors.red,
-                  fontSize: 16,
+                  fontSize: 16.0,
                   text: "submit",
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>LoanSuccessful(),

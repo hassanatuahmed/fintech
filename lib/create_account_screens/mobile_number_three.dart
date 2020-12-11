@@ -74,7 +74,8 @@ class MobileNumber extends StatelessWidget {
 
 
                             hintText: "(000) 000-000",
-                            prefixIcon: Icon(Icons.flag,color: Colors.red,),
+                            prefixIcon: Image.asset("asset/images/gh.png"),
+                            //Icon(Icons.flag,color: Colors.red,),
                           ),
                         ),
                       ],
@@ -129,14 +130,24 @@ class MobileNumber extends StatelessWidget {
                     child: Column(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(right:160.0),
-                          child: Text("6. Digital Address",style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal,
-                              fontFamily: "Poppins",
-                              color: HexColor("#333333"),
-                          ),),
+                          padding: EdgeInsets.only(right:10.0),
+                          child: Row(
+                            children: [
+                              Text("6. Digital Address",style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w300,
+                                  fontStyle: FontStyle.normal,
+                                  fontFamily: "Poppins",
+                                  color: HexColor("#333333"),
+                              ),),
+                              SizedBox(width: 5,),
+                              CircleAvatar(
+                                radius: 13,
+                                backgroundColor: HexColor("#ED1C24").withOpacity(0.1),
+                                child: Text("?",style: TextStyle(color: Colors.red),),
+                              ),
+                            ],
+                          ),
                         ),
                         SizedBox(height: 10,),
 

@@ -6,6 +6,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'full_name_screen2.dart';
 import '../custom_field.dart';
 class Checkboxes extends StatelessWidget {
+  get checkedValue => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,13 +17,13 @@ class Checkboxes extends StatelessWidget {
 
             children: [
               Header(
-                color:Colors.white,
-                color1:Colors.white,
-                color2:Colors.white,
-                color3:Colors.white,
+                color: Colors.white,
+                color1: Colors.white,
+                color2: Colors.white,
+                color3: Colors.white,
                 icon: Icons.keyboard_backspace,
                 text: "Create Account",
-                gradient: LinearGradient(colors: [Colors.red,Colors.pink],
+                gradient: LinearGradient(colors: [Colors.red, Colors.pink],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                 ),
@@ -30,8 +32,14 @@ class Checkboxes extends StatelessWidget {
 
           ),
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.75,
+            width: MediaQuery
+                .of(context)
+                .size
+                .width,
+            height: MediaQuery
+                .of(context)
+                .size
+                .height * 0.75,
             color: Colors.white,
             child: Column(
               children: [
@@ -46,14 +54,15 @@ class Checkboxes extends StatelessWidget {
                 ),
                 SizedBox(height: 17,),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 14.0,left: 60.0),
+                  padding: const EdgeInsets.only(bottom: 14.0, left: 60.0),
                   child: Container(
                     width: 290,
                     height: 144,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
-                      border: Border.all(width: 0.1,color: HexColor("333333"),),
+                      border: Border.all(
+                        width: 0.1, color: HexColor("333333"),),
 
                     ),
                     child: Column(
@@ -71,10 +80,12 @@ class Checkboxes extends StatelessWidget {
                               ),
                             ),
                             SizedBox(width: 23,),
+
+
                             Container(
-                              height: 36,
-                                width: 145,
-                                child: Text("I have read the Terms \n and Services"))
+                            height: 36,
+                            width: 145,
+                            child: Text("I have read the Terms \n and Services"))
                           ],
                         ),
                         SizedBox(height: 30,),
@@ -93,7 +104,8 @@ class Checkboxes extends StatelessWidget {
                             Container(
                                 height: 36,
                                 width: 145,
-                                child: Text("I want to receive \n promotional offers"))
+                                child: Text(
+                                    "I want to receive \n promotional offers"))
                           ],
                         ),
 
@@ -104,16 +116,17 @@ class Checkboxes extends StatelessWidget {
                 Spacer(),
 
                 Padding(
-                  padding: EdgeInsets.only(bottom: 50,right: 90,left: 90),
+                  padding: EdgeInsets.only(bottom: 50, right: 90, left: 90),
                   child: Container(
                     child: CustomMatButton(
                       textColor: Colors.white,
                       color: Colors.red,
-                      fontSize: 16,
+                      fontSize: 16.0,
                       text: "submit",
-                      onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerification(),
-                        fullscreenDialog: true)
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (
+                            context) => PinVerification(),
+                            fullscreenDialog: true)
 
                         );
                       },
@@ -129,10 +142,11 @@ class Checkboxes extends StatelessWidget {
           ),
 
 
-
         ],
       ),
 
     );
   }
 }
+
+

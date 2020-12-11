@@ -1,5 +1,6 @@
 import 'package:fintech/home_page_pattern_view.dart';
 import 'package:fintech/my_style_text.dart';
+import 'package:fintech/portal/loan_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -10,14 +11,30 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+  final List<Widget> _children = [
+    HomePage(),
+
+    LoanPage(),
+  ];
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(currentIndex: 0,
+      body: _children[_currentIndex],
+
+      bottomNavigationBar: BottomNavigationBar(currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
+        onTap: onTabTapped,
+
         selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.black45
-        ,
+        unselectedItemColor: Colors.black45,
+
           items: [
         BottomNavigationBarItem(
           icon: new Icon(Icons.home,color: Colors.red,),
@@ -27,6 +44,7 @@ class _HomePageState extends State<HomePage> {
         BottomNavigationBarItem(
           icon: new Icon(Icons.attach_money,color: Colors.grey),
           title: new Text('Loan',style: TextStyle(color: Colors.grey ),),
+
         ),
         BottomNavigationBarItem(
           icon: new Icon(Icons.home,color: Colors.grey),
@@ -36,7 +54,9 @@ class _HomePageState extends State<HomePage> {
           icon: new Icon(Icons.notifications,color: Colors.grey),
           title: new Text('Notification',style: TextStyle(color: Colors.grey),),
         ),
-      ],),
+      ],
+
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
