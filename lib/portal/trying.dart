@@ -1,43 +1,29 @@
+import 'package:dotted_border/dotted_border.dart';
+import 'package:fintech/portal/pattern_view.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 
-class MySliding extends StatelessWidget {
+import '../custom_button.dart';
+import '../my_style_text.dart';
+
+
+
+class MySliding extends StatefulWidget {
+  MySliding({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MySlidingState createState() => _MySlidingState();
+}
+
+class _MySlidingState extends State<MySliding> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey.shade200,
-      appBar: AppBar(
-        title: Text('Simple Example'),
-      ),
-      body: SlidingSheet(
-        elevation: 8,
-        cornerRadius: 16,
-        snapSpec: const SnapSpec(
-          // Enable snapping. This is true by default.
-          snap: true,
-          // Set custom snapping points.
-          snappings: [0.4, 0.7, 1.0],
-          // Define to what the snappings relate to. In this case,
-          // the total available space that the sheet can expand to.
-          positioning: SnapPositioning.relativeToAvailableSpace,
-        ),
-        // The body widget will be displayed under the SlidingSheet
-        // and a parallax effect can be applied to it.
-        body: Center(
-          child: Text('This widget is below the SlidingSheet'),
-        ),
-        builder: (context, state) {
-          // This is the content of the sheet that will get
-          // scrolled, if the content is bigger than the available
-          // height of the sheet.
-          return Container(
-            height: 500,
-            child: Center(
-              child: Text('This is the content of the sheet'),
-            ),
-          );
-        },
-      ),
-    );
+    // TODO: implement build
+    return Scaffold();
+  }
+
   }
 }
