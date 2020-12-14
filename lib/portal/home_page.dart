@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _children[_currentIndex],
+
 
       bottomNavigationBar: BottomNavigationBar(currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
