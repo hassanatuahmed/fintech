@@ -11,56 +11,85 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _currentIndex = 0;
-  final List<Widget> _children = [
-    HomePage(),
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static  List<Widget> _widgetOptions = <Widget>[
+    //Text(
+      //'Index 0: Home',
+     // style: optionStyle,
+   // ),
+    Column(
+      children: [
+        Text('testing'),
 
-    LoanPage(),
+      ],
+    ),
+    Text(
+      'Index 1: Loan',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: Banking',
+      style: optionStyle,
+    ),
+    //Text(
+      //'Index 3: Notification',
+     // style: optionStyle,
+   // ),
+    Column(
+      children: [
+        Container(
+          height: 20,
+          width: 100,
+          color: Colors.grey,
+        ),
+      ],
+    ),
   ];
 
-  void onTabTapped(int index) {
+  void _onItemTapped(int index) {
     setState(() {
-      _currentIndex = index;
+      _selectedIndex = index;
     });
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
-      bottomNavigationBar: BottomNavigationBar(currentIndex: _currentIndex,
-        type: BottomNavigationBarType.fixed,
-        onTap: onTabTapped,
-
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.black45,
-
-          items: [
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.home,color: Colors.red,),
-          title: new Text('Home',style: TextStyle(color: Colors.red),),
-        ),
-
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.attach_money,color: Colors.grey),
-          title: new Text('Loan',style: TextStyle(color: Colors.grey ),),
-
-        ),
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.home,color: Colors.grey),
-          title: new Text('Banking',style: TextStyle(color: Colors.grey),),
-        ),
-        BottomNavigationBarItem(
-          icon: new Icon(Icons.notifications,color: Colors.grey),
-          title: new Text('Notification',style: TextStyle(color: Colors.grey),),
-        ),
-      ],
-
-      ),
       backgroundColor: Colors.white,
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.style),
+            title: Text('Loan'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.attach_money),
+            title: Text('Banking'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            title: Text('Notification'),
+          ),
+
+        ],
+        currentIndex: _selectedIndex,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        selectedItemColor: Colors.red,
+        onTap: _onItemTapped,
+      ),
       body: SingleChildScrollView(
+
         child: Column(
           children: [
+            Center(
+              child: _widgetOptions.elementAt(_selectedIndex),),
+
             HomePagePatternView(),
             Padding(
               padding: EdgeInsets.only(right:280.0),
@@ -79,12 +108,12 @@ class _HomePageState extends State<HomePage> {
                   height: 120,
                   width: 110,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    gradient: LinearGradient(
-                      begin:Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [HexColor("333333").withOpacity(1.0), HexColor("E75348").withOpacity(1.0)])
-                    ),
+                      borderRadius: BorderRadius.circular(10.0),
+                      gradient: LinearGradient(
+                          begin:Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [HexColor("333333").withOpacity(1.0), HexColor("E75348").withOpacity(1.0)])
+                  ),
                   child: Column(
                     children: [
                       SizedBox(height: 23,),
@@ -92,22 +121,22 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(height: 10,),
 
                       Container(
-                        height: 36,
+                          height: 36,
                           width: 88,
                           child: Text("Apply for a Loan",style: TextStyle(
                             color: Colors.white,
                           ),textAlign: TextAlign.center,)),
                     ],
                   ),
-                  ),
+                ),
 
                 SizedBox(width: 10,),
                 Container(
                   height: 120,
                   width: 110,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                     color: HexColor("FA5E64").withOpacity(1.0),
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: HexColor("FA5E64").withOpacity(1.0),
                   ),
                   child: Column(
                     children: [
@@ -143,7 +172,7 @@ class _HomePageState extends State<HomePage> {
                           height: 36,
                           width: 88,
                           child: Text("Book Appointment",style: TextStyle(color: Colors.white),
-                          textAlign: TextAlign.center,)),
+                            textAlign: TextAlign.center,)),
                     ],
                   ),
                 ),
@@ -234,9 +263,16 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    );
+      );
   }
 }
+
+
+
+
+
+
+
 
 
 

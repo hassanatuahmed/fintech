@@ -19,7 +19,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignIn(),
+      home: LoanPage(),
     );
   }
 
