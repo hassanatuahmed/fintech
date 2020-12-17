@@ -256,9 +256,25 @@ class LoanPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left:280.0),
               child: DropdownButton(
-
               ),
             ),
+            Padding(
+              padding: EdgeInsets.only(left:215.0),
+              child: MaterialButton(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(22),
+                    bottomLeft:Radius.circular(22) )),
+
+                height: 45,
+                minWidth: 200,
+                color: HexColor("#ED1C24"),
+
+                onPressed: (){
+                  _newModalBottomSheet(context);
+                },
+                child: Text("Set-up Auto Payments",style: TextStyle(color: Colors.white),),
+              ),
+            ),
+
             Row(
               children: [
                 SizedBox(width: 5,),
@@ -319,63 +335,269 @@ class LoanPage extends StatelessWidget {
     );
   }
 }
-
-class SlidingButton extends StatefulWidget {
-
-
-  @override
-  _SlidingButtonState createState() => _SlidingButtonState();
-}
-
-class _SlidingButtonState extends State<SlidingButton> {
-
-  void slidingSheet(){
-    showModalBottomSheet(
-        context: context,
-        builder: (context){
-          return Container(
-            color: Colors.black,
-            child: Container(
-              height: 180,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                )
-              ),
-              child: Column(
+void _payMethodModalBottomSheet(context){
+  showModalBottomSheet(
+      context: context,
+      builder: (BuildContext bc){
+        return Container(
+          child: new Wrap(
+            children: <Widget>[
+              Column(
                 children: [
-                  Row(
-                    children: [
-                      Text("hello"),
-                    ],
+                  SizedBox(height: 22,),
+                  Container(
+                    height: 6,
+                    width: 60,
+                    color: HexColor("#333333").withOpacity(0.22),
+
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top:49,right:130.0,bottom: 25.0),
+                    child: MyStyleText(
+                      text: "Payment Method",
+                      height: 36.0,
+                      width: 205.0,
+                      fontSize: 24.0,
+                      color: HexColor("#333333"),
+                    ),
                   ),
                   Row(
                     children: [
-                      Text("hello"),
+                      SizedBox(width: 40,),
+                      Container(
+                        width: 103,
+                        child: CustomMatButton(
+                          text: "Bank",
+                          color: HexColor("#F2F2F2"),
+                          textColor: Colors.black,
+                          onPressed: (){},
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      SizedBox(width: 30,),
+
+                      Container(
+                        width: 112,
+                        child: CustomMatButton(
+                          text: "Wallet",
+                          color: HexColor("#333333"),
+                          textColor: Colors.white,
+                          onPressed: (){},
+                          fontSize: 16.0,
+                        ),
+                      ),
                     ],
                   ),
+                  SizedBox(height: 30,),
+                  CustomMatButton(
+                    text: "Done",
+                    color: HexColor("#ED1C24"),
+                    textColor: Colors.white,
+                    onPressed: (){},
+                    fontSize: 16.0,
+                  ),
+                  SizedBox(height: 30,),
                 ],
               ),
-            ),
-          );
-        });
 
-  }
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: RaisedButton(
-          onPressed: slidingSheet,
-          child: Text('set-up auto payments'),
-        ),
-      ),
-
-    );
-  }
+            ],
+          ),
+        );
+      }
+  );
 }
+void _newModalBottomSheet(context){
+  showModalBottomSheet(
+      context: context,
+      builder: (BuildContext bc){
+        return Container(
+          decoration:  BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight:  Radius.circular(20.0))),
+
+          child: new Wrap(
+            children: <Widget>[
+              Column(
+                children: [
+                  SizedBox(height: 22,),
+                  Container(
+                    height: 6,
+                    width: 60,
+                    color: HexColor("#333333").withOpacity(0.22),
+
+                  ),
+                  SizedBox(height: 45,),
+
+                  Padding(
+                    padding: EdgeInsets.only(right:100.0),
+                    child: MyStyleText(
+                      text: "Auto Payment Set-up",
+                      color: HexColor("#333333"),
+
+
+                      height: 36.0,
+                      width: 259.0,
+                      fontSize: 24.0,
+                    ),
+                  ),
+                  SizedBox(height: 40,),
+
+                  Padding(
+                    padding: EdgeInsets.only(left:30.0),
+                    child: Row(
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            _payMethodModalBottomSheet(context);
+                          },
+                          child: MyStyleText(
+                            text: "Payment Method",
+                            fontSize: 20.0,
+                            color: HexColor("#333333").withOpacity(0.65),
+                            height: 30.0,
+                            width: 171.0,
+                          ),
+                        ),
+                        SizedBox(width: 30,),
+                        MyStyleText(
+                          text: "Wallet",
+                          color: HexColor("#333333"),
+                          height: 30.0,
+                          fontSize: 20.0,
+                          width: 63.0,
+                        ),
+                        SizedBox(width: 20,),
+
+                        Icon(Icons.create,color: Colors.red,),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 40,),
+                  Padding(
+                    padding: EdgeInsets.only(right:170.0),
+                    child: MyStyleText(
+                      text: "Account Details",
+                      color: HexColor("#333333").withOpacity(0.65),
+
+                      height: 30.0,
+                      fontSize: 20.0,
+                      width: 184.0,
+                    ),
+
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(width: 30,),
+                      Container(
+                        height: 41,
+                        width: 70,
+                        child: CustomMatButton(
+                          text: "MTN",
+                          onPressed: (){},
+                          textColor: Colors.black,
+                          color: HexColor("#F2F2F2"),
+
+                        ),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                        height: 41,
+                        width: 109,
+                        child: CustomMatButton(
+                          text: "Vodafone",
+                          onPressed: (){},
+                          textColor: Colors.white,
+                          color: HexColor("#333333"),
+
+                        ),
+                      ),
+                      SizedBox(width: 20,),
+
+                      Container(
+                        height: 41,
+                        width: 105,
+                        child: CustomMatButton(
+                          text: "AirtelTigo",
+                          onPressed: (){},
+                          textColor: Colors.black,
+                          color: HexColor("#F2F2F2"),
+
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 40,),
+                  Padding(
+                    padding: EdgeInsets.only(right:130.0),
+                    child: MyStyleText(
+                      text: "Mobile Wallet Number",
+                      color: HexColor("#333333").withOpacity(0.65),
+                      height: 30.0,
+                      fontSize: 20.0,
+                      width: 220.0,
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+
+                  Padding(
+                    padding: EdgeInsets.only(right:130.0),
+                    child: Container(
+                        width: 216,
+                        height: 20,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Number",
+                          ),
+                        )),
+                  ),
+                  SizedBox(height: 40,),
+                  Padding(
+                    padding: EdgeInsets.only(right:160.0),
+                    child: GestureDetector(
+                      onTap: (){
+                        _dateModalBottomSheet(context);
+                      },
+                      child: MyStyleText(
+                        text: "Choose start date",
+                        color: Colors.red,
+                        height: 30.0,
+                        fontSize: 20.0,
+                        width: 184.0,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 50,),
+                  CustomMatButton(
+                    text: "Done",
+                    color: HexColor("#ED1C24"),
+                    textColor: Colors.white,
+                    onPressed: (){},
+                  ),
+                  SizedBox(height: 20,),
+
+                ],
+              ),
+            ],
+          ),
+
+        );
+
+      },
+    isScrollControlled: true,
+  );
+}
+void _dateModalBottomSheet(context){
+  showModalBottomSheet(
+      context: context,
+      builder: (BuildContext bc){
+        return Container(
+        );
+      }
+  );
+}
+
 
 
 
