@@ -1,6 +1,6 @@
 import 'package:fintech/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/custom_button.dart';
-import 'package:fintech/portal/home_page.dart';
+import 'package:fintech/portal/bottom_navigation_homepage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -65,7 +65,7 @@ class LoanSuccessful extends StatelessWidget {
                 text: "Home",
                 fontSize: 16.0,
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage(),
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage1(),
                       fullscreenDialog: true)
                   );
                 },
