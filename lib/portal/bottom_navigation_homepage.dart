@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -5,7 +7,6 @@ import 'package:giffy_dialog/giffy_dialog.dart';
 
 import '../home_page_pattern_view.dart';
 import '../my_style_text.dart';
-import 'dialog_testing.dart';
 
 class HomePage1 extends StatelessWidget {
   @override
@@ -179,23 +180,37 @@ class HomePage1 extends StatelessWidget {
                               padding: EdgeInsets.only(left:100.0,right: 0.0),
                               child: GestureDetector(
                                 onTap: (){
-                                  return showDialog(context: context,
-                                      builder: (ctx) => AlertDialog(
-                                    title: Container(
-                                      width: 354,
-                                      height: 60,
-                                      color: Colors.blue,
-                                        child: Text("Alert Dialog Box")),
-                                    content: Text("You have raised a Alert Dialog Box"),
-                                    actions: <Widget>[
-                                      Container(
-                                        height: 10,
-                                        width: 10,
+                                  showDialog(context: context,
+                                  builder: (BuildContext context){
+                                    return AlertDialog(
+                                      titlePadding: EdgeInsets.all(0.0),
+                                      contentPadding: EdgeInsets.all(0.0),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20),
                                       ),
-
-                                    ],
-                                  ),
+                                      title: Container(
+                                        height: 60,
+                                          width: 300,
+                                          color: HexColor("#F2F2F2"),
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width: 20,),
+                                              CircleAvatar(
+                                                backgroundColor: Colors.white,
+                                                child: Image.asset("asset/images/cbg.png"),
+                                              ),
+                                              SizedBox(width: 20,),
+                                              Text("Customer Service"),
+                                            ],
+                                          )),
+                                      content: Container(
+                                        height: 400,
+                                      ),
+                                      actions: [],
+                                    );
+                                  }
                                   );
+
                                 },
 
                                   child: Image.asset("asset/images/chat.png")),

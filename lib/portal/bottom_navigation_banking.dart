@@ -5,7 +5,7 @@ class Banking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Loan")),
+      body: Center(child: Text("Banking")),
     );
   }
 }

@@ -255,16 +255,19 @@ class LoanPayment extends StatelessWidget {
 
               ),
             Padding(
-              padding: EdgeInsets.only(left:100.0),
-              child: Container(
-                child: CustomMatButton(
-                  text: "make payment",
-                  onPressed: (){},
-                  fontSize: 17.0,
-                  color: HexColor("#ED1C24"),
-                  textColor: Colors.black,
+              padding: EdgeInsets.only(left:215.0),
+              child: MaterialButton(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(22),
+                    bottomLeft:Radius.circular(22) )),
 
-                ),
+                height: 45,
+                minWidth: 200,
+                color: HexColor("#ED1C24"),
+
+                onPressed: (){
+
+                },
+                child: Text("Make Payment",style: TextStyle(color: Colors.white),),
               ),
             ),
             SizedBox(height: 10,),

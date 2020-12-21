@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:fintech/custom_button.dart';
 import 'package:fintech/my_style_text.dart';
+import 'package:fintech/portal/loan_payment.dart';
 import 'package:fintech/portal/pattern_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -337,6 +338,7 @@ class LoanPage extends StatelessWidget {
 }
 void _payMethodModalBottomSheet(context){
   showModalBottomSheet(
+
       context: context,
       builder: (BuildContext bc){
         return Container(
@@ -590,9 +592,44 @@ void _newModalBottomSheet(context){
 }
 void _dateModalBottomSheet(context){
   showModalBottomSheet(
+    isScrollControlled: true,
       context: context,
       builder: (BuildContext bc){
         return Container(
+          child: Wrap(
+            children:<Widget> [
+              Column(
+                children: [
+                  MyStyleText(
+                    text: "Start Date",
+                    height: 36.0,
+                    width: 120.0,
+                    fontSize: 24.0,
+                  ),
+                  SizedBox(height: 20,),
+                  Container(
+                    height: 379,
+                    width: 328,
+                    child: Card(
+
+                    ),
+                  ),
+                  SizedBox(height: 35,),
+
+                  CustomMatButton(
+                    text: "Done",
+                    color: HexColor("#ED1C24"),
+                    textColor: Colors.white,
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoanPayment()));
+                    },
+                    fontSize: 16.0,
+                  ),
+                  SizedBox(height: 35,),
+                ],
+              ),
+            ],
+          ),
         );
       }
   );

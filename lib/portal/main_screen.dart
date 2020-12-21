@@ -51,7 +51,7 @@ class _MainScreenState extends State<MainScreen> {
                 Icons.motorcycle,
                 color: Colors.grey,
             ),
-            title: Text('Banking'),
+            title: Text('Loan'),
             activeIcon: Icon(
                 Icons.motorcycle,
                 color: Colors.red,
@@ -63,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
               color: Colors.grey,
               size: 36,
             ),
-            title: Text('Loan'),
+            title: Text('Banking'),
             activeIcon: Icon(
               Icons.usb,
               color: Colors.red,
