@@ -15,8 +15,12 @@ class AnnualRevenue extends StatefulWidget {
 }
 
 class _AnnualRevenueState extends State<AnnualRevenue> {
+
+
   @override
   Widget build(BuildContext context) {
+    RangeValues values = RangeValues(120, 180);
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -46,10 +50,22 @@ class _AnnualRevenueState extends State<AnnualRevenue> {
 
           SizedBox(height: 28,),
           Container(
-            height: 10,
+            height: 20,
             width: 360,
-            color: Colors.red,
-            child: MySlider(),
+            child: RangeSlider(
+                activeColor: Colors.red[700],
+                inactiveColor: Colors.red.withOpacity(0.21),
+
+                min: 1,
+                max: 300,
+                values: values,
+
+                onChanged: (values){
+                  setState(() {
+                    values =values;
+                  });
+                }
+            ),
           ),
 
           SizedBox(height: 12,),

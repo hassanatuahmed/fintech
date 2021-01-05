@@ -5,6 +5,7 @@ import 'package:fintech/portal/pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 import '../pattern_view.dart';
 
@@ -147,12 +148,24 @@ class LoanPayment extends StatelessWidget {
                   Row(
                     children: [
                       SizedBox(width: 23.0,),
-                      SleekCircularSlider(
-                        appearance:  CircularSliderAppearance(
-                            customWidths: CustomSliderWidths(progressBarWidth: 10)),
-                        min: 0,
-                        max: 28,
-                        initialValue: 0,
+                      CircularPercentIndicator(
+                        radius: 150.0,
+                        lineWidth: 13.0,
+                        animation: true,
+                        percent: 0.7,
+                        center: new Text(
+                          "70.0%",
+                          style:
+                          new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        footer: new Text(
+                          "",
+                          style:
+                          new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: HexColor("#ED1C24"),
+                        backgroundColor: HexColor("#FFB8BB"),
                       ),
                       SizedBox(width: 40,),
                       Column(

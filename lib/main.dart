@@ -9,6 +9,10 @@ import 'package:fintech/portal/main_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'business/annual_revenue.dart';
+import 'business/duration.dart';
+import 'business/employees.dart';
+
 
 
 void main()=>runApp(Myapp ());
@@ -19,7 +23,7 @@ class Myapp  extends StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignIn(),
+      home: AnnualRevenue(),
     );
   }
 

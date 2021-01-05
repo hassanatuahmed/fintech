@@ -6,6 +6,7 @@ import 'package:fintech/my_slider.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 import '../my_button_screen.dart';
 class HowLong extends StatefulWidget {
@@ -45,10 +46,18 @@ class _HowLongState extends State<HowLong> {
 
           SizedBox(height: 28,),
           Container(
+            child: LinearPercentIndicator(
+              animation: true,
+              width: 350.0,
+              lineHeight: 15.0,
+              percent: 0.9,
+              progressColor: Colors.red,
+
+              backgroundColor: HexColor("#ED1C24").withOpacity(0.21),
+            ),
+
             height: 10,
             width: 360,
-            color: Colors.red,
-            child: MySlider(),
           ),
 
           SizedBox(height: 12,),
