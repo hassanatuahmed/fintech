@@ -6,6 +6,7 @@ import 'package:fintech/portal/pattern_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:intl/intl.dart';
 
 import '../home_page_pattern_view.dart';
 import '../pattern_view.dart';
@@ -13,6 +14,8 @@ import '../pattern_view.dart';
 class LoanPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    DateTime selectedDate = DateTime.now();
+
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -559,6 +562,7 @@ void _newModalBottomSheet(context){
                     padding: EdgeInsets.only(right:160.0),
                     child: GestureDetector(
                       onTap: (){
+                        //_dateModalBottomSheet(context);
                         _dateModalBottomSheet(context);
                       },
                       child: MyStyleText(
@@ -600,6 +604,7 @@ void _dateModalBottomSheet(context){
             children:<Widget> [
               Column(
                 children: [
+                  SizedBox(height: 30,),
                   MyStyleText(
                     text: "Start Date",
                     height: 36.0,
@@ -611,19 +616,27 @@ void _dateModalBottomSheet(context){
                     height: 379,
                     width: 328,
                     child: Card(
+                      child: CupertinoDatePicker(
+                        mode: CupertinoDatePickerMode.date,
+                        initialDateTime: DateTime(1900,1,1),
+                        onDateTimeChanged: (DateTime newDateTime){},
 
+                      ),
                     ),
                   ),
                   SizedBox(height: 35,),
 
-                  CustomMatButton(
-                    text: "Done",
-                    color: HexColor("#ED1C24"),
-                    textColor: Colors.white,
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoanPayment()));
-                    },
-                    fontSize: 16.0,
+                  Padding(
+                    padding: EdgeInsets.only(left:40.0),
+                    child: CustomMatButton(
+                      text: "Done",
+                      color: HexColor("#ED1C24"),
+                      textColor: Colors.white,
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoanPayment()));
+                      },
+                      fontSize: 16.0,
+                    ),
                   ),
                   SizedBox(height: 35,),
                 ],
@@ -634,6 +647,17 @@ void _dateModalBottomSheet(context){
       }
   );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

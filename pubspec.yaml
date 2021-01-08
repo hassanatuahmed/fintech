@@ -36,6 +36,7 @@ dependencies:
   sliding_sheet: ^0.4.1
   giffy_dialog: ^1.8.0
   percent_indicator: "^2.1.7+2"
+  sms_otp_auto_verify: ^1.2.2
 
 dev_dependencies:
   flutter_test:

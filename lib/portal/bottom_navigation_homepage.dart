@@ -186,9 +186,10 @@ class HomePage1 extends StatelessWidget {
                                       titlePadding: EdgeInsets.all(0.0),
                                       contentPadding: EdgeInsets.all(0.0),
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(20),
+                                        borderRadius: BorderRadius.all(Radius.circular(20)),
                                       ),
                                       title: Container(
+                                        
                                         height: 60,
                                           width: 300,
                                           color: HexColor("#F2F2F2"),

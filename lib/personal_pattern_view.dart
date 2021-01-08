@@ -1,4 +1,3 @@
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -15,8 +14,8 @@ class PersonalPatternView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 425,
-      height: 261.3,
+      //width: 425,
+      //height: 261.3,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topRight,

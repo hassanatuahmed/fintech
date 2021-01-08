@@ -112,6 +112,8 @@ class SecurityQuestion extends StatelessWidget {
                           Padding(
                             padding:  EdgeInsets.only(left:30.0,right: 20.0,bottom: 20),
                             child: CustomField(
+                              obscureText: true,
+
                               hintText: "",
                               prefixIcon: Icon(null),
                             ),
@@ -123,6 +125,8 @@ class SecurityQuestion extends StatelessWidget {
                           Padding(
                             padding:  EdgeInsets.only(left:30.0,right: 20.0,bottom: 1),
                             child: CustomField(
+                              obscureText: true,
+
                               hintText: "",
                               prefixIcon: Icon(null),
                             ),

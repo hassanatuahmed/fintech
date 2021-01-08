@@ -294,7 +294,11 @@ class Header extends StatelessWidget {
                           children: [
                             SizedBox(width: 34,),
 
-                            Icon(icon,color: Colors.white,),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.pop(context);
+                              },
+                                child: Icon(icon,color: Colors.white,)),
                             SizedBox(width: 40,),
 
                             Text(text,style: TextStyle(

@@ -80,6 +80,7 @@ class Checkboxes extends StatelessWidget {
                               ),
                             ),
                             SizedBox(width: 23,),
+                            
 
 
                             Container(
@@ -148,5 +149,7 @@ class Checkboxes extends StatelessWidget {
     );
   }
 }
+
+
 
 

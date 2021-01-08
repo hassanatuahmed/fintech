@@ -1,9 +1,9 @@
-        import 'package:fintech/custom_button.dart';
+import 'package:fintech/custom_button.dart';
 import 'package:fintech/personal_screen/dob.dart';
 import 'package:fintech/personal_screen/personal_screen.dart';
-        import 'package:flutter/cupertino.dart';
-        import 'package:flutter/material.dart';
-        import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import '../my_button_screen.dart';
 

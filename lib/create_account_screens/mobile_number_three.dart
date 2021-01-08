@@ -1,9 +1,9 @@
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/create_account_screens/security_question_screen_four.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import '../custom_field.dart';
+import 'full_name_screen2.dart';
 
 class MobileNumber extends StatelessWidget {
   @override

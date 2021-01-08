@@ -1,8 +1,6 @@
 import '../my_button_screen.dart';
 import 'address_info.dart';
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/personal_screen/personal_screen.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
-import 'file:///C:/Users/Balaraba/AndroidStudioProjects/fintech/lib/create_account_screens/pin_successfully_verified.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
