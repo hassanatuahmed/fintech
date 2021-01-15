@@ -15,7 +15,7 @@ class BusinessName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
+      body: ListView(
         children: [
           BusinessPatternView(
             color: Colors.white,
@@ -30,22 +30,28 @@ class BusinessName extends StatelessWidget {
 
 
           ),
-          Container(
-            height: 102,
-            width: 339,
-            child: Text("What is your\nBusiness Name",style: TextStyle(
-              fontSize: 34,
-              fontStyle: FontStyle.normal,
-              fontFamily: "Poppins",
-              color: HexColor("333333").withOpacity(0.9),
-              fontWeight: FontWeight.w400,
-            ),),
+          Padding(
+            padding: EdgeInsets.only(left:30.0),
+            child: Container(
+              height: 102,
+              width: 339,
+              child: Text("What is your\nBusiness Name",style: TextStyle(
+                fontSize: 34,
+                fontStyle: FontStyle.normal,
+                fontFamily: "Poppins",
+                color: HexColor("333333").withOpacity(0.9),
+                fontWeight: FontWeight.w400,
+              ),),
+            ),
           ),
           SizedBox(height: 90,),
-          MyText(
-            hintText: "Name",
-            hintText_color:Colors.white ,
-            fillColor: HexColor("#333333"),
+          Padding(
+            padding: EdgeInsets.only(left:30.0,right: 30.0),
+            child: MyText(
+              hintText: "Name",
+              hintText_color:Colors.white ,
+              fillColor: HexColor("#333333"),
+            ),
           ),
           SizedBox(height: 20,),
 

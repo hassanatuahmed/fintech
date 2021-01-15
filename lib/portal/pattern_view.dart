@@ -5,7 +5,6 @@ class PortalPatternView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 425,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topRight,

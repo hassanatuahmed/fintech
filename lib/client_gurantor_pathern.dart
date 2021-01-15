@@ -15,7 +15,7 @@ class GurantorPatternView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 425,
+      //width: 425,
 
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -33,7 +33,11 @@ class GurantorPatternView extends StatelessWidget {
               Container(
                   height: 16,
                   width: 16,
-                  child: Icon(Icons.keyboard_backspace,color: Colors.white,)),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                      child: Icon(Icons.keyboard_backspace,color: Colors.white,))),
               SizedBox(width: 25,),
               Container(
                 height: 80,

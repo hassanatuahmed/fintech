@@ -21,7 +21,7 @@ class BusinessPatternView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 425,
+      //width: 425,
       //height: 261.3,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -39,7 +39,16 @@ class BusinessPatternView extends StatelessWidget {
               Container(
                   height: 16,
                   width: 16,
-                  child: Icon(Icons.keyboard_backspace,color: Colors.white,)),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+
+                          child: Icon(Icons.keyboard_backspace,color: Colors.white,)))),
               SizedBox(width: 70,),
               Text("Business",style: TextStyle(fontSize: 34,
                 fontWeight: FontWeight.w400,

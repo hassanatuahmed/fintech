@@ -97,3 +97,18 @@ class _PersonalDobState extends State<PersonalDob> {
     );
   }
 }
+
+DateTime currentDate = DateTime.now();
+Future<void> _selectDate(BuildContext context) async {
+  final DateTime pickedDate = await showDatePicker(
+      context: context,
+      initialDate: currentDate,
+      firstDate: DateTime(2015),
+      lastDate: DateTime(2050));
+  if (pickedDate != null && pickedDate != currentDate)
+    setState(() {
+      currentDate = pickedDate;
+    });}
+
+void setState(Null Function() currentDate) {
+}

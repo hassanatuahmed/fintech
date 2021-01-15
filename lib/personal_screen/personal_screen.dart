@@ -1,5 +1,6 @@
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/pattern_view.dart';
+import '../customizeRButton.dart';
 import '../my_button_screen.dart';
 import 'package:fintech/personal_pattern_view.dart';
 import 'package:fintech/personal_screen/dob.dart';
@@ -50,50 +51,9 @@ class _PersonalScreenState extends State<PersonalScreen> {
                           fontStyle: FontStyle.normal
                       ),),),
                   SizedBox(height: 10,),
-                  Row(
-
-                    children: [
-                      SizedBox(width: 37,),
-                      Container(
-                        child: Center(child: Text("Mr",style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 16,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w300,
-                            fontStyle: FontStyle.normal),)),
-                        height: 40,
-                        width: 40,
-                        decoration:BoxDecoration(
-                            border: Border.all(color: Colors.red)),
-                      ),
-                      SizedBox(width: 30,),
-                      Container(
-                        child: Center(child: Text("Mrs",style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 16,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w300,
-                            fontStyle: FontStyle.normal),)),
-                        height: 40,
-                        width: 40,
-                        decoration:BoxDecoration(
-                            border: Border.all(color: Colors.red)),
-                      ),
-                      SizedBox(width: 30,),
-                      Container(
-                        child: Center(child: Text("Ms",style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: "Poppins",
-                            fontWeight: FontWeight.w300,
-                            fontStyle: FontStyle.normal),)),
-                        height: 40,
-                        width: 40,
-                        decoration:BoxDecoration(
-                            color: Colors.red,
-                            border: Border.all(color: Colors.red)),
-                      ),
-                    ],
+                  Container(
+                    height: 100,
+                    child: CustomRadio(),
                   ),
 
                 ],
@@ -103,7 +63,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
 
               ),
               width: 341,
-              height: 104,
+             // height: 200,
 
             ),
             SizedBox(height: 35,),

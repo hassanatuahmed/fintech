@@ -1,4 +1,5 @@
 import 'package:fintech/custom_field.dart';
+import 'package:fintech/customizeRButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -15,11 +16,13 @@ class FullName extends StatefulWidget {
 }
 
 class _FullNameState extends State<FullName> {
+  get _radValue => null;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: [
           Stack(
 
@@ -60,70 +63,29 @@ class _FullNameState extends State<FullName> {
                 SizedBox(height: 24,),
                 Padding(
                   padding: EdgeInsets.only(left: 70.0),
-                  child: Container(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right:170.0),
+                        child: Text(" 1. Select Title",style: TextStyle(fontSize: 16),),
+                      ),
+                      Container(
+                        child: Container(
 
-                    child: Column(
-                      children: [
-                        SizedBox(height: 20,),
-                        Align(
-                          alignment: Alignment.topLeft,
-                            child: Text("  1.  Select Title")),
-                        SizedBox(height: 10,),
-                        Row(
 
-                          children: [
-                            SizedBox(width: 37,),
-                            Container(
-                              child: Center(child: Text("Mr",style: TextStyle(
-                                  color: Colors.red,
-                              fontSize: 16,
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w300,
-                              fontStyle: FontStyle.normal),)),
-                              height: 40,
-                              width: 40,
-                              decoration:BoxDecoration(
-                                border: Border.all(color: Colors.red)),
-                            ),
-                            SizedBox(width: 30,),
-                            Container(
-                              child: Center(child: Text("Mrs",style: TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 16,
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.w300,
-                                  fontStyle: FontStyle.normal),)),
-                              height: 40,
-                              width: 40,
-                              decoration:BoxDecoration(
-                                  border: Border.all(color: Colors.red)),
-                            ),
-                            SizedBox(width: 30,),
-                            Container(
-                              child: Center(child: Text("Ms",style: TextStyle(
-                                  color: Colors.red,
-                                  fontSize: 16,
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.w300,
-                                  fontStyle: FontStyle.normal),)),
-                              height: 40,
-                              width: 40,
-                              decoration:BoxDecoration(
-                                  border: Border.all(color: Colors.red)),
-                            ),
-                          ],
+                          decoration:BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: HexColor("333333"),width: 0.1),
+
+                          ),
+                          width: 290,
+                          height: 104,
+                          child: CustomRadio(),
+
                         ),
-
-                      ],
-                    ),
-                    decoration:BoxDecoration(
-                      border: Border.all(color: HexColor("333333"),width: 0.1),
-
-                    ),
-                    width: 290,
-                    height: 104,
-
-                    ),
+                      ),
+                    ],
+                  ),
 
                   ),
 

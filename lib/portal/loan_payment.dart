@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:getwidget/getwidget.dart';
 
 import '../pattern_view.dart';
 
@@ -284,120 +285,96 @@ class LoanPayment extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10,),
-            Row(
-              children: [
-                SizedBox(width: 30,),
-                MyStyleText(
-                  text: "Repayments Made",
-                  fontSize: 24.0,
-                  height: 36.0,
-                  width: 227.0,
-                ),
-                DropdownButton(),
-              ],
+
+            GFAccordion(
+                title: 'Repayments Made',textStyle: TextStyle(fontSize: 24.0,
+            fontFamily: 'Poppins',
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w400),
+                content: 'No repayments yet.When you make repayments, they will appear here',
+                collapsedIcon: Icon(Icons.arrow_drop_up),
+                expandedIcon: Icon(Icons.arrow_drop_down),
             ),
-            Padding(
-              padding: EdgeInsets.only(right:120.0),
-              child: MyStyleText(
-                text: "No repayments yet.",
-                fontSize: 16.0,
-                height: 36.0,
-                width: 227.0,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left:33.0),
-              child: MyStyleText(
-                text: "When you make repayments, they will appear here",
-                fontSize: 14.0,
-                height: 36.0,
-                width: 388.0,
-              ),
-            ),
+
             Divider(
               thickness: 2,
             ),
+            GFAccordion(
+              title: 'Repayment Settings',textStyle: TextStyle(fontSize: 24.0),
+              contentChild: Container(
+                child: Row(
+                  children: [
+                    SizedBox(width: 20,),
+
+                    DottedBorder(
+                      color: Colors.black,
+                      strokeWidth: 1,
+                      child: Container(
+                        height: 68,
+                        width: 163,
+
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(top:10.0,right: 50.0),
+                              child: Text("Loan Tenure"),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 15.0),
+                              child: Row(
+                                children: [
+                                  Text("6 months"),
+                                  SizedBox(width: 37,),
+                                  Icon(Icons.create,color: Colors.red,),
+
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20,),
+                    DottedBorder(
+                      color: Colors.black,
+                      strokeWidth: 1,
+                      child: Container(
+                        height: 68,
+                        width: 163,
+
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(top:10.0,right: 50.0),
+                              child: Text("Loan Tenure"),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 15.0),
+                              child: Row(
+                                children: [
+                                  Text("6 months"),
+                                  SizedBox(width: 37,),
+                                  Icon(Icons.create,color: Colors.red,),
+
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //content: 'No repayments yet.When you make repayments, they will appear here',
+              collapsedIcon: Icon(Icons.arrow_drop_up),
+              expandedIcon: Icon(Icons.arrow_drop_down),
+            ),
             Padding(
               padding: EdgeInsets.only(left:20.0),
-              child: Row(
-                children: [
-                  Row(
-                    children: [
-                      MyStyleText(
-                        text: "Repayment Settings",
-                        fontSize: 24.0,
-                        height: 36.0,
-                        width: 243.0,
-                      ),
 
-                    ],
-                  ),
-                ],
-              ),
             ),
-            Row(
-              children: [
-                SizedBox(width: 20,),
 
-                DottedBorder(
-                  color: Colors.black,
-                  strokeWidth: 1,
-                  child: Container(
-                    height: 68,
-                    width: 163,
-
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top:10.0,right: 50.0),
-                          child: Text("Loan Tenure"),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15.0),
-                          child: Row(
-                            children: [
-                              Text("6 months"),
-                              SizedBox(width: 37,),
-                              Icon(Icons.create,color: Colors.red,),
-
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(width: 20,),
-                DottedBorder(
-                  color: Colors.black,
-                  strokeWidth: 1,
-                  child: Container(
-                    height: 68,
-                    width: 163,
-
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top:10.0,right: 50.0),
-                          child: Text("Loan Tenure"),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 15.0),
-                          child: Row(
-                            children: [
-                              Text("6 months"),
-                              SizedBox(width: 37,),
-                              Icon(Icons.create,color: Colors.red,),
-
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
             SizedBox(height: 30,),
             Row(
               children: [
@@ -436,72 +413,77 @@ class LoanPayment extends StatelessWidget {
               thickness: 2,
             ),
 
+            GFAccordion(
+              title: 'Histories',textStyle: TextStyle(fontSize: 24.0),
+              contentChild: Container(
+                child: Row(
+                  children: [
+                    SizedBox(width: 15,),
+
+                    Container(
+                      width: 90,
+                      height: 120,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30.0),
+                        color: HexColor("333333").withOpacity(0.8),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 30,),
+                          Icon(Icons.history,color: Colors.white,),
+                          Text("Application  History",style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Poppins",
+                            fontSize: 12,
+                            fontStyle: FontStyle.normal,
+                          ),
+                            textAlign: TextAlign.center,),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 20,),
+                    Container(
+                      width: 90,
+                      height: 120,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30.0),
+                        color: HexColor("333333").withOpacity(0.8),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 30,),
+                          Icon(Icons.history,color: Colors.white,),
+                          Text("Loan  \nHistory",style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Poppins",
+                            fontSize: 12,
+                            fontStyle: FontStyle.normal,
+                          ),
+                            textAlign: TextAlign.center,),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              collapsedIcon: Icon(Icons.arrow_drop_up),
+              expandedIcon: Icon(Icons.arrow_drop_down),
+            ),
+
             Row(
               children: [
                 SizedBox(width: 5,),
-                MyStyleText(
-                  text: "Histories",
-                  height: 36.0,
-                  width: 102.0,
-                  fontSize: 24.0,
 
-                ),
-                DropdownButton(),
+
+
+
                 SizedBox(width: 70,),
 
               ],
             ),
-            Row(
-              children: [
-                SizedBox(width: 15,),
 
-                Container(
-                  width: 90,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: HexColor("333333").withOpacity(0.8),
-                  ),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 30,),
-                      Icon(Icons.history,color: Colors.white,),
-                      Text("Application  History",style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "Poppins",
-                        fontSize: 12,
-                        fontStyle: FontStyle.normal,
-                      ),
-                      textAlign: TextAlign.center,),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 20,),
-                Container(
-                  width: 90,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: HexColor("333333").withOpacity(0.8),
-                  ),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 30,),
-                      Icon(Icons.history,color: Colors.white,),
-                      Text("Loan  \nHistory",style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "Poppins",
-                        fontSize: 12,
-                        fontStyle: FontStyle.normal,
-                      ),
-                        textAlign: TextAlign.center,),
-                    ],
-                  ),
-                ),
-              ],
-            ),
 
 
           ],

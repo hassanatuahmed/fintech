@@ -37,19 +37,22 @@ class _GuarantorMobileState extends State<GuarantorMobile> {
             width: 360.0,
           ),
 
-          Container(
-            decoration: BoxDecoration(
-              color: HexColor("#333333"),
-              borderRadius: BorderRadius.circular(30.0),
-            ),
-            height: 50,
-            width: 330,
-            child: TextField(
-              decoration: InputDecoration(
-                prefixIcon: Image.asset("asset/images/gh.png"),
-                hintText: "Number",
-                hintStyle: TextStyle(color: Colors.white),
-                border: InputBorder.none,
+          Padding(
+            padding: EdgeInsets.only(right:30.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: HexColor("#333333"),
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+              height: 50,
+              width: 330,
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Image.asset("asset/images/gh.png"),
+                  hintText: "Number",
+                  hintStyle: TextStyle(color: Colors.white),
+                  border: InputBorder.none,
+                ),
               ),
             ),
           ),

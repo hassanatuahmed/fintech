@@ -9,6 +9,8 @@ import 'next_business.dart';
 class AddressInformation extends StatelessWidget {
   get selected => null;
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,13 +123,20 @@ class AddressInformation extends StatelessWidget {
                     children: [
                       SizedBox(width: 15,),
 
-                      Text("DD/MM/YY",style: TextStyle(
-                          fontWeight: FontWeight.w200,
-                          fontStyle: FontStyle.normal,
-                          fontFamily: "Poppins",
-                          color: Colors.white),),
+                      GestureDetector(
+                        onTap: (){
+
+                        },
+                        child: Text("DD/MM/YY",style: TextStyle(
+                            fontWeight: FontWeight.w200,
+                            fontStyle: FontStyle.normal,
+                            fontFamily: "Poppins",
+                            color: Colors.white),),
+                      ),
                       SizedBox(width: 160,),
-                      Icon(Icons.calendar_today,color: Colors.white,),
+                      GestureDetector(
+                        onTap: ()=>_selectDate(context),
+                          child: Icon(Icons.calendar_today,color: Colors.white,)),
                       SizedBox(width: 15,),
 
                     ],
@@ -292,4 +301,18 @@ class AddressInformation extends StatelessWidget {
       ),
     );
   }
+}
+DateTime currentDate = DateTime.now();
+Future<void> _selectDate(BuildContext context) async {
+  final DateTime pickedDate = await showDatePicker(
+      context: context,
+      initialDate: currentDate,
+      firstDate: DateTime(2015),
+      lastDate: DateTime(2050));
+  if (pickedDate != null && pickedDate != currentDate)
+    setState(() {
+      currentDate = pickedDate;
+    });}
+
+void setState(Null Function() currentDate) {
 }

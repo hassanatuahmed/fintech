@@ -22,131 +22,101 @@ class PinVerification extends StatelessWidget {
             end: Alignment.bottomLeft,
           )
         ),
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 70,),
 
 
-            Image.asset('asset/images/phone.png',scale: 4,),
+              Image.asset('asset/images/phone.png',scale: 4,),
 
 
-            SizedBox(height: 20,),
-            Center(
-              child: Text("PIN Verification",style: TextStyle(
-                fontStyle: FontStyle.normal,
-                fontFamily: "Poly",
-                fontSize: 34,
-                fontWeight: FontWeight.w400,
+              SizedBox(height: 40,),
+              Center(
+                child: Text("PIN Verification",style: TextStyle(
+                  fontStyle: FontStyle.normal,
+                  fontFamily: "Poly",
+                  fontSize: 34,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
+                ),),
+              ),
+              SizedBox(height: 70,),
+              Container(
+                  child: Text(
+                      "Please input the 4-digit PIN that \n was sent to your phone number",style: TextStyle(
+                    color: Colors.white,
+                    fontSize:16,
+                    fontFamily: "Poppins",
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w400,
+
+                  ),)),
+              SizedBox(height: 20,),
+
+              Row(
+
+                children: [
+                  SizedBox(width: 90,),
+                  Text("(000) 000-0000",style: TextStyle(
+                    color: Colors.white,
+                    fontSize:24,
+                    fontFamily: "Poppins",
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w400,
+                  ),),
+                  SizedBox(width: 10,),
+
+                  Text("Change",style: TextStyle(
+                    color: Colors.white,
+                    fontSize:14,
+                    fontFamily: "Poppins",
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w400,
+                  ),),
+
+                  SizedBox(width: 75,),
+
+                ],
+              ),
+              SizedBox(height: 100,),
+              Container(
+                height: 3,
+                  child: Myotp()),
+
+
+
+              SizedBox(height: 34,),
+
+
+              Text("Resend PIN",style: TextStyle(
                 color: Colors.white,
+                fontSize:16,
+                fontFamily: "Poppins",
+                fontStyle: FontStyle.normal,
+                fontWeight: FontWeight.w300,
+
               ),),
-            ),
-            SizedBox(height: 62,),
-            Container(
-                child: Text(
-                    "Please input the 4-digit PIN that \n was sent to your phone number",style: TextStyle(
-                  color: Colors.white,
-                  fontSize:16,
-                  fontFamily: "Poppins",
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w400,
-
-                ),)),
-            SizedBox(height: 20,),
-
-            Row(
-
-              children: [
-                SizedBox(width: 90,),
-                Text("(000) 000-0000",style: TextStyle(
-                  color: Colors.white,
-                  fontSize:24,
-                  fontFamily: "Poppins",
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w400,
-                ),),
-                SizedBox(width: 10,),
-
-                Text("Change",style: TextStyle(
-                  color: Colors.white,
-                  fontSize:14,
-                  fontFamily: "Poppins",
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.w400,
-                ),),
-
-                SizedBox(width: 75,),
-
-              ],
-            ),
-            SizedBox(height: 60,),
+              SizedBox(height: 27,),
 
 
-            Row(
-              children: [
+              CustomMatButton(
+                textColor: HexColor("#ED1C24"),
+                text: "verify",
+                fontSize: 16.0,
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerified(),
+                  fullscreenDialog: true)
+                  );
+                },
+                color: Colors.white,
+
+              ),
+              SizedBox(height: 90,),
 
 
-                Container(
-                  color: Colors.white,
-                  height: 3,
-                  width: 40,
-                ),
-                SizedBox(width: 20,),
-                Container(
-                  color: Colors.white,
-                  height: 3,
-                  width: 40,
-                ),
-                SizedBox(width: 20,),
-
-                Container(
-                  color: Colors.white,
-                  height: 3,
-                  width: 40,
-                ),
-                SizedBox(width: 20,),
-
-                Container(
-                  color: Colors.white,
-                  height: 3,
-                  width: 40,
-                ),
-                SizedBox(width: 50,),
-
-
-
-
-              ],
-            ),
-            SizedBox(height: 34,),
-
-
-            Text("Resend PIN",style: TextStyle(
-              color: Colors.white,
-              fontSize:16,
-              fontFamily: "Poppins",
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.w300,
-
-            ),),
-            SizedBox(height: 27,),
-
-
-            CustomMatButton(
-              textColor: HexColor("#ED1C24"),
-              text: "verify",
-              fontSize: 16.0,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerified(),
-                fullscreenDialog: true)
-                );
-              },
-              color: Colors.white,
-
-            ),
-            SizedBox(height: 28,),
-
-
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -213,7 +183,23 @@ class _MyotpState extends State<Myotp> {
   }
 
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Expanded(
+      child: TextFieldPin(
+
+            filled: true,
+            filledColor: Colors.white,
+            codeLength: _otpCodeLength,
+            boxSize: 46,
+
+            filledAfterTextChange: true,
+            textStyle: TextStyle(fontSize: 16),
+
+            onOtpCallback: (code, isAutofill) =>
+                _onOtpCallBack(code, isAutofill),
+
+
+      ),
+    );
   }
 }
 

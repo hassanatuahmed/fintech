@@ -37,6 +37,8 @@ dependencies:
   giffy_dialog: ^1.8.0
   percent_indicator: "^2.1.7+2"
   sms_otp_auto_verify: ^1.2.2
+  getwidget: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:

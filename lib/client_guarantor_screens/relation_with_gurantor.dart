@@ -75,7 +75,7 @@ class _RelationWithGuarantorState extends State<RelationWithGuarantor> {
               ),
             ),
           ),
-          SizedBox(height: 100,),
+          SizedBox(height: 120,),
           Padding(
             padding:  EdgeInsets.only(right:4.0),
             child: Row(

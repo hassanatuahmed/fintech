@@ -35,7 +35,6 @@ class SecurityQuestion extends StatelessWidget {
             Container(
               color: Colors.white,
             width: MediaQuery.of(context).size.width,
-              //height: MediaQuery.of(context).size.height * 0.75,
               child: Column(
                 children: [
                   Row(
@@ -72,13 +71,15 @@ class SecurityQuestion extends StatelessWidget {
 
                           Padding(
                             padding: EdgeInsets.only(left:25.0,right: 20,bottom: 30),
+
                             child: CustomField(
 
 
                               hintText: "Select Question",
                               prefixIcon: Icon(null),
-                            ),
+                           ),
                           ),
+
                           Padding(
                             padding: EdgeInsets.only(right:140.0,bottom: 10),
                             child: Text("Security Answer "),

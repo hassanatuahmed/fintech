@@ -32,7 +32,11 @@ class PersonalPatternView extends StatelessWidget {
               Container(
                   height: 16,
                   width: 16,
-                  child: Icon(Icons.keyboard_backspace,color: Colors.white,)),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                      child: Icon(Icons.keyboard_backspace,color: Colors.white,))),
               SizedBox(width: 70,),
               Text("Personal",style: TextStyle(fontSize: 34,
                 fontWeight: FontWeight.w400,

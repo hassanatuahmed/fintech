@@ -3,6 +3,7 @@ import 'package:fintech/client_guarantor_screens/relation_with_gurantor.dart';
 import 'package:fintech/client_gurantor_pathern.dart';
 import 'package:fintech/create_account_screens/full_name_screen2.dart';
 import 'package:fintech/custom_button.dart';
+import 'package:fintech/customizeRButton.dart';
 import 'package:fintech/my_style_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -60,45 +61,11 @@ class _GurantorNameState extends State<GurantorName> {
               ),
             ),
             SizedBox(height: 20,),
-            Row(
-              children: [
-                SizedBox(width: 37,),
-                Container(
-                  height: 41,
-                  width: 85,
-                  child: CustomMatButton(
-                    text: "Mr",
-                    onPressed: (){},
-                    color: HexColor("#F2F2F2"),
-                    textColor: Colors.black,
-                  ),
-                ),
-                SizedBox(width: 21,),
-
-                Container(
-                  height: 41,
-                  width: 85,
-                  child: CustomMatButton(
-                    text: "Mrs",
-                    onPressed: (){},
-                    color: HexColor("#F2F2F2"),
-                    textColor: Colors.black,
-                  ),
-                ),
-                SizedBox(width: 21,),
-
-                Container(
-                  height: 41,
-                  width: 85,
-                  child: CustomMatButton(
-                    text: "Ms",
-                    onPressed: (){},
-                    color: HexColor("#F2F2F2"),
-                    textColor: Colors.black,
-                  ),
-                ),
-              ],
-            ),
+            Container(height: 70,
+            child: Padding(
+              padding: EdgeInsets.only(left:30.0),
+              child: CustomRadio(),
+            ),),
 
              SizedBox(height: 60,),
 

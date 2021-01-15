@@ -65,53 +65,7 @@ class Checkboxes extends StatelessWidget {
                         width: 0.1, color: HexColor("333333"),),
 
                     ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 23,),
-                        Row(
-                          children: [
-                            SizedBox(width: 15,),
-                            Container(
-                              height: 25,
-                              width: 25,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5.0),
-                                color: HexColor("F2F2F2"),
-                              ),
-                            ),
-                            SizedBox(width: 23,),
-                            
-
-
-                            Container(
-                            height: 36,
-                            width: 145,
-                            child: Text("I have read the Terms \n and Services"))
-                          ],
-                        ),
-                        SizedBox(height: 30,),
-                        Row(
-                          children: [
-                            SizedBox(width: 15,),
-                            Container(
-                              height: 25,
-                              width: 25,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5.0),
-                                color: HexColor("F2F2F2"),
-                              ),
-                            ),
-                            SizedBox(width: 23,),
-                            Container(
-                                height: 36,
-                                width: 145,
-                                child: Text(
-                                    "I want to receive \n promotional offers"))
-                          ],
-                        ),
-
-                      ],
-                    ),
+                    child: CustomCheckbox(),
                   ),
                 ),
                 Spacer(),
@@ -151,5 +105,92 @@ class Checkboxes extends StatelessWidget {
 }
 
 
+
+
+class CustomCheckbox extends StatefulWidget {
+  @override
+  createState() {
+    return new CustomCheckboxState();
+  }
+}
+
+class CustomCheckboxState extends State<CustomCheckbox> {
+  List<RadioModel> sampleData = new List<RadioModel>();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    sampleData.add(new RadioModel(false, 'I have read the Terms and Services'));
+    sampleData.add(new RadioModel(false, 'I want to receive promotional offers'));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new ListView.builder(
+        itemCount: sampleData.length,
+        itemBuilder: (BuildContext context, int index) {
+          return new InkWell(
+            //highlightColor: Colors.red,
+            splashColor: Colors.blueAccent,
+            onTap: () {
+              setState(() {
+                sampleData.forEach((element) => element.isSelected = false);
+                sampleData[index].isSelected = true;
+              });
+            },
+            child: new RadioItem(sampleData[index]),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class RadioItem extends StatelessWidget {
+  final RadioModel _item;
+
+  RadioItem(this._item);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      margin: new EdgeInsets.all(15.0),
+      child: new Row(
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          new Container(
+            height: 25.0,
+            width: 25.0,
+
+            decoration: new BoxDecoration(
+              color: _item.isSelected
+                  ? Colors.red
+                  : Colors.transparent,
+              border: new Border.all(
+                  width: 1.0,
+                  color: _item.isSelected
+                      ? Colors.red
+                      : Colors.grey),
+              borderRadius: const BorderRadius.all(const Radius.circular(2.0)),
+            ),
+          ),
+          new Container(
+            margin: new EdgeInsets.only(left: 10.0),
+            child: new Text(_item.text),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+  class RadioModel {
+  bool isSelected;
+  final String text;
+
+  RadioModel(this.isSelected, this.text);
+  }
 
 

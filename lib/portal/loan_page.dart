@@ -1,10 +1,12 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:fintech/business/BankSelection.dart';
 import 'package:fintech/custom_button.dart';
 import 'package:fintech/my_style_text.dart';
 import 'package:fintech/portal/loan_payment.dart';
 import 'package:fintech/portal/pattern_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/accordian/gf_accordian.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl/intl.dart';
 
@@ -257,11 +259,7 @@ class LoanPage extends StatelessWidget {
             Divider(
               thickness: 2,
             ),
-            Padding(
-              padding: EdgeInsets.only(left:280.0),
-              child: DropdownButton(
-              ),
-            ),
+
             Padding(
               padding: EdgeInsets.only(left:215.0),
               child: MaterialButton(
@@ -279,58 +277,36 @@ class LoanPage extends StatelessWidget {
               ),
             ),
 
-            Row(
-              children: [
-                SizedBox(width: 5,),
-                MyStyleText(
-                  text: "Histories",
-                  height: 36.0,
-                  width: 102.0,
-                  fontSize: 24.0,
+            GFAccordion(
+                title: 'Histories',textStyle: TextStyle(fontWeight: FontWeight.w400,fontStyle: FontStyle.normal,
+            fontSize: 24.0),
+                contentChild: Container(
+                  child: Row(
+                    children: [
+                      SizedBox(width: 15,),
 
-                ),
-                SizedBox(width: 70,),
-
-                //Container(
-                 // height: 55,
-                  //width: 230,
-                  //child: MaterialButton(
-
-                    //child:Text("set-up auto payments"),
-                    //onPressed: (){
-
-
-                     // }
-
-                 // ),
-                //),
-
-
-              ],
-            ),
-            Row(
-              children: [
-                SizedBox(width: 15,),
-
-                Container(
-                  width: 90,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: HexColor("333333").withOpacity(0.8),
+                      Container(
+                        width: 90,
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30.0),
+                          color: HexColor("333333").withOpacity(0.8),
+                        ),
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                        width: 90,
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30.0),
+                          color: HexColor("333333").withOpacity(0.8),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                SizedBox(width: 20,),
-                Container(
-                  width: 90,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
-                    color: HexColor("333333").withOpacity(0.8),
-                  ),
-                ),
-              ],
             ),
+
 
 
           ],
@@ -366,32 +342,9 @@ void _payMethodModalBottomSheet(context){
                       color: HexColor("#333333"),
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(width: 40,),
-                      Container(
-                        width: 103,
-                        child: CustomMatButton(
-                          text: "Bank",
-                          color: HexColor("#F2F2F2"),
-                          textColor: Colors.black,
-                          onPressed: (){},
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      SizedBox(width: 30,),
-
-                      Container(
-                        width: 112,
-                        child: CustomMatButton(
-                          text: "Wallet",
-                          color: HexColor("#333333"),
-                          textColor: Colors.white,
-                          onPressed: (){},
-                          fontSize: 16.0,
-                        ),
-                      ),
-                    ],
+                  Container(
+                    height: 70,
+                    child: BankSelection(),
                   ),
                   SizedBox(height: 30,),
                   CustomMatButton(
@@ -492,47 +445,8 @@ void _newModalBottomSheet(context){
                     ),
 
                   ),
-                  Row(
-                    children: [
-                      SizedBox(width: 30,),
-                      Container(
-                        height: 41,
-                        width: 70,
-                        child: CustomMatButton(
-                          text: "MTN",
-                          onPressed: (){},
-                          textColor: Colors.black,
-                          color: HexColor("#F2F2F2"),
-
-                        ),
-                      ),
-                      SizedBox(width: 20,),
-                      Container(
-                        height: 41,
-                        width: 109,
-                        child: CustomMatButton(
-                          text: "Vodafone",
-                          onPressed: (){},
-                          textColor: Colors.white,
-                          color: HexColor("#333333"),
-
-                        ),
-                      ),
-                      SizedBox(width: 20,),
-
-                      Container(
-                        height: 41,
-                        width: 105,
-                        child: CustomMatButton(
-                          text: "AirtelTigo",
-                          onPressed: (){},
-                          textColor: Colors.black,
-                          color: HexColor("#F2F2F2"),
-
-                        ),
-                      ),
-                    ],
-                  ),
+                  Container(height: 70,
+                  child: CustomRadio1(),),
                   SizedBox(height: 40,),
                   Padding(
                     padding: EdgeInsets.only(right:130.0),
@@ -564,6 +478,7 @@ void _newModalBottomSheet(context){
                       onTap: (){
                         //_dateModalBottomSheet(context);
                         _dateModalBottomSheet(context);
+                        _selectDate(context);
                       },
                       child: MyStyleText(
                         text: "Choose start date",
@@ -612,18 +527,7 @@ void _dateModalBottomSheet(context){
                     fontSize: 24.0,
                   ),
                   SizedBox(height: 20,),
-                  Container(
-                    height: 379,
-                    width: 328,
-                    child: Card(
-                      child: CupertinoDatePicker(
-                        mode: CupertinoDatePickerMode.date,
-                        initialDateTime: DateTime(1900,1,1),
-                        onDateTimeChanged: (DateTime newDateTime){},
 
-                      ),
-                    ),
-                  ),
                   SizedBox(height: 35,),
 
                   Padding(
@@ -648,6 +552,114 @@ void _dateModalBottomSheet(context){
   );
 }
 
+
+class CustomRadio1 extends StatefulWidget {
+  @override
+  createState() {
+    return new CustomRadio1State();
+  }
+}
+
+class CustomRadio1State extends State<CustomRadio1> {
+  List<RadioModel> sampleData = new List<RadioModel>();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    sampleData.add(new RadioModel(false, 'MTN', ));
+    sampleData.add(new RadioModel(false, 'Vodafone', ));
+    sampleData.add(new RadioModel(false, 'AirtelTigo', ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      backgroundColor: Colors.white,
+
+      body: new ListView.builder(
+        itemCount: sampleData.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (BuildContext context, int index) {
+          return new InkWell(
+            //highlightColor: Colors.red,
+            onTap: () {
+              setState(() {
+                sampleData.forEach((element) => element.isSelected = false);
+                sampleData[index].isSelected = true;
+              });
+            },
+            child: new RadioItem(sampleData[index]),
+          );
+        },
+      ),
+    );
+  }
+}
+class RadioItem extends StatelessWidget {
+  final RadioModel _item;
+
+  RadioItem(this._item);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      margin: new EdgeInsets.all(15.0),
+      child: new Row(
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          new Container(
+            height: 50.0,
+            width: 100.0,
+            child: new Center(
+              child: new Text(_item.buttonText,
+                  style: new TextStyle(
+                      color:
+                      _item.isSelected ? Colors.white : Colors.black,
+                      //fontWeight: FontWeight.bold,
+                      fontSize: 18.0)),
+            ),
+            decoration: new BoxDecoration(
+              color: _item.isSelected
+                  ? Colors.black
+                  : Colors.transparent,
+              border: new Border.all(
+                  width: 1.0,
+                  color: _item.isSelected
+                      ? Colors.black
+                      : Colors.black),
+              borderRadius: const BorderRadius.all(const Radius.circular(30.0)),
+            ),
+          ),
+          new Container(
+            margin: new EdgeInsets.only(left: 10.0),
+          )
+        ],
+      ),
+    );
+  }
+}
+class RadioModel {
+  bool isSelected;
+  final String buttonText;
+
+  RadioModel(this.isSelected, this.buttonText, );
+}
+
+DateTime currentDate = DateTime.now();
+Future<void> _selectDate(BuildContext context) async {
+  final DateTime pickedDate = await showDatePicker(
+      context: context,
+      initialDate: currentDate,
+      firstDate: DateTime(2015),
+      lastDate: DateTime(2050));
+  if (pickedDate != null && pickedDate != currentDate)
+    setState(() {
+      currentDate = pickedDate;
+    });}
+
+void setState(Null Function() currentDate) {
+}
 
 
 
