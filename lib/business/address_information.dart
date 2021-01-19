@@ -192,7 +192,7 @@ class _BusinessAddressState extends State<BusinessAddress> {
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.normal),),
                   ),
-                  SizedBox(width: 80,),
+                  SizedBox(width: 50,),
                   GestureDetector(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>UploadDocument(),

@@ -6,12 +6,12 @@ import 'bottom_navigation_homepage.dart';
 import 'bottom_navigation_notification.dart';
 import 'loan_page.dart';
 
-class MainScreen extends StatefulWidget {
+class PortalMainScreen extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _PortalMainScreenState createState() => _PortalMainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _PortalMainScreenState extends State<PortalMainScreen> {
   int _selectedIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
               color: Colors.grey,
 
             ),
-            title: Text('HOME'),
+            title: Text('Home'),
             activeIcon: Icon(
                 Icons.home,
                 color: Colors.red,

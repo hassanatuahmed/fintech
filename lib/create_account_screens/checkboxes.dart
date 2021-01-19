@@ -65,7 +65,9 @@ class Checkboxes extends StatelessWidget {
                         width: 0.1, color: HexColor("333333"),),
 
                     ),
-                    child: CustomCheckbox(),
+                    child: Container(
+                      height: 144,
+                        child: CustomCheckbox()),
                   ),
                 ),
                 Spacer(),
@@ -121,8 +123,8 @@ class CustomCheckboxState extends State<CustomCheckbox> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    sampleData.add(new RadioModel(false, 'I have read the Terms and Services'));
-    sampleData.add(new RadioModel(false, 'I want to receive promotional offers'));
+    sampleData.add(new RadioModel(false, 'I have read the Terms\nand Services'));
+    sampleData.add(new RadioModel(false, 'I want to receive\npromotional offers'));
   }
 
   @override

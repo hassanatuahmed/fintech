@@ -81,7 +81,7 @@ class _PersonalDobState extends State<PersonalDob> {
                fontWeight: FontWeight.w400,
                fontStyle: FontStyle.normal),),
              ),
-             SizedBox(width: 80,),
+             SizedBox(width: 50,),
              GestureDetector(
                onTap: (){
                  Navigator.push(context, MaterialPageRoute(builder: (context)=>UploadIdentification(),

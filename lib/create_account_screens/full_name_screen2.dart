@@ -65,13 +65,9 @@ class _FullNameState extends State<FullName> {
                   padding: EdgeInsets.only(left: 70.0),
                   child: Column(
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(right:170.0),
-                        child: Text(" 1. Select Title",style: TextStyle(fontSize: 16),),
-                      ),
+
                       Container(
                         child: Container(
-
 
                           decoration:BoxDecoration(
                             color: Colors.white,
@@ -80,7 +76,17 @@ class _FullNameState extends State<FullName> {
                           ),
                           width: 290,
                           height: 104,
-                          child: CustomRadio(),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(right:170.0),
+                                child: Text(" 1. Select Title",style: TextStyle(fontSize: 16),),
+                              ),
+                              Container(
+                                height: 70,
+                                  child: CustomRadio()),
+                            ],
+                          ),
 
                         ),
                       ),
@@ -189,7 +195,7 @@ class SecondHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           CircleAvatar(
-            radius: 25,
+            radius: 23,
             backgroundColor: HexColor("F2F2F2"),
             child: Text("CBG",
               style: TextStyle(fontSize: 16,
@@ -198,7 +204,7 @@ class SecondHeader extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   fontStyle: FontStyle.normal),),
           ),
-          SizedBox(width: 10,),
+          SizedBox(width: 7,),
           Container(
             width: 290,
             height: 75,

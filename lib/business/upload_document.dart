@@ -185,7 +185,7 @@ class _UploadDocumentState extends State<UploadDocument> {
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.normal),),
                 ),
-                SizedBox(width: 80,),
+                SizedBox(width: 50,),
                 GestureDetector(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>LoanInformation(),

@@ -28,7 +28,7 @@ class GurantorPatternView extends StatelessWidget {
           SizedBox(height: 30,),
           Row(
             children: [
-              SizedBox(width: 30,),
+              SizedBox(width: 20,),
 
               Container(
                   height: 16,
@@ -38,10 +38,10 @@ class GurantorPatternView extends StatelessWidget {
                       Navigator.pop(context);
                     },
                       child: Icon(Icons.keyboard_backspace,color: Colors.white,))),
-              SizedBox(width: 25,),
+              SizedBox(width: 1,),
               Container(
                 height: 80,
-                width: 239,
+                width: 230,
                 child: Text("Client Guarantor",style: TextStyle(fontSize: 34,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal, color: Colors.white,
@@ -50,7 +50,7 @@ class GurantorPatternView extends StatelessWidget {
               ),
 
               Container(
-                width: 95,
+                width: 90,
                 height: 40,
                 child: MyButton(
 
@@ -58,7 +58,7 @@ class GurantorPatternView extends StatelessWidget {
                   BorderSide_color: Colors.white,
                   text: "Sign Out",
                   style:TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontFamily: "Poppins",
                     fontStyle: FontStyle.normal,
                     color: Colors.white,
@@ -73,7 +73,7 @@ class GurantorPatternView extends StatelessWidget {
           SizedBox(height: 10,),
           Row(
             children: [
-              SizedBox(width: 80,),
+              SizedBox(width: 50,),
 
               Container(
                 height: 3,

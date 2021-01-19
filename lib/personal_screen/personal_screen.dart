@@ -75,8 +75,8 @@ class _PersonalScreenState extends State<PersonalScreen> {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right:185.0,top: 15.0,bottom: 15.0),
-                    child: Text("2.   Full Legal Name",style: TextStyle(
+                    padding: EdgeInsets.only(right:180.0,top: 15.0,bottom: 15.0),
+                    child: Text(" 2.  Full Legal Name",style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                         fontFamily: "Poppins",
@@ -237,7 +237,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.normal),),
                 ),
-                SizedBox(width: 80,),
+                SizedBox(width: 50,),
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>PersonalDob(),

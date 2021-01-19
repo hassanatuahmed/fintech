@@ -37,13 +37,13 @@ class PersonalPatternView extends StatelessWidget {
                       Navigator.pop(context);
                     },
                       child: Icon(Icons.keyboard_backspace,color: Colors.white,))),
-              SizedBox(width: 70,),
+              SizedBox(width: 50,),
               Text("Personal",style: TextStyle(fontSize: 34,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal, color: Colors.white,
               ),
                 textAlign: TextAlign.center,),
-              SizedBox(width: 30,),
+              SizedBox(width: 20,),
 
               Container(
                 width: 95,
@@ -54,7 +54,7 @@ class PersonalPatternView extends StatelessWidget {
                   BorderSide_color: Colors.white,
                   text: "Sign Out",
                   style:TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontFamily: "Poppins",
                     fontStyle: FontStyle.normal,
                     color: Colors.white,
@@ -69,7 +69,7 @@ class PersonalPatternView extends StatelessWidget {
           SizedBox(height: 22,),
           Row(
             children: [
-              SizedBox(width: 100,),
+              SizedBox(width: 80,),
 
               Container(
                 height: 3,

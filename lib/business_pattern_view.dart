@@ -49,13 +49,13 @@ class BusinessPatternView extends StatelessWidget {
                         },
 
                           child: Icon(Icons.keyboard_backspace,color: Colors.white,)))),
-              SizedBox(width: 70,),
+              SizedBox(width: 40,),
               Text("Business",style: TextStyle(fontSize: 34,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal, color: Colors.white,
               ),
                 textAlign: TextAlign.center,),
-              SizedBox(width: 30,),
+              SizedBox(width: 20,),
 
               Container(
                 width: 95,
@@ -66,7 +66,7 @@ class BusinessPatternView extends StatelessWidget {
                   BorderSide_color: Colors.white,
                   text: "Sign Out",
                   style:TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontFamily: "Poppins",
                     fontStyle: FontStyle.normal,
                     color: Colors.white,
@@ -81,7 +81,7 @@ class BusinessPatternView extends StatelessWidget {
           SizedBox(height: 22,),
           Row(
             children: [
-              SizedBox(width: 50,),
+              SizedBox(width: 30,),
 
               Container(
                 height: 3,

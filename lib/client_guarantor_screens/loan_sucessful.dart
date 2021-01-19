@@ -66,7 +66,7 @@ class LoanSuccessful extends StatelessWidget {
                 text: "Home",
                 fontSize: 16.0,
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MainScreen(),
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> PortalMainScreen(),
                       fullscreenDialog: true)
                   );
                 },

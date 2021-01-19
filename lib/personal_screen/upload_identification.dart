@@ -35,10 +35,10 @@ class UploadIdentification extends StatelessWidget {
           ),
           Row(
             children: [
-              SizedBox(width: 15,),
+              SizedBox(width: 12,),
               Container(
                 height:200,
-                width: 180,
+                width: 165,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   border: Border.all(color: HexColor("#333333"),width: 1),
@@ -61,11 +61,11 @@ class UploadIdentification extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: 15,),
+              SizedBox(width: 10,),
 
               Container(
                 height:200,
-                width: 180,
+                width: 165,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   border: Border.all(color: HexColor("#333333"),width: 1),
@@ -124,7 +124,7 @@ class UploadIdentification extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     fontStyle: FontStyle.normal),),
               ),
-              SizedBox(width: 80,),
+              SizedBox(width: 50,),
               GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>AddressInformation(),

@@ -31,7 +31,7 @@ class PinVerification extends StatelessWidget {
               Image.asset('asset/images/phone.png',scale: 4,),
 
 
-              SizedBox(height: 40,),
+              SizedBox(height: 20,),
               Center(
                 child: Text("PIN Verification",style: TextStyle(
                   fontStyle: FontStyle.normal,
@@ -41,7 +41,7 @@ class PinVerification extends StatelessWidget {
                   color: Colors.white,
                 ),),
               ),
-              SizedBox(height: 70,),
+              SizedBox(height: 50,),
               Container(
                   child: Text(
                       "Please input the 4-digit PIN that \n was sent to your phone number",style: TextStyle(
@@ -57,7 +57,7 @@ class PinVerification extends StatelessWidget {
               Row(
 
                 children: [
-                  SizedBox(width: 90,),
+                  SizedBox(width: 70,),
                   Text("(000) 000-0000",style: TextStyle(
                     color: Colors.white,
                     fontSize:24,
@@ -65,11 +65,11 @@ class PinVerification extends StatelessWidget {
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w400,
                   ),),
-                  SizedBox(width: 10,),
+                  SizedBox(width: 5,),
 
                   Text("Change",style: TextStyle(
                     color: Colors.white,
-                    fontSize:14,
+                    fontSize:12,
                     fontFamily: "Poppins",
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w400,
@@ -79,7 +79,7 @@ class PinVerification extends StatelessWidget {
 
                 ],
               ),
-              SizedBox(height: 100,),
+              SizedBox(height: 60,),
               Container(
                 height: 3,
                   child: Myotp()),
@@ -97,7 +97,7 @@ class PinVerification extends StatelessWidget {
                 fontWeight: FontWeight.w300,
 
               ),),
-              SizedBox(height: 27,),
+              SizedBox(height: 20,),
 
 
               CustomMatButton(
@@ -112,7 +112,7 @@ class PinVerification extends StatelessWidget {
                 color: Colors.white,
 
               ),
-              SizedBox(height: 90,),
+              SizedBox(height: 130,),
 
 
             ],

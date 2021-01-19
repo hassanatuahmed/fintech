@@ -81,7 +81,7 @@ class _GurantorNameState extends State<GurantorName> {
             ),
 
             Padding(
-              padding: EdgeInsets.only(left:30.0),
+              padding: EdgeInsets.only(left:30.0,right:30.0),
               child: MyStyleText(
                 text: "Guarantor’s First Name",
                 height: 30.0,
@@ -115,7 +115,7 @@ class _GurantorNameState extends State<GurantorName> {
             ),
 
             Padding(
-              padding: EdgeInsets.only(left:30.0),
+              padding: EdgeInsets.only(left:40.0,right:40.0),
               child: MyStyleText(
                 text: "Guarantor’s Last Name",
                 height: 30.0,
@@ -171,7 +171,7 @@ class _GurantorNameState extends State<GurantorName> {
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.normal),),
                   ),
-                  SizedBox(width: 80,),
+                  SizedBox(width: 50,),
                   GestureDetector(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>RelationWithGuarantor(),

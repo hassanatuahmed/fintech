@@ -51,12 +51,12 @@ class MobileNumber extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 14.0,left: 50.0),
                   child: Container(
 
-                    width: 290,
+                    width: 280,
                     height: 104,
                     child: Column(
                       children: [
                          Padding(
-                           padding: EdgeInsets.only(right:160.0),
+                           padding: EdgeInsets.only(right:150.0),
                            child: Text("4. Mobile Number",style: TextStyle(
                                fontSize: 16,
                                fontWeight: FontWeight.w300,

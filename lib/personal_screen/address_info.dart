@@ -26,7 +26,7 @@ class AddressInformation extends StatelessWidget {
             ),
 
             Padding(
-              padding: EdgeInsets.only(bottom:35.0,right: 30.0),
+              padding: EdgeInsets.only(bottom:35.0,left: 20.0),
               child: Text("Address Information",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -35,7 +35,7 @@ class AddressInformation extends StatelessWidget {
               ),),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 310.0),
+              padding: EdgeInsets.only(right: 290.0),
               child: Text("1 of 4",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -47,7 +47,7 @@ class AddressInformation extends StatelessWidget {
 
 
          Padding(
-           padding: EdgeInsets.only(bottom:27.0,right: 132),
+           padding: EdgeInsets.only(bottom:27.0,right: 85),
            child: Text("Upload Proof of Address",style: TextStyle(
              fontSize: 20,
            ),),
@@ -85,7 +85,7 @@ class AddressInformation extends StatelessWidget {
             ),
           ),
             Padding(
-              padding: EdgeInsets.only(right: 310.0),
+              padding: EdgeInsets.only(right: 290.0),
               child: Text("2 of 4",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -146,7 +146,7 @@ class AddressInformation extends StatelessWidget {
             ),
           ),
             Padding(
-              padding: EdgeInsets.only(right: 310.0),
+              padding: EdgeInsets.only(right: 290.0),
               child: Text("3 of 4",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -156,7 +156,7 @@ class AddressInformation extends StatelessWidget {
               ),),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 83.0),
+              padding: EdgeInsets.only(right: 45.0),
               child: Text("What is the ownership status",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -204,7 +204,7 @@ class AddressInformation extends StatelessWidget {
 
             SizedBox(height: 60,),
             Padding(
-              padding: EdgeInsets.only(right: 310.0),
+              padding: EdgeInsets.only(right: 290.0),
               child: Text("4 of 4",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -214,7 +214,7 @@ class AddressInformation extends StatelessWidget {
               ),),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 97.0),
+              padding: EdgeInsets.only(right: 57.0),
               child: Text("Upload Tenancy Agreement",style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
@@ -284,7 +284,7 @@ class AddressInformation extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                       fontStyle: FontStyle.normal),),
                 ),
-                SizedBox(width: 80,),
+                SizedBox(width: 50,),
                 GestureDetector(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>NextBusiness(),
