@@ -11,21 +11,20 @@ class PinVerification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: MediaQuery.of(context).size.width,
-        //height:MediaQuery.of(context).size.height * 0.4,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.red,Colors.purple],
+      body: Center(
+        child: Container(
+          //width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.red,Colors.purple],
 
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-          )
-        ),
-        child: SingleChildScrollView(
-          child: Column(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+            )
+          ),
+          child: ListView(
             children: [
-              SizedBox(height: 70,),
+              SizedBox(height: 50,),
 
 
               Image.asset('asset/images/phone.png',scale: 4,),
@@ -42,9 +41,9 @@ class PinVerification extends StatelessWidget {
                 ),),
               ),
               SizedBox(height: 50,),
-              Container(
+              Center(
                   child: Text(
-                      "Please input the 4-digit PIN that \n was sent to your phone number",style: TextStyle(
+                    "Please input the 4-digit PIN that \n was sent to your phone number",style: TextStyle(
                     color: Colors.white,
                     fontSize:16,
                     fontFamily: "Poppins",
@@ -57,7 +56,7 @@ class PinVerification extends StatelessWidget {
               Row(
 
                 children: [
-                  SizedBox(width: 70,),
+                  SizedBox(width: 100,),
                   Text("(000) 000-0000",style: TextStyle(
                     color: Colors.white,
                     fontSize:24,
@@ -80,23 +79,27 @@ class PinVerification extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 60,),
-              Container(
-                height: 3,
-                  child: Myotp()),
+              Center(
+                child: Container(
+                    height: 3,
+                    child: Myotp()),
+              ),
 
 
 
               SizedBox(height: 34,),
 
 
-              Text("Resend PIN",style: TextStyle(
-                color: Colors.white,
-                fontSize:16,
-                fontFamily: "Poppins",
-                fontStyle: FontStyle.normal,
-                fontWeight: FontWeight.w300,
+              Center(
+                child: Text("Resend PIN",style: TextStyle(
+                  color: Colors.white,
+                  fontSize:16,
+                  fontFamily: "Poppins",
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.w300,
 
-              ),),
+                ),),
+              ),
               SizedBox(height: 20,),
 
 
@@ -106,17 +109,18 @@ class PinVerification extends StatelessWidget {
                 fontSize: 16.0,
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>PinVerified(),
-                  fullscreenDialog: true)
+                      fullscreenDialog: true)
                   );
                 },
                 color: Colors.white,
 
               ),
-              SizedBox(height: 130,),
+              SizedBox(height: 30,),
 
 
             ],
           ),
+
         ),
       ),
     );
@@ -183,8 +187,8 @@ class _MyotpState extends State<Myotp> {
   }
 
   Widget build(BuildContext context) {
-    return Expanded(
-      child: TextFieldPin(
+    return Scaffold(
+      body: TextFieldPin(
 
             filled: true,
             filledColor: Colors.white,

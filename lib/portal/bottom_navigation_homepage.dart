@@ -8,7 +8,7 @@ import 'package:giffy_dialog/giffy_dialog.dart';
 import '../home_page_pattern_view.dart';
 import '../my_style_text.dart';
 
-class HomePage1 extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

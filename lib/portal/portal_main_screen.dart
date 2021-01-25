@@ -15,7 +15,7 @@ class _PortalMainScreenState extends State<PortalMainScreen> {
   int _selectedIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
-    HomePage1(),
+    HomePage(),
     LoanPage(),
     Banking(),
     NotificationPage(),
@@ -26,19 +26,19 @@ class _PortalMainScreenState extends State<PortalMainScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         showSelectedLabels: true,
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
+
+
         items: [
           BottomNavigationBarItem(
             icon: Icon(
                 Icons.home,
               color: Colors.grey,
-
             ),
             title: Text('Home'),
             activeIcon: Icon(
@@ -61,37 +61,42 @@ class _PortalMainScreenState extends State<PortalMainScreen> {
             icon: Icon(
               Icons.donut_small,
               color: Colors.grey,
-              size: 36,
+              size: 25,
             ),
             title: Text('Banking'),
             activeIcon: Icon(
               Icons.usb,
               color: Colors.red,
-              size: 36,
+              size: 30,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.notifications,
               color: Colors.grey,
-              size: 36,
+              size: 25,
             ),
             title: Text('Notification'),
             activeIcon: Icon(
               Icons.usb,
               color: Colors.red,
-              size: 36,
+              size: 30,
             ),
           ),
         ],
+
         onTap: (index) {
           setState(() {
             _selectedIndex = index;
           });
         },
+
+
       ),
       body: _widgetOptions.elementAt(_selectedIndex),
     );
   }
 
 }
+
+
